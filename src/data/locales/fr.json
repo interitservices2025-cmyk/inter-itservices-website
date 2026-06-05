@@ -1,0 +1,162 @@
+{
+  "common": {
+    "companyName": "INTER-IT SERVICES INC",
+    "location": "Brampton, Ontario, Canada",
+    "email": "contact@inter-itservices.ca",
+    "phone": "(647) 638-4583",
+    "cta": {
+      "contactUs": "Contactez-nous",
+      "getStarted": "Démarrer",
+      "learnMore": "En savoir plus",
+      "submit": "Envoyer le message",
+      "viewAll": "Voir tout",
+      "register": "S'inscrire maintenant"
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "services": "Services",
+    "aiSolutions": "Solutions IA",
+    "portfolio": "Portfolio",
+    "training": "Formations",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Leader des innovations IT & IA",
+    "title": "Propulsez votre entreprise grâce aux technologies intelligentes",
+    "subtitle": "Chez INTER-IT SERVICES INC, nous concevons des solutions d'Intelligence Artificielle de pointe, du développement logiciel sur mesure et des formations professionnelles pour accélérer votre transformation numérique.",
+    "ctaPrimary": "Découvrir les Solutions IA",
+    "ctaSecondary": "Réserver une Consultation"
+  },
+  "trusted": {
+    "title": "Propulsé par la confiance des entreprises innovantes"
+  },
+  "aiSolutions": {
+    "title": "Solutions d'Intelligence Artificielle",
+    "subtitle": "Tirez parti de l'IA de nouvelle génération et de l'automatisation pour simplifier vos opérations et ouvrir de nouvelles perspectives.",
+    "solutions": {
+      "automation": {
+        "title": "Automatisation par l'IA",
+        "description": "Automatisez les tâches répétitives et volumineuses grâce à des agents logiciels intelligents pour réduire vos coûts et booster la productivité."
+      },
+      "customAI": {
+        "title": "LLMs & Chatbots Personnalisés",
+        "description": "Développez des agents conversationnels sécurisés et propriétaires, entraînés sur vos données d'entreprise pour accompagner vos équipes et clients."
+      },
+      "predictive": {
+        "title": "Analyses Prédictives",
+        "description": "Utilisez des algorithmes de machine learning pour analyser les tendances passées, anticiper les évolutions et prendre des décisions fondées."
+      }
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Des solutions technologiques complètes de bout en bout adaptées aux exigences uniques de votre entreprise.",
+    "items": {
+      "software": {
+        "title": "Développement Logiciel Sur Mesure",
+        "description": "Des applications logicielles personnalisées, conçues de A à Z pour résoudre vos défis opérationnels spécifiques."
+      },
+      "web": {
+        "title": "Développement Web",
+        "description": "Des sites web d'entreprise et des portails web performants, sécurisés et optimisés pour le SEO à l'aide de frameworks modernes."
+      },
+      "mobile": {
+        "title": "Développement Mobile",
+        "description": "Des applications mobiles natives et multiplateformes intuitives et performantes pour terminaux iOS et Android."
+      },
+      "uiux": {
+        "title": "Design UI/UX",
+        "description": "Une recherche centrée sur l'utilisateur et des interfaces épurées pour maximiser l'engagement et la satisfaction de vos usagers."
+      },
+      "branding": {
+        "title": "Design Graphique & Image de Marque",
+        "description": "Création d'identités de marque percutantes, logos et chartes graphiques en harmonie avec votre public cible."
+      },
+      "marketing": {
+        "title": "Marketing Numérique",
+        "description": "Campagnes de référencement (SEO), marketing de contenu et stratégies publicitaires axées sur les données pour accroître votre présence en ligne."
+      }
+    }
+  },
+  "whyUs": {
+    "title": "Pourquoi Choisir INTER-IT ?",
+    "subtitle": "Nous combinons expertise technique, proximité locale et passion de l'excellence pour offrir des résultats concrets à nos clients.",
+    "reasons": {
+      "expertise": {
+        "title": "Expertise Approfondie",
+        "description": "Une équipe de développeurs full-stack seniors, d'ingénieurs IA et de designers chevronnés engagés pour la qualité."
+      },
+      "clientFirst": {
+        "title": "Approche Centrée Client",
+        "description": "Nous adaptons nos méthodes de travail à votre flux, en assurant une communication limpide et des livraisons jalonnées."
+      },
+      "localPresence": {
+        "title": "Proximité en Ontario",
+        "description": "Basés à Brampton, nous sommes réactifs et disponibles pour des réunions en face-à-face, des ateliers et des collaborations de proximité."
+      },
+      "innovation": {
+        "title": "Orientés vers l'Innovation",
+        "description": "Nous intégrons en permanence les dernières nouveautés IA et architectures Cloud pour maintenir votre avance concurrentielle."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Notre Portfolio",
+    "subtitle": "Découvrez nos dernières réalisations de transformation numérique et de développement logiciel sur mesure.",
+    "categories": {
+      "all": "Tous les projets",
+      "ai": "IA & Automatisation",
+      "web": "Développement Web",
+      "mobile": "Apps Mobiles",
+      "design": "Design & UI/UX"
+    }
+  },
+  "testimonials": {
+    "title": "Témoignages Clients",
+    "subtitle": "Découvrez comment nous aidons nos partenaires à grandir grâce à notre dévouement et notre savoir-faire technique."
+  },
+  "training": {
+    "title": "Formations Professionnelles & Ateliers",
+    "subtitle": "Montez en compétences avec nos bootcamps pratiques guidés par des experts seniors de l'industrie.",
+    "cta": "Parcourir les modules de cours"
+  },
+  "ctaSection": {
+    "title": "Prêt à Accélérer Votre Croissance Numérique ?",
+    "subtitle": "Contactez notre bureau de Brampton dès aujourd'hui pour échanger sur votre projet ou planifier un diagnostic gratuit avec nos architectes.",
+    "button": "Obtenir une Consultation Gratuite"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Vous avez un projet en tête ou besoin de conseils techniques ? Écrivez-nous.",
+    "info": {
+      "address": "Adresse",
+      "email": "Courriel",
+      "phone": "Téléphone",
+      "hours": "Heures d'ouverture",
+      "hoursVal": "Lun - Ven, 9:00 - 17:00 HNE"
+    },
+    "form": {
+      "name": "Nom Complet",
+      "email": "Adresse Courriel",
+      "phone": "Téléphone (Optionnel)",
+      "subject": "Sujet",
+      "message": "Message",
+      "success": "Merci ! Votre message a été envoyé avec succès. Nous vous contacterons rapidement.",
+      "error": "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer ou nous téléphoner directement."
+    }
+  },
+  "footer": {
+    "tagline": "Solutions IA innovantes et Développement Logiciel sur mesure conçus pour accélérer votre entreprise.",
+    "quickLinks": "Liens Rapides",
+    "contactInfo": "Coordonnées",
+    "newsletter": "Infolettre",
+    "newsletterDesc": "Abonnez-vous pour recevoir nos analyses sur l'automatisation IA et les tendances IT.",
+    "newsletterPlaceholder": "Votre adresse courriel",
+    "copyright": "© {year} INTER-IT SERVICES INC. Tous droits réservés.",
+    "legal": "Politique de Confidentialité | Conditions d'Utilisation",
+    "address": "Brampton, ON, Canada"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "common": {
+    "companyName": "INTER-IT SERVICES INC",
+    "location": "Brampton, Ontario, Canada",
+    "email": "contact@inter-itservices.ca",
+    "phone": "(647) 638-4583",
+    "cta": {
+      "contactUs": "Contact Us",
+      "getStarted": "Get Started",
+      "learnMore": "Learn More",
+      "submit": "Send Message",
+      "viewAll": "View All",
+      "register": "Register Now"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "aiSolutions": "AI Solutions",
+    "portfolio": "Portfolio",
+    "training": "Training",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Leading IT & AI Innovations",
+    "title": "Empowering Businesses through Intelligent Technology",
+    "subtitle": "At INTER-IT SERVICES INC, we deliver cutting-edge Artificial Intelligence solutions, custom software development, and professional training to drive your digital transformation.",
+    "ctaPrimary": "Explore AI Solutions",
+    "ctaSecondary": "Book a Consultation"
+  },
+  "trusted": {
+    "title": "Trusted by forward-thinking companies"
+  },
+  "aiSolutions": {
+    "title": "Artificial Intelligence Solutions",
+    "subtitle": "Leverage next-generation AI and automation to streamline operations and unlock new opportunities.",
+    "solutions": {
+      "automation": {
+        "title": "AI Automation",
+        "description": "Automate repetitive, high-volume tasks with intelligent software agents to cut costs and increase productivity."
+      },
+      "customAI": {
+        "title": "Custom LLMs & Chatbots",
+        "description": "Build proprietary, secure conversational agents trained on your business data to support your teams and customers."
+      },
+      "predictive": {
+        "title": "Predictive Analytics",
+        "description": "Utilize machine learning algorithms to analyze historical patterns, forecast trends, and make data-driven decisions."
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive end-to-end technology solutions tailored to your unique business requirements.",
+    "items": {
+      "software": {
+        "title": "Custom Software Development",
+        "description": "Tailor-made software applications engineered from scratch to solve your specific operational challenges."
+      },
+      "web": {
+        "title": "Web Development",
+        "description": "High-performance, secure, and SEO-optimized corporate websites and web portals built on modern frameworks."
+      },
+      "mobile": {
+        "title": "Mobile App Development",
+        "description": "Intuitive, high-performance native and cross-platform mobile apps for iOS and Android devices."
+      },
+      "uiux": {
+        "title": "UI/UX Design",
+        "description": "User-centric research and beautiful interface design that maximizes engagement and user satisfaction."
+      },
+      "branding": {
+        "title": "Graphic Design & Branding",
+        "description": "Creating impactful brand identities, logos, and visual assets that resonate with your target audience."
+      },
+      "marketing": {
+        "title": "Digital Marketing",
+        "description": "Data-driven SEO, content marketing, and advertising campaigns designed to grow your online visibility."
+      }
+    }
+  },
+  "whyUs": {
+    "title": "Why Choose INTER-IT?",
+    "subtitle": "We combine technological expertise, local proximity, and a passion for excellence to deliver tangible business results.",
+    "reasons": {
+      "expertise": {
+        "title": "Deep Expertise",
+        "description": "A team of senior full-stack developers, AI engineers, and creative designers committed to high standards."
+      },
+      "clientFirst": {
+        "title": "Client-Centric Approach",
+        "description": "We adapt our methodologies to fit your workflow, providing transparent communication and milestone-based deliveries."
+      },
+      "localPresence": {
+        "title": "Ontario-Based Proximity",
+        "description": "Based in Brampton, we are responsive and easily accessible for on-site meetings, workshops, and collaboration."
+      },
+      "innovation": {
+        "title": "Innovation-Driven",
+        "description": "We continually integrate the latest developments in AI and cloud architecture to keep you ahead of the competition."
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Our Featured Portfolio",
+    "subtitle": "Explore case studies of digital transformation and custom software solutions we have proudly delivered.",
+    "categories": {
+      "all": "All Projects",
+      "ai": "AI & Automation",
+      "web": "Web Development",
+      "mobile": "Mobile Apps",
+      "design": "Branding & UI/UX"
+    }
+  },
+  "testimonials": {
+    "title": "Client Testimonials",
+    "subtitle": "Discover how we help our partners succeed through our dedication and technical expertise."
+  },
+  "training": {
+    "title": "Professional Training & Workshops",
+    "subtitle": "Upskill your internal teams with hands-on technical bootcamps led by senior industry practitioners.",
+    "cta": "Explore Course Modules"
+  },
+  "ctaSection": {
+    "title": "Ready to Accelerate Your Digital Growth?",
+    "subtitle": "Contact our Brampton office today to discuss your project requirements or book a free discovery session with our architects.",
+    "button": "Get a Free Consultation"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a project in mind or need technical consultation? Reach out to us.",
+    "info": {
+      "address": "Address",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "hours": "Business Hours",
+      "hoursVal": "Mon - Fri, 9:00 AM - 5:00 PM EST"
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number (Optional)",
+      "subject": "Subject",
+      "message": "Message",
+      "success": "Thank you! Your message has been sent successfully. We will contact you soon.",
+      "error": "An error occurred while sending your message. Please try again or call us directly."
+    }
+  },
+  "footer": {
+    "tagline": "Innovative AI Solutions and Custom Software Development built for business acceleration.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Information",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Subscribe to receive insights on AI automation and technology trends.",
+    "newsletterPlaceholder": "Your email address",
+    "copyright": "© {year} INTER-IT SERVICES INC. All rights reserved.",
+    "legal": "Privacy Policy | Terms of Service",
+    "address": "Brampton, ON, Canada"
+  }
+}
