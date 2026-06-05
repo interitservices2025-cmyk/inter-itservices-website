@@ -93,7 +93,7 @@ export default function TrainingSection({ dict, locale }: TrainingSectionProps) 
 
               {/* Action Button */}
               <div className="pt-4">
-                <Link href={`/${locale}/training`} className="w-full">
+                <Link href={`/${locale}/training/${course.slug}`} className="w-full">
                   <Button variant="outline" className="w-full text-xs py-2">
                     {dict.training.cta}
                   </Button>

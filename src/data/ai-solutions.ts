@@ -41,6 +41,7 @@ export const aiSolutions: AISolution[] = [
         fr: "Disponibilité 24h/24, 7j/7, 365j/an des flux de fond critiques",
       },
     ],
+    technologies: ["Python", "LangChain", "n8n", "OpenAI API", "Docker"],
   },
   {
     id: "custom-llms",
@@ -82,6 +83,7 @@ export const aiSolutions: AISolution[] = [
         fr: "Montée en compétences des employés avec des réponses techniques immédiates",
       },
     ],
+    technologies: ["Llama 3", "Qdrant Vector DB", "RAG Pipelines", "Hugging Face", "PyTorch"],
   },
   {
     id: "predictive-analytics",
@@ -123,5 +125,6 @@ export const aiSolutions: AISolution[] = [
         fr: "Détection des fraudes et anomalies en temps quasi réel",
       },
     ],
+    technologies: ["Scikit-Learn", "TensorFlow", "Pandas", "FastAPI", "PostgreSQL"],
   },
 ];

@@ -1,0 +1,177 @@
+import React from "react";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { ArrowLeft, BookOpen, Clock, Compass, Users, CheckCircle2, ChevronRight, GraduationCap } from "lucide-react";
+import { courses } from "@/data/training";
+import SectionContainer from "@/components/ui/SectionContainer";
+import Card from "@/components/ui/Card";
+import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
+
+interface CourseDetailPageProps {
+  params: Promise<{ locale: string; slug: string }>;
+}
+
+export async function generateMetadata({
+  params,
+}: CourseDetailPageProps): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const course = courses.find((c) => c.slug === slug);
+  if (!course) return {};
+
+  return {
+    title: `${course.title[locale as "en" | "fr"]} | Corporate Training | INTER-IT SERVICES INC`,
+    description: course.description[locale as "en" | "fr"],
+  };
+}
+
+export default async function CourseDetailPage({ params }: CourseDetailPageProps) {
+  const { locale, slug } = await params;
+
+  const course = courses.find((c) => c.slug === slug);
+  if (!course) {
+    notFound();
+  }
+
+  return (
+    <div className="pt-24 pb-16 flex-grow bg-slate-950">
+      <SectionContainer bgType="transparent">
+        {/* Back Link */}
+        <Link
+          href={`/${locale}/training`}
+          className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-amber-500 mb-8 transition-colors cursor-pointer"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          <span>{locale === "fr" ? "Retour aux formations" : "Back to training"}</span>
+        </Link>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-6xl mx-auto">
+          {/* Main Info (8 Columns) */}
+          <div className="lg:col-span-8 space-y-8">
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <Badge variant="secondary">LEARNING WORKSHOPS</Badge>
+              </div>
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-white">
+                {course.title[locale as "en" | "fr"]}
+              </h1>
+              <div className="h-1 w-20 bg-amber-500 rounded-full mt-4" />
+            </div>
+
+            {/* Overview / Description */}
+            <div className="space-y-4">
+              <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                <BookOpen className="h-5 w-5 text-amber-500" />
+                <span>{locale === "fr" ? "Aperçu du Programme" : "Program Overview"}</span>
+              </h2>
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                {course.description[locale as "en" | "fr"]}
+              </p>
+            </div>
+
+            {/* Curriculum / Objectives */}
+            <div className="space-y-4">
+              <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                <GraduationCap className="h-5 w-5 text-amber-500" />
+                <span>{locale === "fr" ? "Objectifs Pédagogiques & Curriculum" : "Learning Curriculum"}</span>
+              </h2>
+              <div className="space-y-3">
+                {course.topics.map((topic, index) => (
+                  <div key={index} className="flex gap-3 items-start text-xs sm:text-sm text-slate-300">
+                    <span className="text-amber-500 font-bold shrink-0 mt-0.5">•</span>
+                    <span>{topic[locale as "en" | "fr"]}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Skills Acquired */}
+            {course.skillsAcquired && (
+              <div className="space-y-4">
+                <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                  <CheckCircle2 className="h-5 w-5 text-amber-500" />
+                  <span>{locale === "fr" ? "Compétences Acquises" : "Skills Acquired"}</span>
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {course.skillsAcquired.map((skill, index) => (
+                    <Card key={index} hoverEffect={true} className="border-slate-800 bg-slate-900/20 p-4 flex gap-2.5 items-start">
+                      <ChevronRight className="h-4 w-4 text-amber-500 shrink-0 mt-0.5" />
+                      <span className="text-slate-300 text-xs leading-relaxed">
+                        {skill[locale as "en" | "fr"]}
+                      </span>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Sidebar (4 Columns) */}
+          <div className="lg:col-span-4 space-y-6">
+            <Card hoverEffect={false} className="border-slate-800 bg-slate-900/40 p-6 space-y-6">
+              {/* Meta information */}
+              <div className="space-y-4 pb-6 border-b border-slate-900">
+                <div className="flex items-center gap-3 text-xs text-slate-300">
+                  <Clock className="h-4.5 w-4.5 text-amber-500 shrink-0" />
+                  <div>
+                    <span className="text-[10px] text-slate-500 block font-semibold">{locale === "fr" ? "DURÉE" : "DURATION"}</span>
+                    <span className="font-bold">{course.duration[locale as "en" | "fr"]}</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 text-xs text-slate-300">
+                  <Compass className="h-4.5 w-4.5 text-amber-500 shrink-0" />
+                  <div>
+                    <span className="text-[10px] text-slate-500 block font-semibold">{locale === "fr" ? "NIVEAU" : "LEVEL"}</span>
+                    <span className="font-bold">{course.level[locale as "en" | "fr"]}</span>
+                  </div>
+                </div>
+
+                {course.price && (
+                  <div className="flex items-center gap-3 text-xs text-slate-300">
+                    <GraduationCap className="h-4.5 w-4.5 text-amber-500 shrink-0" />
+                    <div>
+                      <span className="text-[10px] text-slate-500 block font-semibold">{locale === "fr" ? "TARIF D'INSCRIPTION" : "REGISTRATION FEE"}</span>
+                      <span className="font-bold">{course.price}</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Target Audience */}
+              {course.targetAudience && (
+                <div>
+                  <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                    <Users className="h-4 w-4 text-amber-500" />
+                    <span>{locale === "fr" ? "Public Cible" : "Target Audience"}</span>
+                  </h3>
+                  <p className="text-xs text-slate-400 leading-relaxed">
+                    {course.targetAudience[locale as "en" | "fr"]}
+                  </p>
+                </div>
+              )}
+
+              {/* Registration CTA Block */}
+              <div className="pt-6 border-t border-slate-900 space-y-4">
+                <h4 className="text-xs font-semibold text-white uppercase tracking-wider">
+                  {locale === "fr" ? "S'inscrire à cet Atelier ?" : "Enroll Today"}
+                </h4>
+                <p className="text-[11px] text-slate-400 leading-relaxed">
+                  {locale === "fr"
+                    ? "Réservez une session privée pour vos équipes à Brampton ou rejoignez nos classes virtuelles interactives."
+                    : "Book a private session for your team in Ontario or secure your slot in our interactive remote classroom."}
+                </p>
+                <Link href={`/${locale}/contact`} className="block w-full">
+                  <Button variant="secondary" className="w-full text-xs py-2.5 shadow-md shadow-amber-500/10">
+                    {locale === "fr" ? "Demander une inscription" : "Request Registration"}
+                  </Button>
+                </Link>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </SectionContainer>
+    </div>
+  );
+}

@@ -39,6 +39,15 @@ export const courses: Course[] = [
       },
     ],
     price: "$1,299 CAD",
+    targetAudience: {
+      en: "Business owners, executives, IT managers, and project coordinators looking to securely implement automation and AI.",
+      fr: "Propriétaires d'entreprises, cadres de direction, responsables IT et coordinateurs de projet cherchant à intégrer sereinement l'IA.",
+    },
+    skillsAcquired: [
+      { en: "Evaluate AI project ROI", fr: "Évaluer le ROI d'un projet IA" },
+      { en: "Draft AI compliance guidelines", fr: "Rédiger des chartes de conformité IA" },
+      { en: "Identify automatable processes", fr: "Identifier les processus automatisables" },
+    ],
   },
   {
     id: "nextjs-typescript",
@@ -78,5 +87,14 @@ export const courses: Course[] = [
       },
     ],
     price: "$2,499 CAD",
+    targetAudience: {
+      en: "Mid-level web developers, software engineers, and technical leads aiming to master modern React architectures.",
+      fr: "Développeurs web intermédiaires, ingénieurs logiciels et leaders techniques souhaitant maîtriser les architectures React modernes.",
+    },
+    skillsAcquired: [
+      { en: "Build App Router applications", fr: "Créer des applications App Router Next.js" },
+      { en: "Master React Server Components", fr: "Maîtriser les Server Components React" },
+      { en: "Implement strict type checking", fr: "Implémenter un typage strict et robuste" },
+    ],
   },
 ];

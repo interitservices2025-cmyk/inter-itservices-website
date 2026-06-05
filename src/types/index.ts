@@ -22,6 +22,7 @@ export interface AISolution {
   iconName: string;
   useCases: LocalizedString[];
   benefits: LocalizedString[];
+  technologies?: string[];
 }
 
 export interface Project {
@@ -49,6 +50,8 @@ export interface Course {
   level: LocalizedString;
   topics: LocalizedString[];
   price?: string;
+  targetAudience?: LocalizedString;
+  skillsAcquired?: LocalizedString[];
 }
 
 export interface Testimonial {

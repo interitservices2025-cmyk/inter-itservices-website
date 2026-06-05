@@ -82,7 +82,7 @@ export default function AISolutionsSection({ dict, locale }: AISolutionsSectionP
                 {/* Learn More link */}
                 <div className="pt-4 border-t border-slate-900">
                   <Link
-                    href={`/${locale}/ai-solutions`}
+                    href={`/${locale}/ai-solutions/${solution.slug}`}
                     className="inline-flex items-center gap-2 text-xs font-semibold text-amber-500 hover:text-amber-400 transition-colors group cursor-pointer"
                   >
                     <span>{dict.common.cta.learnMore}</span>

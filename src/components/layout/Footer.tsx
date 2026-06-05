@@ -18,6 +18,7 @@ export default async function Footer({ locale }: FooterProps) {
     { href: `/${locale}/ai-solutions`, label: dict.nav.aiSolutions },
     { href: `/${locale}/portfolio`, label: dict.nav.portfolio },
     { href: `/${locale}/training`, label: dict.nav.training },
+    { href: `/${locale}/blog`, label: dict.nav.blog },
     { href: `/${locale}/contact`, label: dict.nav.contact },
   ];
 

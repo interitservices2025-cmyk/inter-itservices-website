@@ -49,4 +49,76 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["Web Dev", "Next.js", "React"],
   },
+  {
+    id: "blog-3",
+    slug: "importance-graphic-design-print-branding-smes",
+    title: {
+      en: "The Impact of Premium Graphic Design and Print Branding for SMEs",
+      fr: "L'Impact d'un Design Graphique de Qualité et du Print pour les PME",
+    },
+    excerpt: {
+      en: "Why physical marketing assets and professional visual branding are critical for local authority and corporate trust.",
+      fr: "Pourquoi les supports physiques et une identité visuelle professionnelle sont indispensables pour asseoir sa crédibilité locale.",
+    },
+    content: {
+      en: "In a digital-first world, physical print media holds unique psychological value. Cohesive brand folders, textured business cards, and vector logo consistency across vehicles and workspaces establish instant professionalism. For local service companies in Brampton and Ontario, combining high-end Next.js web portals with matching print materials ensures a unified omnichannel brand experience. At INTER-IT, we bridge the gap between digital excellence and physical print asset design.",
+      fr: "Dans un monde dominé par le numérique, les supports imprimés physiques conservent une valeur psychologique unique. Des pochettes d'entreprise cohérentes, des cartes de visite de qualité et un logo vectoriel décliné sur les véhicules et chantiers imposent le professionnalisme. Pour les entreprises locales à Brampton et en Ontario, allier un portail Next.js haut de gamme à des supports print assortis garantit une expérience client omnicanale mémorable. Chez INTER-IT, nous unissons excellence numérique et design d'impression de premier plan.",
+    },
+    publishedAt: "2026-05-25",
+    author: "Lead Brand Designer, INTER-IT",
+    imageUrl: "/images/blog/logistics.png",
+    readTime: {
+      en: "4 min read",
+      fr: "4 min de lecture",
+    },
+    tags: ["Design", "Branding", "Print"],
+  },
+  {
+    id: "blog-4",
+    slug: "local-seo-digital-marketing-brampton-ontario",
+    title: {
+      en: "Mastering Local SEO and Digital Marketing in Ontario",
+      fr: "Maîtriser le SEO Local et le Marketing Numérique en Ontario",
+    },
+    excerpt: {
+      en: "Effective strategies to optimize local search rankings, target Ontario SMEs, and drive high-intent customer inquiries.",
+      fr: "Stratégies efficaces pour optimiser le référencement local, cibler les PME en Ontario et générer des demandes clients qualifiées.",
+    },
+    content: {
+      en: "To grow as a business in Brampton, generic marketing isn't enough. You need highly targeted local search optimization. By integrating structured schema data, maintaining Google Business profile alignment, and creating location-specific content, SMEs can outrank larger competitors. Discover the algorithms behind local map packs, and how dynamic SEO-friendly page loading directly impacts marketing conversion rates.",
+      fr: "Pour développer une entreprise à Brampton, le marketing générique ne suffit pas. Vous devez optimiser votre référencement local de manière chirurgicale. En intégrant des données structurées (schema data), en optimisant votre profil Google Business et en publiant des contenus géo-ciblés, les PME peuvent surpasser des concurrents plus importants. Découvrez les rouages des packs de cartes locaux et l'impact de la vitesse de chargement SEO sur vos taux de conversion.",
+    },
+    publishedAt: "2026-06-02",
+    author: "Senior Marketing Strategist, INTER-IT",
+    imageUrl: "/images/blog/nextjs.png",
+    readTime: {
+      en: "5 min read",
+      fr: "5 min de lecture",
+    },
+    tags: ["Marketing", "SEO", "Business"],
+  },
+  {
+    id: "blog-5",
+    slug: "why-corporate-training-workshops-drive-growth",
+    title: {
+      en: "Why Technical Corporate Training is the Engine of Digital Growth",
+      fr: "Pourquoi la Formation Professionnelle Technique est le Moteur de la Croissance",
+    },
+    excerpt: {
+      en: "Upskilling internal developers and decision-makers on AI models and modern code workflows leads to rapid innovation and ROI.",
+      fr: "Former les développeurs et décideurs internes sur l'IA et les frameworks modernes accélère l'innovation et le retour sur investissement.",
+    },
+    content: {
+      en: "Technology moves faster than corporate hiring cycles. The most efficient way to scale tech capability is upskilling existing staff. Delivering structured Learning Workshops on Next.js/TypeScript and secure AI pipelines directly increases implementation speed and reduces external agency dependencies. At INTER-IT, our senior developer-led workshops in Ontario ensure teams build secure, scalable corporate architectures.",
+      fr: "La technologie évolue plus vite que les cycles de recrutement des entreprises. Le moyen le plus efficace d'accroître vos capacités techniques est de former vos collaborateurs. Animer des ateliers d'apprentissage structurés sur Next.js, TypeScript et l'IA sécurisée réduit les dépendances externes et booste la productivité. Chez INTER-IT, nos bootcamps menés par des développeurs seniors en Ontario garantissent que vos équipes créent des architectures robustes et pérennes.",
+    },
+    publishedAt: "2026-06-04",
+    author: "Director of Education, INTER-IT",
+    imageUrl: "/images/blog/logistics.png",
+    readTime: {
+      en: "6 min read",
+      fr: "6 min de lecture",
+    },
+    tags: ["Training", "Workshops", "Tech Trends"],
+  },
 ];

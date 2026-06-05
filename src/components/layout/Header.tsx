@@ -37,6 +37,7 @@ export default function Header({ locale }: HeaderProps) {
     { href: `/${locale}/ai-solutions`, label: locale === "fr" ? "Solutions IA" : "AI Solutions" },
     { href: `/${locale}/portfolio`, label: locale === "fr" ? "Portfolio" : "Portfolio" },
     { href: `/${locale}/training`, label: locale === "fr" ? "Formations" : "Training" },
+    { href: `/${locale}/blog`, label: locale === "fr" ? "Blog" : "Blog" },
     { href: `/${locale}/contact`, label: locale === "fr" ? "Contact" : "Contact" },
   ];
 
