@@ -23,7 +23,7 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
 
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -175,20 +175,29 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
                   />
                 </div>
 
-                {/* Subject */}
+                {/* Subject / Service Selection */}
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="subject" className="text-slate-300 text-xs font-semibold">
                     {dict.contact.form.subject} <span className="text-amber-500">*</span>
                   </label>
-                  <input
-                    type="text"
+                  <select
                     id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="bg-slate-950 border border-slate-800 focus:border-amber-500 focus:outline-none rounded-lg px-4 py-2 text-xs text-white placeholder-slate-600 transition-colors"
+                    className="bg-slate-950 border border-slate-800 focus:border-amber-500 focus:outline-none rounded-lg px-4 py-2 text-xs text-white transition-colors"
                     required
-                  />
+                  >
+                    <option value="" disabled className="text-slate-600 bg-slate-950">
+                      {locale === "fr" ? "Sélectionnez un service" : "Select a service"}
+                    </option>
+                    <option value="web" className="bg-slate-950">{dict.contact.form.services.web}</option>
+                    <option value="design" className="bg-slate-950">{dict.contact.form.services.design}</option>
+                    <option value="marketing" className="bg-slate-950">{dict.contact.form.services.marketing}</option>
+                    <option value="training" className="bg-slate-950">{dict.contact.form.services.training}</option>
+                    <option value="ai" className="bg-slate-950">{dict.contact.form.services.ai}</option>
+                    <option value="other" className="bg-slate-950">{dict.contact.form.services.other}</option>
+                  </select>
                 </div>
               </div>
 
@@ -231,7 +240,7 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
                 </motion.div>
               )}
 
-              {/* Submit Button */}
+              {/* Submit Button & Response Time */}
               <div className="pt-2">
                 <Button
                   type="submit"
@@ -242,6 +251,11 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
                   <span>{dict.common.cta.submit}</span>
                   <Send className="h-4 w-4" />
                 </Button>
+                
+                <div className="flex items-center justify-center gap-1.5 mt-3 text-slate-400 text-[11px]">
+                  <Clock className="h-3.5 w-3.5 text-amber-500/80" />
+                  <span>{dict.contact.form.responseTime}</span>
+                </div>
               </div>
             </form>
           </Card>

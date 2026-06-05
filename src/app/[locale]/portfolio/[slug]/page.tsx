@@ -106,6 +106,14 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                 </div>
 
                 <div className="flex items-center gap-3 text-xs text-slate-300">
+                  <Folder className="h-4.5 w-4.5 text-amber-500 shrink-0" />
+                  <div>
+                    <span className="text-[10px] text-slate-500 block font-semibold">{locale === "fr" ? "SECTEUR D'ACTIVITÉ" : "INDUSTRY"}</span>
+                    <span className="font-bold">{project.industry[locale as "en" | "fr"]}</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 text-xs text-slate-300">
                   <Calendar className="h-4.5 w-4.5 text-amber-500 shrink-0" />
                   <div>
                     <span className="text-[10px] text-slate-500 block font-semibold">DATE</span>
@@ -122,9 +130,23 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
                 </div>
               </div>
 
+              {/* Services Fournis / Services Delivered */}
+              <div>
+                <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-3">
+                  {locale === "fr" ? "Services Fournis" : "Services Delivered"}
+                </h3>
+                <div className="flex flex-wrap gap-1.5">
+                  {project.servicesDelivered.map((service, index) => (
+                    <Badge key={index} variant="secondary">
+                      {service[locale as "en" | "fr"]}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+
               {/* Technologies */}
               <div>
-                <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-4">
+                <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-3">
                   {locale === "fr" ? "Technologies" : "Technologies"}
                 </h3>
                 <div className="flex flex-wrap gap-1.5">

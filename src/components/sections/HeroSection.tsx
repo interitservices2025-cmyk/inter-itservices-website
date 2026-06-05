@@ -42,13 +42,13 @@ export default function HeroSection({ dict, locale }: HeroSectionProps) {
         >
           {locale === "fr" ? (
             <>
-              Propulsez votre entreprise grâce aux{" "}
-              <span className="text-gradient-secondary">technologies intelligentes</span>
+              Solutions Technologiques, Design, Marketing &{" "}
+              <span className="text-gradient-secondary">IA à Brampton, Ontario</span>
             </>
           ) : (
             <>
-              Empowering Businesses through{" "}
-              <span className="text-gradient-secondary">Intelligent Technology</span>
+              Technology, Design, Marketing &{" "}
+              <span className="text-gradient-secondary">AI Solutions in Brampton</span>
             </>
           )}
         </motion.h1>
@@ -70,7 +70,7 @@ export default function HeroSection({ dict, locale }: HeroSectionProps) {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Link href={`/${locale}/ai-solutions`} className="w-full sm:w-auto">
+          <Link href={`/${locale}/services`} className="w-full sm:w-auto">
             <Button variant="secondary" size="lg" className="w-full sm:w-auto gap-2">
               <span>{dict.hero.ctaPrimary}</span>
               <ArrowRight className="h-5 w-5" />

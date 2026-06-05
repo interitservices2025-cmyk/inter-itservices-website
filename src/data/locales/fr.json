@@ -24,10 +24,10 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "Leader des innovations IT & IA",
-    "title": "Propulsez votre entreprise grâce aux technologies intelligentes",
-    "subtitle": "Chez INTER-IT SERVICES INC, nous concevons des solutions d'Intelligence Artificielle de pointe, du développement logiciel sur mesure et des formations professionnelles pour accélérer votre transformation numérique.",
-    "ctaPrimary": "Découvrir les Solutions IA",
+    "badge": "Partenaire IT de Premier Plan à Brampton",
+    "title": "Solutions Technologiques, Design, Marketing & IA à Brampton, Ontario",
+    "subtitle": "INTER-IT SERVICES INC est votre partenaire canadien pour le Développement de Sites Web performants à Brampton, le Design Graphique haut de gamme au Canada, le Marketing Numérique ciblé, les Ateliers de Formation en Ontario et les Solutions IA sécurisées.",
+    "ctaPrimary": "Découvrir nos Services",
     "ctaSecondary": "Réserver une Consultation"
   },
   "trusted": {
@@ -138,10 +138,19 @@
       "name": "Nom Complet",
       "email": "Adresse Courriel",
       "phone": "Téléphone (Optionnel)",
-      "subject": "Sujet",
-      "message": "Message",
+      "subject": "Service Souhaité",
+      "message": "Détails du projet / Message",
       "success": "Merci ! Votre message a été envoyé avec succès. Nous vous contacterons rapidement.",
-      "error": "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer ou nous téléphoner directement."
+      "error": "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer ou nous téléphoner directement.",
+      "responseTime": "Nous répondons en moins de 24h ouvrées.",
+      "services": {
+        "web": "Développement de Sites Web (Brampton)",
+        "design": "Design Graphique & Impression (Canada)",
+        "marketing": "Marketing Numérique (Ontario)",
+        "training": "Ateliers de Formation Professionnelle",
+        "ai": "Solutions IA & Automatisation",
+        "other": "Autre demande"
+      }
     }
   },
   "footer": {

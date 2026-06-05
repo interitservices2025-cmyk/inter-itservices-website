@@ -30,6 +30,8 @@ export interface Project {
   title: string;
   category: "ai" | "web" | "mobile" | "design" | "marketing";
   clientName: string;
+  industry: LocalizedString;
+  servicesDelivered: LocalizedString[];
   description: LocalizedString;
   challenges: LocalizedString;
   solutions: LocalizedString;

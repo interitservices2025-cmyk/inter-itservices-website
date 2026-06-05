@@ -24,10 +24,10 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "Leading IT & AI Innovations",
-    "title": "Empowering Businesses through Intelligent Technology",
-    "subtitle": "At INTER-IT SERVICES INC, we deliver cutting-edge Artificial Intelligence solutions, custom software development, and professional training to drive your digital transformation.",
-    "ctaPrimary": "Explore AI Solutions",
+    "badge": "Premium IT Partner in Brampton",
+    "title": "Technology, Design, Marketing & AI Solutions in Brampton, Ontario",
+    "subtitle": "INTER-IT SERVICES INC is your Canadian partner for high-performance Website Development in Brampton, premium Graphic Design in Canada, data-driven Digital Marketing, Corporate Training in Ontario, and secure AI Solutions.",
+    "ctaPrimary": "Explore Our Services",
     "ctaSecondary": "Book a Consultation"
   },
   "trusted": {
@@ -138,10 +138,19 @@
       "name": "Full Name",
       "email": "Email Address",
       "phone": "Phone Number (Optional)",
-      "subject": "Subject",
-      "message": "Message",
+      "subject": "Service Requested",
+      "message": "Message / Project Details",
       "success": "Thank you! Your message has been sent successfully. We will contact you soon.",
-      "error": "An error occurred while sending your message. Please try again or call us directly."
+      "error": "An error occurred while sending your message. Please try again or call us directly.",
+      "responseTime": "We respond in less than 24 business hours.",
+      "services": {
+        "web": "Website Development Brampton",
+        "design": "Graphic Design & Print Canada",
+        "marketing": "Digital Marketing Ontario",
+        "training": "Corporate Training & Workshops",
+        "ai": "AI Solutions & Automation",
+        "other": "Other Inquiry"
+      }
     }
   },
   "footer": {

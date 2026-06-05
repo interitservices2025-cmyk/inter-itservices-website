@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ShieldCheck, Server, Cpu, Database, Cloud } from "lucide-react";
+import { ShieldCheck, Hammer, Activity, Briefcase, Users } from "lucide-react";
 
 interface TrustedByProps {
   dict: any;
@@ -10,12 +10,13 @@ interface TrustedByProps {
 
 export default function TrustedBy({ dict }: TrustedByProps) {
   const logos = [
-    { icon: Server, name: "Ontario Logistics" },
-    { icon: ShieldCheck, name: "Brampton Invest" },
-    { icon: Cpu, name: "AI Tech Group" },
-    { icon: Database, name: "Global Supply" },
-    { icon: Cloud, name: "Nordic Cloud" },
+    { icon: ShieldCheck, name: "QC Entretien" },
+    { icon: Hammer, name: "Triréno" },
+    { icon: Activity, name: "Mmega Sports" },
+    { icon: Briefcase, name: "Inter Solutions" },
+    { icon: Users, name: "Ontario SMEs" },
   ];
+
 
   return (
     <section className="py-12 border-y border-slate-900 bg-slate-950/40 relative z-10">
