@@ -55,29 +55,25 @@
     "title": "Nos Services",
     "subtitle": "Des solutions technologiques complètes de bout en bout adaptées aux exigences uniques de votre entreprise.",
     "items": {
-      "software": {
-        "title": "Développement Logiciel Sur Mesure",
-        "description": "Des applications logicielles personnalisées, conçues de A à Z pour résoudre vos défis opérationnels spécifiques."
-      },
-      "web": {
-        "title": "Développement Web",
+      "websiteDevelopment": {
+        "title": "Développement de Sites Web",
         "description": "Des sites web d'entreprise et des portails web performants, sécurisés et optimisés pour le SEO à l'aide de frameworks modernes."
       },
-      "mobile": {
-        "title": "Développement Mobile",
-        "description": "Des applications mobiles natives et multiplateformes intuitives et performantes pour terminaux iOS et Android."
+      "graphicDesignPrint": {
+        "title": "Design Graphique & Impression",
+        "description": "Création d'identités de marque percutantes, logos et supports marketing de haute qualité prêts pour l'impression."
       },
-      "uiux": {
-        "title": "Design UI/UX",
-        "description": "Une recherche centrée sur l'utilisateur et des interfaces épurées pour maximiser l'engagement et la satisfaction de vos usagers."
-      },
-      "branding": {
-        "title": "Design Graphique & Image de Marque",
-        "description": "Création d'identités de marque percutantes, logos et chartes graphiques en harmonie avec votre public cible."
-      },
-      "marketing": {
+      "digitalMarketing": {
         "title": "Marketing Numérique",
         "description": "Campagnes de référencement (SEO), marketing de contenu et stratégies publicitaires axées sur les données pour accroître votre présence en ligne."
+      },
+      "learningWorkshops": {
+        "title": "Ateliers de Formation",
+        "description": "Montez en compétences grâce à nos ateliers pratiques et bootcamps technologiques animés par des experts seniors."
+      },
+      "aiSolutions": {
+        "title": "Solutions d'Intelligence Artificielle",
+        "description": "Intégrez des modèles de langage souverains (LLM), des chatbots personnalisés et des flux d'automatisation IA sécurisés."
       }
     }
   },

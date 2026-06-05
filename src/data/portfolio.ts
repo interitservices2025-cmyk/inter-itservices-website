@@ -20,7 +20,7 @@ export const portfolio: Project[] = [
       fr: "Nous avons construit un pipeline personnalisé à l'aide de LlamaIndex, PostgreSQL pgvector et d'un modèle LLaMA-3 hébergé localement. Un tableau de bord Next.js fait office d'interface utilisateur, intégrant un contrôle d'accès basé sur les rôles (RBAC).",
     },
     technologies: ["Next.js", "Python", "LlamaIndex", "PostgreSQL", "Docker", "AWS EC2 G5"],
-    imageUrl: "/images/portfolio/smartrag.jpg",
+    imageUrl: "/images/portfolio/smartrag.png",
     completionDate: "2025-11",
   },
   {
@@ -42,7 +42,7 @@ export const portfolio: Project[] = [
       fr: "Nous avons entièrement repensé le portail avec Next.js et Tailwind CSS. Le nouveau portail est mobile-first, respecte les directives d'accessibilité WCAG 2.1 AA et se charge en moins de 1,2 seconde.",
     },
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "REST API", "Auth0", "Recharts"],
-    imageUrl: "/images/portfolio/fintrack.jpg",
+    imageUrl: "/images/portfolio/fintrack.png",
     completionDate: "2025-08",
   },
   {
@@ -64,7 +64,7 @@ export const portfolio: Project[] = [
       fr: "Conçu avec React Native, utilisant SQLite pour le stockage local sécurisé hors ligne et des WebSockets chiffrés de bout en bout pour la messagerie sécurisée en temps réel.",
     },
     technologies: ["React Native", "Node.js", "WebSocket", "SQLite", "Firebase Cloud Messaging", "Tailwind CSS"],
-    imageUrl: "/images/portfolio/ontariocare.jpg",
+    imageUrl: "/images/portfolio/ontariocare.png",
     completionDate: "2025-05",
   },
 ];

@@ -55,29 +55,25 @@
     "title": "Our Services",
     "subtitle": "Comprehensive end-to-end technology solutions tailored to your unique business requirements.",
     "items": {
-      "software": {
-        "title": "Custom Software Development",
-        "description": "Tailor-made software applications engineered from scratch to solve your specific operational challenges."
-      },
-      "web": {
-        "title": "Web Development",
+      "websiteDevelopment": {
+        "title": "Website Development",
         "description": "High-performance, secure, and SEO-optimized corporate websites and web portals built on modern frameworks."
       },
-      "mobile": {
-        "title": "Mobile App Development",
-        "description": "Intuitive, high-performance native and cross-platform mobile apps for iOS and Android devices."
+      "graphicDesignPrint": {
+        "title": "Graphic Design & Print",
+        "description": "Creating impactful brand identities, logos, and high-quality print-ready marketing materials."
       },
-      "uiux": {
-        "title": "UI/UX Design",
-        "description": "User-centric research and beautiful interface design that maximizes engagement and user satisfaction."
-      },
-      "branding": {
-        "title": "Graphic Design & Branding",
-        "description": "Creating impactful brand identities, logos, and visual assets that resonate with your target audience."
-      },
-      "marketing": {
+      "digitalMarketing": {
         "title": "Digital Marketing",
         "description": "Data-driven SEO, content marketing, and advertising campaigns designed to grow your online visibility."
+      },
+      "learningWorkshops": {
+        "title": "Learning Workshops",
+        "description": "Hands-on technical bootcamps and workshops led by senior industry experts to upskill your teams."
+      },
+      "aiSolutions": {
+        "title": "AI Solutions",
+        "description": "Custom LLM integration, secure chatbot development, and AI-driven automation workflows."
       }
     }
   },

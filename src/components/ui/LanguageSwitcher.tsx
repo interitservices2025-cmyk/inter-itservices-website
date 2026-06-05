@@ -29,6 +29,8 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
     <div className={cn("flex items-center space-x-1 bg-slate-950/60 p-1 rounded-lg border border-slate-800", className)}>
       <button
         onClick={() => handleLanguageChange("en")}
+        aria-label="Switch language to English"
+        aria-current={currentLocale === "en" ? "page" : undefined}
         className={cn(
           "px-2.5 py-1 text-xs font-semibold rounded transition-all duration-200 cursor-pointer",
           currentLocale === "en"
@@ -40,6 +42,8 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
       </button>
       <button
         onClick={() => handleLanguageChange("fr")}
+        aria-label="Changer la langue en français"
+        aria-current={currentLocale === "fr" ? "page" : undefined}
         className={cn(
           "px-2.5 py-1 text-xs font-semibold rounded transition-all duration-200 cursor-pointer",
           currentLocale === "fr"

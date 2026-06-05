@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowRight, Cpu } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import LanguageSwitcher from "../ui/LanguageSwitcher";
 
@@ -57,17 +58,14 @@ export default function Header({ locale }: HeaderProps) {
             href={`/${locale}`}
             className="flex items-center gap-2 group cursor-pointer"
           >
-            <div className="bg-gradient-to-br from-amber-500 to-amber-600 p-2 rounded-lg text-slate-950 transition-all duration-300 group-hover:rotate-6">
-              <Cpu className="h-6 w-6" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-lg tracking-tight text-white leading-none">
-                INTER-IT
-              </span>
-              <span className="text-[10px] text-amber-500 font-semibold tracking-wider uppercase leading-none mt-1">
-                SERVICES INC
-              </span>
-            </div>
+            <Image
+              src="/images/logo/Logo 2.svg"
+              alt="INTER-IT SERVICES INC"
+              width={140}
+              height={48}
+              className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Cpu, Mail, Phone, MapPin, Linkedin, Facebook, Twitter } from "lucide-react";
+import Image from "next/image";
+import { Mail, Phone, MapPin, Linkedin, Facebook, Twitter } from "lucide-react";
 import { getDictionary } from "@/lib/get-dictionary";
 
 interface FooterProps {
@@ -27,17 +28,13 @@ export default async function Footer({ locale }: FooterProps) {
           {/* Brand Info */}
           <div className="space-y-4">
             <Link href={`/${locale}`} className="flex items-center gap-2 group">
-              <div className="bg-gradient-to-br from-amber-500 to-amber-600 p-2 rounded-lg text-slate-950">
-                <Cpu className="h-6 w-6" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-lg tracking-tight text-white leading-none">
-                  INTER-IT
-                </span>
-                <span className="text-[10px] text-amber-500 font-semibold tracking-wider uppercase leading-none mt-1">
-                  SERVICES INC
-                </span>
-              </div>
+              <Image
+                src="/images/logo/Logo 2.svg"
+                alt="INTER-IT SERVICES INC"
+                width={140}
+                height={48}
+                className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
             </Link>
             <p className="text-sm leading-relaxed text-slate-400">
               {dict.footer.tagline}

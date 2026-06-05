@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Code2, Globe, Smartphone, Palette, Layers, Megaphone, ArrowRight } from "lucide-react";
+import { Globe, Printer, Megaphone, BookOpen, BrainCircuit, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { services } from "@/data/services";
 import SectionContainer from "../ui/SectionContainer";
@@ -17,12 +17,11 @@ interface ServicesSectionProps {
 export default function ServicesSection({ dict, locale }: ServicesSectionProps) {
   // Map icon names to Lucide icons
   const iconMap: Record<string, React.ComponentType<any>> = {
-    Code2: Code2,
     Globe: Globe,
-    Smartphone: Smartphone,
-    Palette: Palette,
-    Layers: Layers,
+    Printer: Printer,
     Megaphone: Megaphone,
+    BookOpen: BookOpen,
+    BrainCircuit: BrainCircuit,
   };
 
   return (

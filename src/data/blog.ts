@@ -6,7 +6,7 @@ export const blogPosts: BlogPost[] = [
     slug: "ai-automation-logistics-supply-chain",
     title: {
       en: "The Future of AI Automation in Supply Chain Logistics",
-      fr: "L'Avenir de l'Automatisation par l'IA dans la Logistique Logique",
+      fr: "L'Avenir de l'Automatisation par l'IA dans la Logistique de la Chaîne d'Approvisionnement",
     },
     excerpt: {
       en: "How intelligent software agents and LLMs are transforming document routing, inventory tracking, and warehouse workflows.",
@@ -18,7 +18,7 @@ export const blogPosts: BlogPost[] = [
     },
     publishedAt: "2026-05-15",
     author: "Lead AI Architect, INTER-IT",
-    imageUrl: "/images/blog/logistics.jpg",
+    imageUrl: "/images/blog/logistics.png",
     readTime: {
       en: "5 min read",
       fr: "5 min de lecture",
@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
     },
     publishedAt: "2026-05-01",
     author: "Lead Web Developer, INTER-IT",
-    imageUrl: "/images/blog/nextjs.jpg",
+    imageUrl: "/images/blog/nextjs.png",
     readTime: {
       en: "4 min read",
       fr: "4 min de lecture",
