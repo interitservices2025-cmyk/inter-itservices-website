@@ -21,12 +21,13 @@
     "portfolio": "Portfolio",
     "training": "Training",
     "blog": "Blog",
+    "products": "Products",
     "contact": "Contact"
   },
   "hero": {
-    "badge": "Premium IT Partner in Brampton",
-    "title": "Technology, Design, Marketing & AI Solutions in Brampton, Ontario",
-    "subtitle": "INTER-IT SERVICES INC is your Canadian partner for high-performance Website Development in Brampton, premium Graphic Design in Canada, data-driven Digital Marketing, Corporate Training in Ontario, and secure AI Solutions.",
+    "badge": "IT & AI Expert (Canada & International)",
+    "title": "Tech, Design, Marketing & AI Solutions in Canada & Internationally",
+    "subtitle": "Based in Brampton (Ontario), INTER-IT SERVICES INC is your trusted technology partner for web development, graphic design, digital marketing, professional training, and SaaS solutions across Canada and worldwide.",
     "ctaPrimary": "Explore Our Services",
     "ctaSecondary": "Book a Consultation"
   },
@@ -90,8 +91,8 @@
         "description": "We adapt our methodologies to fit your workflow, providing transparent communication and milestone-based deliveries."
       },
       "localPresence": {
-        "title": "Ontario-Based Proximity",
-        "description": "Based in Brampton, we are responsive and easily accessible for on-site meetings, workshops, and collaboration."
+        "title": "Local & International Presence",
+        "description": "Based in Brampton (Ontario), we serve clients locally, nationally, and internationally with absolute responsiveness."
       },
       "innovation": {
         "title": "Innovation-Driven",
@@ -121,7 +122,7 @@
   },
   "ctaSection": {
     "title": "Ready to Accelerate Your Digital Growth?",
-    "subtitle": "Contact our Brampton office today to discuss your project requirements or book a free discovery session with our architects.",
+    "subtitle": "Contact our Brampton (Ontario) headquarters today to discuss your project in Canada or internationally.",
     "button": "Get a Free Consultation"
   },
   "contact": {
@@ -144,9 +145,9 @@
       "error": "An error occurred while sending your message. Please try again or call us directly.",
       "responseTime": "We respond in less than 24 business hours.",
       "services": {
-        "web": "Website Development Brampton",
+        "web": "Website Development (Canada & International)",
         "design": "Graphic Design & Print Canada",
-        "marketing": "Digital Marketing Ontario",
+        "marketing": "Digital Marketing & SEO",
         "training": "Corporate Training & Workshops",
         "ai": "AI Solutions & Automation",
         "other": "Other Inquiry"
@@ -154,7 +155,7 @@
     }
   },
   "footer": {
-    "tagline": "Innovative AI Solutions and Custom Software Development built for business acceleration.",
+    "tagline": "A Canadian AI-First Technology Company delivering Design, Digital Solutions, Training and SaaS Products.",
     "quickLinks": "Quick Links",
     "contactInfo": "Contact Information",
     "newsletter": "Newsletter",

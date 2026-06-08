@@ -1,0 +1,185 @@
+import React from "react";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { ArrowLeft, CheckCircle2, ChevronRight, Compass, Cpu, HelpCircle, Milestone, Sparkles } from "lucide-react";
+import { products } from "@/data/products";
+import SectionContainer from "@/components/ui/SectionContainer";
+import Card from "@/components/ui/Card";
+import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
+
+interface ProductDetailPageProps {
+  params: Promise<{ locale: string; slug: string }>;
+}
+
+export async function generateMetadata({
+  params,
+}: ProductDetailPageProps): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const product = products.find((p) => p.slug === slug);
+  if (!product) return {};
+
+  return {
+    title: `${product.name} | SaaS Product | INTER-IT SERVICES INC`,
+    description: product.tagline[locale as "en" | "fr"],
+  };
+}
+
+export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
+  const { locale, slug } = await params;
+
+  const product = products.find((p) => p.slug === slug);
+  if (!product) {
+    notFound();
+  }
+
+  return (
+    <div className="pt-24 pb-16 flex-grow bg-slate-950">
+      <SectionContainer bgType="transparent">
+        {/* Back Link */}
+        <Link
+          href={`/${locale}/products`}
+          className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-amber-500 mb-8 transition-colors cursor-pointer"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          <span>{locale === "fr" ? "Retour aux produits" : "Back to products"}</span>
+        </Link>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-6xl mx-auto">
+          {/* Main Info (8 Columns) */}
+          <div className="lg:col-span-8 space-y-8">
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <Badge variant="secondary">SAAS ECOSYSTEM</Badge>
+              </div>
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-white">
+                {product.name}
+              </h1>
+              <p className="text-amber-500 text-sm font-semibold uppercase tracking-wider mt-2">
+                {product.tagline[locale as "en" | "fr"]}
+              </p>
+              <div className="h-1 w-20 bg-amber-500 rounded-full mt-4" />
+            </div>
+
+            {/* Overview / Description */}
+            <div className="space-y-4">
+              <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                <Cpu className="h-5 w-5 text-amber-500" />
+                <span>{locale === "fr" ? "Description du Produit" : "Product Overview"}</span>
+              </h2>
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                {product.description[locale as "en" | "fr"]}
+              </p>
+            </div>
+
+            {/* Benefits */}
+            <div className="space-y-4">
+              <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                <CheckCircle2 className="h-5 w-5 text-amber-500" />
+                <span>{locale === "fr" ? "Avantages Majeurs" : "Key Benefits"}</span>
+              </h2>
+              <div className="space-y-3">
+                {product.benefits.map((benefit, index) => (
+                  <div key={index} className="flex gap-3 items-start text-xs sm:text-sm text-slate-300 bg-slate-900/10 border border-slate-900/40 p-4 rounded-xl">
+                    <CheckCircle2 className="h-4.5 w-4.5 text-amber-500 shrink-0 mt-0.5" />
+                    <span>{benefit[locale as "en" | "fr"]}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Features */}
+            <div className="space-y-4">
+              <h2 className="text-xl font-bold text-white flex items-center gap-2">
+                <Sparkles className="h-5 w-5 text-amber-500" />
+                <span>{locale === "fr" ? "Fonctionnalités Techniques" : "Product Features"}</span>
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {product.features.map((feature, index) => (
+                  <Card key={index} hoverEffect={true} className="border-slate-800 bg-slate-900/20 p-5 flex gap-3 items-start">
+                    <ChevronRight className="h-4.5 w-4.5 text-amber-500 shrink-0 mt-0.5" />
+                    <span className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                      {feature[locale as "en" | "fr"]}
+                    </span>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Sidebar (4 Columns) */}
+          <div className="lg:col-span-4 space-y-6">
+            <Card hoverEffect={false} className="border-slate-800 bg-slate-900/40 p-6 space-y-6">
+              {/* Product Roadmap */}
+              <div>
+                <h3 className="text-xs font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-1.5 border-b border-slate-900 pb-3">
+                  <Milestone className="h-4 w-4 text-amber-500" />
+                  <span>{locale === "fr" ? "Feuille de Route" : "Product Roadmap"}</span>
+                </h3>
+                <div className="space-y-4">
+                  {product.roadmap.map((step, index) => (
+                    <div key={index} className="space-y-1">
+                      <span className="text-[10px] text-amber-500 font-bold block">
+                        {step[locale as "en" | "fr"].split(":")[0]}
+                      </span>
+                      <p className="text-slate-400 text-xs leading-relaxed">
+                        {step[locale as "en" | "fr"].split(":")[1] || step[locale as "en" | "fr"]}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Product CTA Block */}
+              <div className="pt-6 border-t border-slate-900 space-y-4">
+                <h4 className="text-xs font-semibold text-white uppercase tracking-wider flex items-center gap-1">
+                  <Compass className="h-4 w-4 text-amber-500" />
+                  <span>{locale === "fr" ? "Planifier un essai ?" : "Request Access"}</span>
+                </h4>
+                <p className="text-[11px] text-slate-400 leading-relaxed">
+                  {locale === "fr"
+                    ? "Prenez contact avec notre équipe au Canada ou à l'international pour obtenir un accès d'essai exclusif à la plateforme."
+                    : "Get in touch with our team in Canada or internationally to secure exclusive sandbox access to the platform."}
+                </p>
+                <Link href={`/${locale}/contact`} className="block w-full">
+                  <Button variant="secondary" className="w-full text-xs py-2.5 shadow-md shadow-amber-500/10">
+                    {locale === "fr" ? "Demander une démo" : "Request Product Demo"}
+                  </Button>
+                </Link>
+              </div>
+            </Card>
+          </div>
+        </div>
+
+        {/* Calendly Booking Section */}
+        <div className="mt-16 max-w-6xl mx-auto">
+          <Card className="border-slate-800 bg-slate-900/40 p-6 sm:p-8">
+            <div className="text-center max-w-3xl mx-auto mb-8">
+              <h2 className="text-xl sm:text-2xl font-extrabold text-white mb-3">
+                {locale === "fr" ? "Planifier une démonstration en direct" : "Schedule a Live Demo"}
+              </h2>
+              <p className="text-slate-400 text-xs sm:text-sm">
+                {locale === "fr"
+                  ? "Choisissez un créneau ci-dessous pour assister à une démonstration guidée du produit avec un ingénieur d'INTER-IT SERVICES INC."
+                  : "Select a time slot below to watch a guided product walk-through with an INTER-IT SERVICES INC. engineer."}
+              </p>
+              <div className="h-0.5 w-16 bg-amber-500 mx-auto mt-4 rounded-full" />
+            </div>
+
+            <div className="w-full rounded-xl overflow-hidden border border-slate-800 bg-slate-950 h-[600px]">
+              <iframe
+                src="https://calendly.com/interitservices-brampton/30min?embed_domain=inter-itservices.ca&embed_type=inline&hide_event_type_details=1&background_color=0f172a&text_color=ffffff&primary_color=f59e0b"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                title="Calendly Scheduler"
+                className="w-full h-full min-h-[550px]"
+              ></iframe>
+            </div>
+          </Card>
+        </div>
+      </SectionContainer>
+    </div>
+  );
+}

@@ -12,6 +12,7 @@ export interface Service {
   iconName: string; // Lucide icon identifier
   technologies: string[];
   features: LocalizedString[];
+  pillar: "design" | "digital";
 }
 
 export interface AISolution {
@@ -52,6 +53,7 @@ export interface Course {
   price?: string;
   targetAudience?: LocalizedString;
   skillsAcquired?: LocalizedString[];
+  trainingCategory: "ai-communication" | "digital-marketing" | "storytelling-creation";
 }
 
 export interface Testimonial {
@@ -74,4 +76,16 @@ export interface BlogPost {
   imageUrl: string;
   readTime: LocalizedString;
   tags: string[];
+}
+
+export interface Product {
+  id: string;
+  slug: string;
+  name: string;
+  tagline: LocalizedString;
+  description: LocalizedString;
+  benefits: LocalizedString[];
+  features: LocalizedString[];
+  roadmap: LocalizedString[];
+  imageUrl: string;
 }

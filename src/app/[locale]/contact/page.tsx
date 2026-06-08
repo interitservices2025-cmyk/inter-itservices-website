@@ -14,8 +14,8 @@ export async function generateMetadata({
       ? "Contactez-nous | INTER-IT SERVICES INC"
       : "Contact Us | INTER-IT SERVICES INC",
     description: locale === "fr"
-      ? "Discutez de votre projet logiciel ou d'IA avec notre bureau de Brampton en Ontario."
-      : "Discuss your software or AI project with our Brampton, Ontario office.",
+      ? "Discutez de votre projet de développement web, design, marketing ou logiciel avec nos experts au Canada et à l'international."
+      : "Discuss your website development, design, marketing, or software project with our experts across Canada and internationally.",
   };
 }
 

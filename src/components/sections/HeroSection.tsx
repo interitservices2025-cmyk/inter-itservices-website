@@ -42,13 +42,13 @@ export default function HeroSection({ dict, locale }: HeroSectionProps) {
         >
           {locale === "fr" ? (
             <>
-              Solutions Technologiques, Design, Marketing &{" "}
-              <span className="text-gradient-secondary">IA à Brampton, Ontario</span>
+              Solutions Tech, Design, Marketing &{" "}
+              <span className="text-gradient-secondary">IA à l'International</span>
             </>
           ) : (
             <>
-              Technology, Design, Marketing &{" "}
-              <span className="text-gradient-secondary">AI Solutions in Brampton</span>
+              Tech, Design, Marketing &{" "}
+              <span className="text-gradient-secondary">AI Solutions Worldwide</span>
             </>
           )}
         </motion.h1>

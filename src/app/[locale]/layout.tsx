@@ -33,14 +33,14 @@ export async function generateMetadata({
     return {
       title: "INTER-IT SERVICES INC | Intelligence Artificielle & Solutions Web",
       description:
-        "Solutions technologiques sur mesure à Brampton, Ontario. Intelligence artificielle, design graphique & impression, ateliers de formation, développement de sites web et marketing digital.",
+        "Solutions technologiques sur mesure au Canada et à l'international (siège à Brampton, Ontario). Web development, design graphique & print, formations professionnelles et logiciels SaaS.",
       alternates,
     };
   }
   return {
     title: "INTER-IT SERVICES INC | Artificial Intelligence & Web Solutions",
     description:
-      "Custom technology solutions in Brampton, Ontario. Artificial intelligence, graphic design & print, learning workshops, website development, and digital marketing.",
+      "Tailored technology solutions in Canada and internationally (headquartered in Brampton, Ontario). Web development, graphic design & print, training workshops, and SaaS products.",
     alternates,
   };
 }

@@ -159,8 +159,8 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
                 </h4>
                 <p className="text-[11px] text-slate-400 leading-relaxed">
                   {locale === "fr"
-                    ? "Réservez une session privée pour vos équipes à Brampton ou rejoignez nos classes virtuelles interactives."
-                    : "Book a private session for your team in Ontario or secure your slot in our interactive remote classroom."}
+                    ? "Réservez une session privée pour vos collaborateurs au Canada (Brampton/Ontario) ou à distance à l'international."
+                    : "Book a private session for your team in Canada (Brampton/Ontario) or join our live remote cohorts worldwide."}
                 </p>
                 <Link href={`/${locale}/contact`} className="block w-full">
                   <Button variant="secondary" className="w-full text-xs py-2.5 shadow-md shadow-amber-500/10">
@@ -170,6 +170,34 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
               </div>
             </Card>
           </div>
+        </div>
+
+        {/* Calendly Booking Section */}
+        <div className="mt-16 max-w-6xl mx-auto">
+          <Card className="border-slate-800 bg-slate-900/40 p-6 sm:p-8">
+            <div className="text-center max-w-3xl mx-auto mb-8">
+              <h2 className="text-xl sm:text-2xl font-extrabold text-white mb-3">
+                {locale === "fr" ? "Réserver votre créneau d'atelier" : "Schedule your Workshop Session"}
+              </h2>
+              <p className="text-slate-400 text-xs sm:text-sm">
+                {locale === "fr"
+                  ? "Choisissez un créneau ci-dessous pour planifier votre atelier ou discuter d'un programme sur-mesure pour vos collaborateurs."
+                  : "Select a time slot below to schedule your workshop or discuss a tailored program for your team."}
+              </p>
+              <div className="h-0.5 w-16 bg-amber-500 mx-auto mt-4 rounded-full" />
+            </div>
+
+            <div className="w-full rounded-xl overflow-hidden border border-slate-800 bg-slate-950 h-[600px]">
+              <iframe
+                src="https://calendly.com/interitservices-brampton/30min?embed_domain=inter-itservices.ca&embed_type=inline&hide_event_type_details=1&background_color=0f172a&text_color=ffffff&primary_color=f59e0b"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                title="Calendly Scheduler"
+                className="w-full h-full min-h-[550px]"
+              ></iframe>
+            </div>
+          </Card>
         </div>
       </SectionContainer>
     </div>

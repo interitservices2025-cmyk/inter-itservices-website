@@ -2,7 +2,6 @@ import React from "react";
 import { getDictionary } from "@/lib/get-dictionary";
 import HeroSection from "@/components/sections/HeroSection";
 import TrustedBy from "@/components/sections/TrustedBy";
-import AISolutionsSection from "@/components/sections/AISolutionsSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import WhyUsSection from "@/components/sections/WhyUsSection";
 import PortfolioSection from "@/components/sections/PortfolioSection";
@@ -27,10 +26,7 @@ export default async function HomePage({ params }: HomePageProps) {
       {/* 2. Trusted By Branding Bar */}
       <TrustedBy dict={dict} />
 
-      {/* 3. AI Solutions Section */}
-      <AISolutionsSection dict={dict} locale={locale} />
-
-      {/* 4. Core Services Section */}
+      {/* 3. Core Services Section */}
       <ServicesSection dict={dict} locale={locale} />
 
       {/* 5. Why Choose Us Section */}

@@ -34,9 +34,9 @@ export default function Header({ locale }: HeaderProps) {
     { href: `/${locale}`, label: locale === "fr" ? "Accueil" : "Home" },
     { href: `/${locale}/about`, label: locale === "fr" ? "À Propos" : "About" },
     { href: `/${locale}/services`, label: locale === "fr" ? "Services" : "Services" },
-    { href: `/${locale}/ai-solutions`, label: locale === "fr" ? "Solutions IA" : "AI Solutions" },
-    { href: `/${locale}/portfolio`, label: locale === "fr" ? "Portfolio" : "Portfolio" },
+    { href: `/${locale}/products`, label: locale === "fr" ? "Produits" : "Products" },
     { href: `/${locale}/training`, label: locale === "fr" ? "Formations" : "Training" },
+    { href: `/${locale}/portfolio`, label: locale === "fr" ? "Portfolio" : "Portfolio" },
     { href: `/${locale}/blog`, label: locale === "fr" ? "Blog" : "Blog" },
     { href: `/${locale}/contact`, label: locale === "fr" ? "Contact" : "Contact" },
   ];

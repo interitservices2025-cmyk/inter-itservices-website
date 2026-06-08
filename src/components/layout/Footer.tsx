@@ -15,9 +15,9 @@ export default async function Footer({ locale }: FooterProps) {
   const navLinks = [
     { href: `/${locale}/about`, label: dict.nav.about },
     { href: `/${locale}/services`, label: dict.nav.services },
-    { href: `/${locale}/ai-solutions`, label: dict.nav.aiSolutions },
-    { href: `/${locale}/portfolio`, label: dict.nav.portfolio },
+    { href: `/${locale}/products`, label: dict.nav.products },
     { href: `/${locale}/training`, label: dict.nav.training },
+    { href: `/${locale}/portfolio`, label: dict.nav.portfolio },
     { href: `/${locale}/blog`, label: dict.nav.blog },
     { href: `/${locale}/contact`, label: dict.nav.contact },
   ];

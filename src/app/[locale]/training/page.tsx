@@ -39,7 +39,7 @@ export default async function TrainingPage({ params }: TrainingPageProps) {
     {
       icon: Users,
       title: locale === "fr" ? "Ateliers en Entreprise" : "Corporate On-Site",
-      desc: locale === "fr" ? "Formations privées sur mesure dispensées directement dans vos locaux à Brampton ou partout au Canada." : "Custom group training workshops hosted on-premise at your office location in Ontario or across Canada.",
+      desc: locale === "fr" ? "Formations privées sur mesure dispensées directement dans vos locaux au Canada (Brampton/Ontario) ou à distance à l'international." : "Custom group training workshops hosted on-premise at your location in Canada (Ontario/Brampton) or delivered remotely worldwide.",
     },
     {
       icon: Monitor,

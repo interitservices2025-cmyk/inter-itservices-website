@@ -38,8 +38,8 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
     },
     {
       icon: Landmark,
-      title: locale === "fr" ? "Proximité Ontarienne" : "Brampton Hub Proximity",
-      desc: locale === "fr" ? "Disponibles en Ontario pour des réunions régulières et des ateliers d'expression de vos besoins techniques." : "Directly available for on-site client syncs, requirements mapping, and local project support.",
+      title: locale === "fr" ? "Présence Locale & Globale" : "Canada & Global Reach",
+      desc: locale === "fr" ? "Disponibles à Brampton (Ontario) pour des ateliers sur site, et à distance pour nos clients internationaux." : "Available for on-site sessions in Ontario and seamless remote collaboration for global accounts.",
     },
     {
       icon: Lightbulb,
