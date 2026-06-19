@@ -28,7 +28,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
   const dict = await getDictionary(locale);
 
   return (
-    <div className="pt-24 pb-16 flex-grow bg-slate-950">
+    <div className="pt-24 pb-16 flex-grow bg-white">
       <ContactSection dict={dict} locale={locale} />
     </div>
   );

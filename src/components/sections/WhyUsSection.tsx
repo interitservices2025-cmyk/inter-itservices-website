@@ -42,11 +42,11 @@ export default function WhyUsSection({ dict }: WhyUsSectionProps) {
     <SectionContainer id="why-choose-us" bgType="dark">
       {/* Title */}
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0B163F] mb-4">
           {dict.whyUs.title}
         </h2>
-        <div className="h-1 w-20 bg-amber-500 mx-auto rounded-full mb-6" />
-        <p className="text-slate-400 text-base sm:text-lg">
+        <div className="h-1 w-20 bg-[#F7931E] mx-auto rounded-full mb-6" />
+        <p className="text-slate-600 text-base sm:text-lg">
           {dict.whyUs.subtitle}
         </p>
       </div>
@@ -66,15 +66,15 @@ export default function WhyUsSection({ dict }: WhyUsSectionProps) {
             >
               <Card
                 hoverEffect={true}
-                className="h-full border-slate-800/80 bg-slate-900/30 p-6 flex flex-col items-start"
+                className="h-full border-slate-200 bg-white p-6 flex flex-col items-start hover:border-[#0B163F]/10 transition-all duration-300"
               >
-                <div className="bg-amber-500/10 text-amber-500 p-2.5 rounded-lg mb-5 border border-amber-500/10">
+                <div className="bg-[#F7931E]/10 text-[#F7931E] p-2.5 rounded-lg mb-5 border border-[#F7931E]/20">
                   <IconComponent className="h-5 w-5" />
                 </div>
-                <h3 className="text-base font-bold text-white mb-3">
+                <h3 className="text-base font-bold text-[#0B163F] mb-3">
                   {reason.title}
                 </h3>
-                <p className="text-slate-400 text-xs leading-relaxed">
+                <p className="text-slate-600 text-xs leading-relaxed">
                   {reason.description}
                 </p>
               </Card>

@@ -28,7 +28,7 @@ export default async function PortfolioPage({ params }: PortfolioPageProps) {
   const dict = await getDictionary(locale);
 
   return (
-    <div className="pt-24 pb-16 flex-grow bg-slate-950">
+    <div className="pt-24 pb-16 flex-grow bg-white">
       <PortfolioSection dict={dict} locale={locale} />
     </div>
   );

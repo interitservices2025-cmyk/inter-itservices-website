@@ -94,7 +94,7 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-slate-950 text-slate-100 font-sans selection:bg-amber-500 selection:text-slate-950">
+      <body className="min-h-full flex flex-col bg-white text-slate-900 font-sans selection:bg-amber-500 selection:text-slate-950">
         <Header locale={locale} />
         <main className="flex-grow flex flex-col">{children}</main>
         <Footer locale={locale} />

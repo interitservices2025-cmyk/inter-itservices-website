@@ -19,7 +19,7 @@ export default function TrustedBy({ dict }: TrustedByProps) {
 
 
   return (
-    <section className="py-12 border-y border-slate-900 bg-slate-950/40 relative z-10">
+    <section className="py-12 border-y border-slate-100 bg-slate-50 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-xs font-semibold uppercase tracking-wider text-slate-500 mb-8">
           {dict.trusted.title}
@@ -34,9 +34,9 @@ export default function TrustedBy({ dict }: TrustedByProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors duration-300"
+                className="flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-colors duration-300"
               >
-                <Icon className="h-5 w-5 text-amber-500/80" />
+                <Icon className="h-5 w-5 text-orange-500" />
                 <span className="text-sm font-semibold tracking-wide">{logo.name}</span>
               </motion.div>
             );

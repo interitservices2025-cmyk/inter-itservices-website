@@ -17,13 +17,13 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
     <section
       id={id}
       className={cn(
-        "py-16 md:py-24 relative overflow-hidden",
+        "py-20 sm:py-28 md:py-32 relative overflow-hidden",
         {
-          "bg-slate-950 text-slate-100": bgType === "dark",
-          "bg-slate-900 text-slate-100": bgType === "light", // A slightly lighter dark for contrast
-          "bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-slate-100":
+          "bg-white text-slate-900": bgType === "dark",
+          "bg-slate-50 text-slate-900": bgType === "light",
+          "bg-gradient-to-b from-white via-slate-50 to-white text-slate-900":
             bgType === "gradient-dark",
-          "bg-transparent": bgType === "transparent",
+          "bg-transparent text-slate-900": bgType === "transparent",
         },
         className
       )}

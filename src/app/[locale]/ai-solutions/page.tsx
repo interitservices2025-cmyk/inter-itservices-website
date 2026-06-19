@@ -49,26 +49,26 @@ export default async function AISolutionsPage({ params }: AISolutionsPageProps) 
   ];
 
   return (
-    <div className="pt-24 pb-16 flex-grow bg-slate-950">
+    <div className="pt-24 pb-16 flex-grow bg-white">
       {/* 1. solutions section */}
       <AISolutionsSection dict={dict} locale={locale} />
 
       {/* 2. Differentiators */}
-      <SectionContainer bgType="transparent" className="border-t border-slate-900">
+      <SectionContainer bgType="transparent" className="border-t border-slate-100">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 text-center mb-12">
             {locale === "fr" ? "Pourquoi Notre Approche IA Est Unique ?" : "Why Choose Our AI Implementation Approach?"}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {keyDifferentiators.map((diff, idx) => {
               const Icon = diff.icon;
               return (
-                <Card key={idx} hoverEffect={true} className="border-slate-800 bg-slate-900/30 p-6 flex flex-col items-start">
-                  <div className="bg-amber-500/10 text-amber-500 p-2.5 rounded-lg mb-4 border border-amber-500/10">
+                <Card key={idx} hoverEffect={true} className="border-slate-200 bg-white p-6 flex flex-col items-start shadow-sm">
+                  <div className="bg-orange-50 text-orange-600 p-2.5 rounded-lg mb-4 border border-orange-100">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <h3 className="text-base font-bold text-white mb-2">{diff.title}</h3>
-                  <p className="text-slate-400 text-xs leading-relaxed">{diff.desc}</p>
+                  <h3 className="text-base font-bold text-slate-900 mb-2">{diff.title}</h3>
+                  <p className="text-slate-600 text-xs leading-relaxed">{diff.desc}</p>
                 </Card>
               );
             })}

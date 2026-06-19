@@ -23,14 +23,14 @@ export default function AISolutionsSection({ dict, locale }: AISolutionsSectionP
   };
 
   return (
-    <SectionContainer id="ai-solutions" bgType="gradient-dark">
+    <SectionContainer id="ai-solutions" bgType="light">
       {/* Title block */}
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-4">
           {dict.aiSolutions.title}
         </h2>
-        <div className="h-1 w-20 bg-amber-500 mx-auto rounded-full mb-6" />
-        <p className="text-slate-400 text-base sm:text-lg">
+        <div className="h-1 w-20 bg-orange-500 mx-auto rounded-full mb-6" />
+        <p className="text-slate-600 text-base sm:text-lg">
           {dict.aiSolutions.subtitle}
         </p>
       </div>
@@ -50,19 +50,19 @@ export default function AISolutionsSection({ dict, locale }: AISolutionsSectionP
             >
               <Card
                 glowColor="secondary"
-                className="h-full flex flex-col justify-between border-slate-800 bg-slate-900/40 p-8"
+                className="h-full flex flex-col justify-between border-slate-200 bg-white p-8 shadow-sm"
               >
                 <div>
                   {/* Icon Header */}
-                  <div className="bg-amber-500/10 text-amber-500 p-3.5 rounded-xl inline-flex mb-6 border border-amber-500/20">
+                  <div className="bg-orange-50 text-orange-600 p-3.5 rounded-xl inline-flex mb-6 border border-orange-100">
                     <IconComponent className="h-6 w-6" />
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-xl font-bold text-white mb-4">
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">
                     {solution.title[locale as "en" | "fr"]}
                   </h3>
-                  <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                  <p className="text-slate-600 text-sm leading-relaxed mb-6">
                     {solution.description[locale as "en" | "fr"]}
                   </p>
 
@@ -70,8 +70,8 @@ export default function AISolutionsSection({ dict, locale }: AISolutionsSectionP
                   <div className="space-y-3 mb-8">
                     {solution.benefits.slice(0, 3).map((benefit, bIndex) => (
                       <div key={bIndex} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="h-4.5 w-4.5 text-amber-500 mt-0.5 shrink-0" />
-                        <span className="text-slate-300 text-xs leading-normal">
+                        <CheckCircle2 className="h-4.5 w-4.5 text-orange-500 mt-0.5 shrink-0" />
+                        <span className="text-slate-600 text-xs leading-normal">
                           {benefit[locale as "en" | "fr"]}
                         </span>
                       </div>
@@ -80,10 +80,10 @@ export default function AISolutionsSection({ dict, locale }: AISolutionsSectionP
                 </div>
 
                 {/* Learn More link */}
-                <div className="pt-4 border-t border-slate-900">
+                <div className="pt-4 border-t border-slate-100">
                   <Link
                     href={`/${locale}/ai-solutions/${solution.slug}`}
-                    className="inline-flex items-center gap-2 text-xs font-semibold text-amber-500 hover:text-amber-400 transition-colors group cursor-pointer"
+                    className="inline-flex items-center gap-2 text-xs font-semibold text-orange-500 hover:text-orange-600 transition-colors group cursor-pointer"
                   >
                     <span>{dict.common.cta.learnMore}</span>
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

@@ -28,15 +28,15 @@ export default async function BlogPage({ params }: BlogPageProps) {
   const { locale } = await params;
 
   return (
-    <div className="pt-24 pb-16 flex-grow bg-slate-950">
+    <div className="pt-24 pb-16 flex-grow bg-white">
       <SectionContainer bgType="transparent">
         {/* Intro */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-6">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-6">
             {locale === "fr" ? "Notre Blog Tech" : "Our Technology Blog"}
           </h1>
-          <div className="h-1 w-20 bg-amber-500 mx-auto rounded-full mb-6" />
-          <p className="text-slate-400 text-base sm:text-lg">
+          <div className="h-1 w-20 bg-orange-500 mx-auto rounded-full mb-6" />
+          <p className="text-slate-600 text-base sm:text-lg">
             {locale === "fr"
               ? "Découvrez nos dernières analyses, actualités et guides techniques sur l'IA, le développement d'applications et les tendances de l'automatisation."
               : "Discover our latest insights, news, and technical guides regarding AI, app development, and automation trends."}

@@ -17,17 +17,17 @@ export default function TestimonialsSection({ dict, locale }: TestimonialsSectio
     <SectionContainer id="testimonials" bgType="light">
       {/* Title */}
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0B163F] mb-4">
           {dict.testimonials.title}
         </h2>
-        <div className="h-1 w-20 bg-amber-500 mx-auto rounded-full mb-6" />
-        <p className="text-slate-400 text-base sm:text-lg">
+        <div className="h-1 w-20 bg-[#F7931E] mx-auto rounded-full mb-6" />
+        <p className="text-slate-600 text-base sm:text-lg">
           {dict.testimonials.subtitle}
         </p>
       </div>
 
       {/* Google Business Review Badge (Brampton, Ontario) */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12 max-w-sm sm:max-w-md mx-auto bg-slate-900/30 border border-slate-900 rounded-xl px-4 py-2.5 shadow-sm">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12 max-w-sm sm:max-w-md mx-auto bg-white border border-slate-200 rounded-xl px-4 py-2.5 shadow-sm">
         <div className="flex items-center gap-1.5">
           <svg className="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
             <path
@@ -47,19 +47,17 @@ export default function TestimonialsSection({ dict, locale }: TestimonialsSectio
               d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
             />
           </svg>
-          <span className="text-[10px] font-bold text-white tracking-widest uppercase">Google</span>
+          <span className="text-[10px] font-bold text-slate-800 tracking-widest uppercase">Google</span>
         </div>
-        <div className="h-3 w-px bg-slate-800 hidden sm:block" />
+        <div className="h-3 w-px bg-slate-200 hidden sm:block" />
         <div className="flex items-center gap-1.5">
           <div className="flex text-amber-500">
             {"★★★★★".split("").map((star, idx) => (
               <span key={idx} className="text-xs">★</span>
             ))}
           </div>
-          <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
-            {locale === "fr" 
-              ? "4.9/5 Brampton, ON" 
-              : "4.9/5 Brampton, ON"}
+          <span className="text-[10px] text-slate-600 font-bold uppercase tracking-wider">
+            4.9/5 Brampton, ON
           </span>
         </div>
       </div>
@@ -76,24 +74,24 @@ export default function TestimonialsSection({ dict, locale }: TestimonialsSectio
           >
             <Card
               hoverEffect={true}
-              className="h-full border-slate-800 bg-slate-900/50 p-8 flex flex-col justify-between relative overflow-hidden"
+              className="h-full border-slate-200 bg-white p-8 flex flex-col justify-between relative overflow-hidden hover:border-[#0B163F]/10 transition-all duration-300 hover:scale-[1.01] hover:shadow-md"
             >
               {/* Quote mark ornament */}
-              <Quote className="absolute right-6 top-6 h-12 w-12 text-slate-800/40 pointer-events-none" />
+              <Quote className="absolute right-6 top-6 h-12 w-12 text-slate-200/50 pointer-events-none" />
 
               <div>
-                <p className="text-slate-300 italic text-sm leading-relaxed mb-6 relative z-10">
+                <p className="text-slate-700 italic text-sm leading-relaxed mb-6 relative z-10">
                   "{testimonial.text[locale as "en" | "fr"]}"
                 </p>
               </div>
 
-              <div className="flex items-center gap-3 pt-4 border-t border-slate-800">
+              <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
                 {/* Initial Avatar */}
-                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center text-slate-950 font-bold text-sm">
+                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-[#F7931E] to-orange-500 flex items-center justify-center text-white font-bold text-sm">
                   {testimonial.name[0]}
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white leading-none">
+                  <h4 className="text-sm font-bold text-[#0B163F] leading-none">
                     {testimonial.name}
                   </h4>
                   <p className="text-[10px] text-slate-500 mt-1.5 font-semibold">

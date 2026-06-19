@@ -16,13 +16,13 @@ const Badge: React.FC<BadgeProps> = ({
       className={cn(
         "inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium border transition-all duration-300",
         {
-          "bg-slate-900/80 text-slate-300 border-slate-800 hover:border-slate-700":
+          "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200":
             variant === "primary",
-          "bg-amber-500/10 text-amber-500 border-amber-500/20 hover:bg-amber-500/20":
+          "bg-orange-50 text-[#F7931E] border-orange-100 hover:bg-orange-100/80":
             variant === "secondary",
-          "bg-emerald-500/10 text-emerald-400 border-emerald-500/20":
+          "bg-emerald-50 text-emerald-700 border-emerald-100":
             variant === "success",
-          "bg-sky-500/10 text-sky-400 border-sky-500/20":
+          "bg-sky-50 text-sky-700 border-sky-100":
             variant === "info",
         },
         className

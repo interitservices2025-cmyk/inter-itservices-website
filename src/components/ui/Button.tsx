@@ -14,20 +14,20 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         disabled={isLoading || props.disabled}
         className={cn(
-          "inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-2 focus:ring-amber-500/50 cursor-pointer",
+          "inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-2 focus:ring-[#F7931E]/50 cursor-pointer",
           // Variants
           {
-            // Primary: Brand Blue background with white text and gradient hover
-            "bg-slate-900 border border-slate-800 text-slate-100 hover:bg-slate-800/80 hover:border-amber-500/30 hover:shadow-lg hover:shadow-amber-500/5":
+            // Primary: Brand Blue background with white text
+            "bg-[#0B163F] text-white hover:bg-[#0B163F]/95 hover:shadow-lg hover:shadow-[#0B163F]/15":
               variant === "primary",
-            // Secondary: Brand Orange background with black text
-            "bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-semibold hover:from-amber-400 hover:to-amber-500 hover:shadow-lg hover:shadow-amber-500/20":
+            // Secondary: Brand Orange background with white text
+            "bg-[#F7931E] text-white font-semibold hover:bg-[#F7931E]/95 hover:shadow-lg hover:shadow-[#F7931E]/20":
               variant === "secondary",
-            // Outline: Transparent background with white border
-            "border border-slate-700 bg-transparent text-slate-300 hover:bg-slate-800/50 hover:text-slate-100 hover:border-slate-500":
+            // Outline: Transparent background with slate border and slate-700 text
+            "border border-slate-300 bg-transparent text-slate-700 hover:bg-slate-50 hover:text-slate-900 hover:border-slate-400":
               variant === "outline",
             // Ghost: Text only with light hover
-            "bg-transparent text-slate-300 hover:bg-slate-800/40 hover:text-slate-100":
+            "bg-transparent text-slate-600 hover:bg-slate-100 hover:text-slate-900":
               variant === "ghost",
           },
           // Sizes

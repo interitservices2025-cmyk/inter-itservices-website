@@ -1,511 +1,127 @@
 import { Course } from "@/types";
 
 export const courses: Course[] = [
-  // CATEGORY 1 – AI & COMMUNICATION
   {
-    id: "ai-applied-strategy",
-    slug: "ai-applied-strategy",
+    id: "formation-ia",
+    slug: "formation-ia",
     title: {
-      en: "AI Applied to Business Strategy",
-      fr: "L'IA Appliquée à la Stratégie d'Entreprise",
+      en: "AI & Automation for Business Productivity",
+      fr: "IA & Automatisation pour la Productivité",
     },
     description: {
-      en: "A strategic workshop helping executives identify high-ROI AI use cases, map technological capabilities, and build adoption roadmaps.",
-      fr: "Un atelier stratégique pour aider les cadres à identifier les cas d'usage IA à fort ROI, cartographier les capacités et planifier l'adoption.",
+      en: "Learn to integrate generative AI tools like ChatGPT and Midjourney, and build automated workflows to save hours on repetitive operations.",
+      fr: "Apprenez à intégrer l'IA générative comme ChatGPT et Midjourney, et à concevoir des automatisations pour libérer du temps au quotidien.",
     },
     duration: {
       en: "2 Days (12 Hours)",
       fr: "2 Jours (12 Heures)",
     },
     level: {
-      en: "Executive",
-      fr: "Exécutif",
+      en: "Beginner to Intermediate",
+      fr: "Débutant à Intermédiaire",
     },
+    price: "$799 CAD",
     topics: [
-      { en: "AI Market Trends & Business Models", fr: "Tendances du marché de l'IA & modèles d'affaires" },
-      { en: "Evaluating ROI of AI Integrations", fr: "Évaluation du ROI des intégrations d'IA" },
-      { en: "Sovereign AI vs Third-Party APIs", fr: "IA souveraine vs APIs tierces" },
+      { en: "Prompt engineering foundations (ChatGPT, Claude)", fr: "Bases de l'ingénierie des requêtes (ChatGPT, Claude)" },
+      { en: "Generative images & commercial visual assets (Midjourney)", fr: "Création de visuels et supports publicitaires (Midjourney)" },
+      { en: "Task automation & workflow integration (Zapier, Make)", fr: "Automatisation de tâches et connexion d'outils (Zapier, Make)" },
+      { en: "Establishing an enterprise AI adoption roadmap", fr: "Mise en place d'une feuille de route d'adoption de l'IA" },
     ],
-    price: "$1,499 CAD",
     targetAudience: {
-      en: "CEOs, Directors, Business owners, and IT decision-makers.",
-      fr: "PDG, directeurs, propriétaires d'entreprises et décideurs IT.",
+      en: "SME owners, managers, administrators, and professionals.",
+      fr: "Dirigeants de PME, gestionnaires, adjoints administratifs et professionnels.",
     },
     skillsAcquired: [
-      { en: "Assess AI project feasibility", fr: "Évaluer la faisabilité d'un projet IA" },
-      { en: "Design a strategic AI roadmap", fr: "Concevoir une feuille de route IA stratégique" },
+      { en: "Automate administrative tasks", fr: "Automatiser des flux administratifs" },
+      { en: "Design advanced custom prompts", fr: "Concevoir des invites complexes et structurées" },
+      { en: "Configure low-code system integrations", fr: "Mettre en place des intégrations sans code" },
     ],
     trainingCategory: "ai-communication",
   },
   {
-    id: "creative-prompt-engineering",
-    slug: "creative-prompt-engineering",
+    id: "formation-marketing",
+    slug: "formation-marketing",
     title: {
-      en: "Creative Prompt Engineering",
-      fr: "Prompt Engineering Créatif",
+      en: "Digital Marketing & Local Client Acquisition",
+      fr: "Marketing Numérique & Acquisition de Clientèle",
     },
     description: {
-      en: "Learn to communicate effectively with large language and diffusion models to generate highly relevant texts, codes, and digital assets.",
-      fr: "Apprenez à communiquer avec les modèles de langage et de diffusion pour générer des textes, codes et visuels précis.",
+      en: "Learn to attract local clients, optimize your search engine visibility (SEO), and run high-performing advertising campaigns.",
+      fr: "Attirez de nouveaux clients, optimisez votre visibilité locale (Google Business & SEO) et lancez des campagnes publicitaires rentables.",
     },
     duration: {
-      en: "1 Day (6 Hours)",
-      fr: "1 Jour (6 Heures)",
+      en: "2 Days (12 Hours)",
+      fr: "2 Jours (12 Heures)",
     },
     level: {
       en: "Beginner to Intermediate",
       fr: "Débutant à Intermédiaire",
     },
-    topics: [
-      { en: "Foundations of Prompting (Few-shot, Chain-of-thought)", fr: "Bases du Prompting (Few-shot, Chain-of-thought)" },
-      { en: "Advanced Text Generation Techniques", fr: "Techniques avancées de génération de texte" },
-      { en: "Image Prompting Architectures", fr: "Architectures de prompt pour les images" },
-    ],
-    price: "$599 CAD",
-    targetAudience: {
-      en: "Content creators, marketers, copywriters, and developers.",
-      fr: "Créateurs de contenu, marketeurs, rédacteurs et développeurs.",
-    },
-    skillsAcquired: [
-      { en: "Structure complex prompts for LLMs", fr: "Structurer des prompts complexes pour LLMs" },
-      { en: "Automate task instructions with AI", fr: "Automatiser des instructions de tâches avec l'IA" },
-    ],
-    trainingCategory: "ai-communication",
-  },
-  {
-    id: "chatgpt-training",
-    slug: "chatgpt-training",
-    title: {
-      en: "ChatGPT Training for Enterprise Productivity",
-      fr: "Formation ChatGPT pour la Productivité",
-    },
-    description: {
-      en: "Maximize team performance by integrating ChatGPT into daily business operations, report drafting, and email automation.",
-      fr: "Maximisez la performance de vos équipes en intégrant ChatGPT dans la rédaction de rapports, d'e-mails et l'analyse de données.",
-    },
-    duration: {
-      en: "1 Day (6 Hours)",
-      fr: "1 Jour (6 Heures)",
-    },
-    level: {
-      en: "Beginner",
-      fr: "Débutant",
-    },
-    topics: [
-      { en: "ChatGPT Interface & Custom Instructions", fr: "Interface ChatGPT & instructions personnalisées" },
-      { en: "Drafting Emails & Editing Business Reports", fr: "Rédaction d'e-mails & correction de rapports" },
-      { en: "Data Analysis and File Upload Workflows", fr: "Analyses de données & flux de chargement de fichiers" },
-    ],
-    price: "$499 CAD",
-    targetAudience: {
-      en: "Administrative staff, sales teams, and corporate managers.",
-      fr: "Personnel administratif, équipes commerciales et managers.",
-    },
-    skillsAcquired: [
-      { en: "Save hours weekly on drafting tasks", fr: "Gagner des heures chaque semaine sur les tâches de rédaction" },
-      { en: "Analyze CSV datasets instantly", fr: "Analyser des jeux de données CSV instantanément" },
-    ],
-    trainingCategory: "ai-communication",
-  },
-  {
-    id: "midjourney-training",
-    slug: "midjourney-training",
-    title: {
-      en: "Midjourney Training: AI Asset Generation",
-      fr: "Formation Midjourney : Actifs Visuels par l'IA",
-    },
-    description: {
-      en: "Master Midjourney and visual AI generators to create premium commercial layouts, marketing imagery, and graphic assets.",
-      fr: "Maîtrisez Midjourney et les générateurs d'images pour concevoir des illustrations commerciales, maquettes et ressources graphiques.",
-    },
-    duration: {
-      en: "1 Day (6 Hours)",
-      fr: "1 Jour (6 Heures)",
-    },
-    level: {
-      en: "Intermediate",
-      fr: "Intermédiaire",
-    },
-    topics: [
-      { en: "Midjourney Parameters (Aspect ratios, Stylize, Niji)", fr: "Paramètres Midjourney (Aspect ratios, Stylize, Niji)" },
-      { en: "Image-to-Image & Character Consistency", fr: "Image-to-Image & cohérence des personnages" },
-      { en: "Upscaling and Vectorizing Visual Assets", fr: "Agrandissement & vectorisation d'actifs visuels" },
-    ],
     price: "$699 CAD",
-    targetAudience: {
-      en: "Graphic designers, illustrators, and creative directors.",
-      fr: "Designers graphiques, illustrateurs et directeurs artistiques.",
-    },
-    skillsAcquired: [
-      { en: "Generate production-quality visual assets", fr: "Générer des visuels prêts pour la production" },
-      { en: "Speed up brand conceptualization workflows", fr: "Accélérer la conceptualisation de marque" },
-    ],
-    trainingCategory: "ai-communication",
-  },
-  {
-    id: "predictive-analytics",
-    slug: "predictive-analytics-training",
-    title: {
-      en: "Predictive Analytics & Machine Learning Basics",
-      fr: "Analyses Prédictives & Initiation au ML",
-    },
-    description: {
-      en: "A code-light bootcamp introducing python, model training, demand forecasting, and data-driven prediction.",
-      fr: "Un bootcamp d'initiation au machine learning pour comprendre la prévision de la demande et les prédictions par les données.",
-    },
-    duration: {
-      en: "3 Days (18 Hours)",
-      fr: "3 Jours (18 Heures)",
-    },
-    level: {
-      en: "Intermediate",
-      fr: "Intermédiaire",
-    },
     topics: [
-      { en: "Python Basics & Jupyter Notebooks", fr: "Bases de Python & Jupyter Notebooks" },
-      { en: "Regression, Classification, and ML Algorithms", fr: "Régression, classification et algorithmes ML" },
-      { en: "Evaluating Prediction Accuracy", fr: "Évaluation de la précision des prédictions" },
+      { en: "Search Engine Optimization (SEO) & Google Business", fr: "Référencement naturel (SEO) et visibilité locale Google" },
+      { en: "Social media strategies (Facebook, Instagram, LinkedIn)", fr: "Animation de réseaux sociaux et calendriers éditoriaux" },
+      { en: "Digital advertising campaign setup (Meta & Google Ads)", fr: "Lancement de campagnes publicitaires (Meta et Google Ads)" },
+      { en: "Performance tracking and newsletter automation", fr: "Mesure d'audience (GA4) et marketing par courriel" },
     ],
-    price: "$1,899 CAD",
     targetAudience: {
-      en: "Data analysts, software developers, and business strategists.",
-      fr: "Analystes de données, développeurs logiciels et stratèges d'affaires.",
+      en: "Entrepreneurs, business owners, and marketing managers.",
+      fr: "Entrepreneurs, propriétaires de PME et responsables marketing.",
     },
     skillsAcquired: [
-      { en: "Train simple predictive ML models", fr: "Entraîner des modèles prédictifs ML simples" },
-      { en: "Interpret analytics results for business", fr: "Interpréter les résultats d'analyses pour l'entreprise" },
+      { en: "Build target customer acquisition pipelines", fr: "Bâtir des tunnels d'acquisition client ciblés" },
+      { en: "Optimize ranking in Google Search maps", fr: "Optimiser le classement local sur Google Maps" },
+      { en: "Measure return on advertising spend", fr: "Analyser et mesurer le retour sur investissement publicitaire" },
     ],
-    trainingCategory: "ai-communication",
+    trainingCategory: "digital-marketing",
   },
   {
-    id: "ai-ethics-governance",
-    slug: "ai-ethics-governance",
+    id: "formation-cybersecurite",
+    slug: "formation-cybersecurite",
     title: {
-      en: "AI Ethics, Bias & Governance",
-      fr: "Éthique, Biais & Gouvernance de l'IA",
+      en: "Cybersecurity & Data Protection for SMEs",
+      fr: "Cybersécurité & Protection des Données",
     },
     description: {
-      en: "Address the legal, privacy, and ethical compliance requirements for deploying AI models in Canadian organizations.",
-      fr: "Comprenez les exigences légales, éthiques et de confidentialité pour déployer l'IA dans les organisations canadiennes.",
+      en: "Protect your organization against cyber threats, secure internal networks and client databases, and implement security policies.",
+      fr: "Protégez votre entreprise contre les cybermenaces, sécurisez vos réseaux et terminaux, et appliquez les politiques de conformité.",
     },
     duration: {
-      en: "1 Day (6 Hours)",
-      fr: "1 Jour (6 Heures)",
+      en: "2 Days (12 Hours)",
+      fr: "2 Jours (12 Heures)",
     },
     level: {
       en: "Beginner to Advanced",
       fr: "Débutant à Avancé",
     },
+    price: "$899 CAD",
     topics: [
-      { en: "Data Privacy & Intellectual Property in AI", fr: "Confidentialité des données & propriété intellectuelle en IA" },
-      { en: "Detecting & Mitigating Algorithm Bias", fr: "Détecter et atténuer les biais algorithmiques" },
-      { en: "Building an Enterprise AI Policy", fr: "Construire une politique d'utilisation de l'IA en entreprise" },
+      { en: "Anatomy of modern threats (Phishing, Ransomware)", fr: "Anatomie des menaces modernes (Hameçonnage, Ransomware)" },
+      { en: "Securing corporate networks, devices, and cloud databases", fr: "Sécurisation des accès cloud, réseaux et appareils mobiles" },
+      { en: "Drafting an incident response and business continuity plan", fr: "Plan de continuité d'activité et gestion de crise" },
+      { en: "Regulatory compliance and client data privacy standards", fr: "Conformité réglementaire et lois sur la vie privée (LPRPDE)" },
     ],
-    price: "$699 CAD",
     targetAudience: {
-      en: "Compliance officers, HR managers, legal advisors, and executives.",
-      fr: "Responsables conformité, managers RH, conseillers juridiques et dirigeants.",
+      en: "IT staff, business managers, and operations leads.",
+      fr: "Responsables techniques, chefs d'entreprise et managers.",
     },
     skillsAcquired: [
-      { en: "Draft an enterprise AI code of conduct", fr: "Rédiger une charte d'utilisation de l'IA en entreprise" },
-      { en: "Evaluate risk metrics of third-party tools", fr: "Évaluer les risques des outils tiers" },
+      { en: "Conduct basic internal security audits", fr: "Réaliser un diagnostic de sécurité interne" },
+      { en: "Establish incident reporting protocols", fr: "Mettre en place des protocoles de sécurité préventifs" },
+      { en: "Secure employee workstation environments", fr: "Sécuriser l'environnement de travail des collaborateurs" },
     ],
     trainingCategory: "ai-communication",
   },
-
-  // CATEGORY 2 – DIGITAL MARKETING
   {
-    id: "social-media-strategy",
-    slug: "social-media-strategy",
+    id: "formation-productivite",
+    slug: "formation-productivite",
     title: {
-      en: "Social Media Strategy & Local Engagement",
-      fr: "Stratégie de Réseaux Sociaux & Engagement Local",
+      en: "Digital Productivity & Collaborative Workspace",
+      fr: "Productivité Numérique & Outils Collaboratifs",
     },
     description: {
-      en: "Build a highly engaged local community on Meta, LinkedIn, and Instagram to accelerate small business customer acquisition.",
-      fr: "Bâtissez une communauté engagée sur Meta, LinkedIn et Instagram pour accélérer l'acquisition clients locale.",
-    },
-    duration: {
-      en: "2 Days (12 Hours)",
-      fr: "2 Jours (12 Heures)",
-    },
-    level: {
-      en: "Beginner to Intermediate",
-      fr: "Débutant à Intermédiaire",
-    },
-    topics: [
-      { en: "Content Calendar & Post Planning", fr: "Calendrier de contenu & planification de publications" },
-      { en: "Local Community Management & Organic Growth", fr: "Gestion de communauté locale & croissance organique" },
-      { en: "Analyzing Social Metrics", fr: "Analyse des métriques sociales" },
-    ],
-    price: "$899 CAD",
-    targetAudience: {
-      en: "Marketing coordinators, small business owners, and startup founders.",
-      fr: "Coordinateurs marketing, propriétaires de PME et fondateurs de startups.",
-    },
-    skillsAcquired: [
-      { en: "Create a 3-month content calendar", fr: "Créer un calendrier éditorial de 3 mois" },
-      { en: "Execute local engagement campaigns", fr: "Mener des campagnes d'engagement local" },
-    ],
-    trainingCategory: "digital-marketing",
-  },
-  {
-    id: "seo-content-marketing",
-    slug: "seo-content-marketing",
-    title: {
-      en: "SEO & Strategic Content Marketing",
-      fr: "SEO & Marketing de Contenu Stratégique",
-    },
-    description: {
-      en: "Master keyword targeting, on-page optimization, and content structuring to rank highly in Canada search engines.",
-      fr: "Maîtrisez le ciblage de mots-clés, l'optimisation on-page et le contenu pour être visible dans Google Canada.",
-    },
-    duration: {
-      en: "2 Days (12 Hours)",
-      fr: "2 Jours (12 Heures)",
-    },
-    level: {
-      en: "Intermediate",
-      fr: "Intermédiaire",
-    },
-    topics: [
-      { en: "Keyword Research & User Search Intent", fr: "Recherche de mots-clés & intention de recherche" },
-      { en: "On-Page SEO Optimization Techniques", fr: "Techniques d'optimisation SEO On-Page" },
-      { en: "Content Strategy & Copywriting", fr: "Stratégie de contenu & rédaction web" },
-    ],
-    price: "$999 CAD",
-    targetAudience: {
-      en: "Copywriters, digital marketers, and web developers.",
-      fr: "Rédacteurs, marketeurs digitaux et développeurs web.",
-    },
-    skillsAcquired: [
-      { en: "Optimize pages for search engine ranking", fr: "Optimiser les pages pour le référencement naturel" },
-      { en: "Perform complete SEO technical audits", fr: "Réaliser un audit technique SEO complet" },
-    ],
-    trainingCategory: "digital-marketing",
-  },
-  {
-    id: "google-analytics-4",
-    slug: "google-analytics-4",
-    title: {
-      en: "Google Analytics 4 & Performance Tracking",
-      fr: "Google Analytics 4 & Suivi des Performances",
-    },
-    description: {
-      en: "Learn to configure custom tracking, analyze user behavior, and monitor online store conversion rates with GA4.",
-      fr: "Apprenez à configurer des suivis personnalisés, analyser le comportement utilisateur et mesurer les conversions avec GA4.",
-    },
-    duration: {
-      en: "1 Day (6 Hours)",
-      fr: "1 Jour (6 Heures)",
-    },
-    level: {
-      en: "Intermediate",
-      fr: "Intermédiaire",
-    },
-    topics: [
-      { en: "GA4 Installation & Event Setup", fr: "Installation de GA4 & configuration d'événements" },
-      { en: "Funnel Analysis & E-commerce Tracking", fr: "Analyse d'entonnoirs & suivi e-commerce" },
-      { en: "Building Custom Reports & Dashboards", fr: "Création de rapports & tableaux de bord personnalisés" },
-    ],
-    price: "$599 CAD",
-    targetAudience: {
-      en: "Business analysts, marketing directors, and web developers.",
-      fr: "Analystes d'affaires, directeurs marketing et développeurs web.",
-    },
-    skillsAcquired: [
-      { en: "Analyze website conversion drop-off", fr: "Analyser les pertes de conversion sur un site" },
-      { en: "Implement complete event tracking systems", fr: "Implémenter un suivi d'événements complet" },
-    ],
-    trainingCategory: "digital-marketing",
-  },
-  {
-    id: "email-marketing-automation",
-    slug: "email-marketing-automation",
-    title: {
-      en: "Email Marketing & Marketing Automation",
-      fr: "Email Marketing & Automatisation Marketing",
-    },
-    description: {
-      en: "Design automated customer nurturing campaigns, manage corporate newsletter list growth, and drive repeat sales.",
-      fr: "Concevez des campagnes d'automatisation marketing par e-mail, gérez des listes d'abonnés et générez des ventes récurrentes.",
-    },
-    duration: {
-      en: "1 Day (6 Hours)",
-      fr: "1 Jour (6 Heures)",
-    },
-    level: {
-      en: "Beginner to Intermediate",
-      fr: "Débutant à Intermédiaire",
-    },
-    topics: [
-      { en: "Lead Magnet Creation & Opt-in Design", fr: "Création de Lead Magnets & formulaires d'inscription" },
-      { en: "Nurturing Automations & Cart Abandonment flows", fr: "Automatisation de séquences & relances de paniers" },
-      { en: "Deliverability and Email Design Best Practices", fr: "Délivrabilité et bonnes pratiques de design d'emails" },
-    ],
-    price: "$499 CAD",
-    targetAudience: {
-      en: "E-commerce managers, marketing staff, and service providers.",
-      fr: "Responsables e-commerce, chargés marketing et prestataires de services.",
-    },
-    skillsAcquired: [
-      { en: "Set up automated sales pipelines by email", fr: "Configurer des tunnels de vente par e-mail" },
-      { en: "Maintain clean high-deliverability lists", fr: "Maintenir des listes d'e-mails à haute délivrabilité" },
-    ],
-    trainingCategory: "digital-marketing",
-  },
-  {
-    id: "digital-advertising",
-    slug: "digital-advertising",
-    title: {
-      en: "Digital Advertising (Meta & Google Ads)",
-      fr: "Publicité Numérique (Meta & Google Ads)",
-    },
-    description: {
-      en: "A practical bootcamp to master pay-per-click (PPC) campaigns, audience targeting, and budgeting on Facebook, Instagram, and Google.",
-      fr: "Un bootcamp pratique pour maîtriser les campagnes PPC, le ciblage d'audience et l'optimisation des budgets Meta & Google Ads.",
-    },
-    duration: {
-      en: "2 Days (12 Hours)",
-      fr: "2 Jours (12 Heures)",
-    },
-    level: {
-      en: "Intermediate",
-      fr: "Intermédiaire",
-    },
-    topics: [
-      { en: "Google Search Ads & Keyword Match Types", fr: "Annonces Google Search & types de correspondance" },
-      { en: "Meta Ads Manager & Visual Asset Testing", fr: "Meta Ads Manager & tests de visuels publicitaires" },
-      { en: "Budget Allocation & ROI Optimization", fr: "Optimisation de l'allocation budgétaire & ROI" },
-    ],
-    price: "$999 CAD",
-    targetAudience: {
-      en: "Startup founders, media buyers, and marketing executives.",
-      fr: "Fondateurs de startups, acheteurs média et responsables marketing.",
-    },
-    skillsAcquired: [
-      { en: "Build and deploy ad campaigns from scratch", fr: "Créer et lancer des campagnes publicitaires de A à Z" },
-      { en: "Analyze and reduce customer acquisition costs (CAC)", fr: "Analyser et réduire le coût d'acquisition client (CAC)" },
-    ],
-    trainingCategory: "digital-marketing",
-  },
-
-  // CATEGORY 3 – STORYTELLING & CREATION
-  {
-    id: "brand-storytelling",
-    slug: "brand-storytelling",
-    title: {
-      en: "Brand Storytelling & Copywriting",
-      fr: "Brand Storytelling & Rédaction Web",
-    },
-    description: {
-      en: "Craft a compelling corporate narrative and write persuasive copy that builds strong brand loyalty.",
-      fr: "Façonnez une histoire de marque convaincante et rédigez des textes persuasifs pour fidéliser vos clients.",
-    },
-    duration: {
-      en: "1 Day (6 Hours)",
-      fr: "1 Jour (6 Heures)",
-    },
-    level: {
-      en: "Beginner to Intermediate",
-      fr: "Débutant à Intermédiaire",
-    },
-    topics: [
-      { en: "Developing a Brand Narrative Archetype", fr: "Développer l'archétype narratif de la marque" },
-      { en: "Copywriting Formulas (AIDA, PAS)", fr: "Formules de rédaction publicitaire (AIDA, PAS)" },
-      { en: "Writing Landing Page Copy that Converts", fr: "Rédiger des textes de page de destination convertissants" },
-    ],
-    price: "$599 CAD",
-    targetAudience: {
-      en: "Brand managers, founders, copywriters, and content directors.",
-      fr: "Responsables de marque, fondateurs, rédacteurs et directeurs de contenu.",
-    },
-    skillsAcquired: [
-      { en: "Write highly persuasive marketing copies", fr: "Rédiger des textes marketing hautement persuasifs" },
-      { en: "Establish a unique corporate voice tone", fr: "Établir une charte éditoriale unique pour son entreprise" },
-    ],
-    trainingCategory: "storytelling-creation",
-  },
-  {
-    id: "ai-assisted-web-writing",
-    slug: "ai-assisted-web-writing",
-    title: {
-      en: "AI-Assisted Web Writing",
-      fr: "Rédaction Web Assistée par l'IA",
-    },
-    description: {
-      en: "Learn to use LLMs to accelerate blog post writing, SEO article research, and newsletter draft editing safely.",
-      fr: "Apprenez à utiliser les modèles d'IA pour accélérer la rédaction d'articles SEO, de blogs et de newsletters.",
-    },
-    duration: {
-      en: "1 Day (6 Hours)",
-      fr: "1 Jour (6 Heures)",
-    },
-    level: {
-      en: "Intermediate",
-      fr: "Intermédiaire",
-    },
-    topics: [
-      { en: "Structuring Articles with AI Outlines", fr: "Structurer des articles avec des plans d'IA" },
-      { en: "Maintaining Human Voice Tone & SEO Integration", fr: "Conserver le ton humain & intégrer le SEO" },
-      { en: "Compliance and Plagiarism Prevention Workflows", fr: "Conformité et méthodes anti-plagiat" },
-    ],
-    price: "$499 CAD",
-    targetAudience: {
-      en: "Journalists, bloggers, copywriters, and communications staff.",
-      fr: "Journalistes, blogueurs, rédacteurs et chargés de communication.",
-    },
-    skillsAcquired: [
-      { en: "Write articles up to 3x faster using LLMs", fr: "Rédiger des articles jusqu'à 3x plus vite avec l'aide des LLMs" },
-      { en: "Structure copy for perfect SEO visibility", fr: "Structurer ses textes pour une visibilité SEO parfaite" },
-    ],
-    trainingCategory: "storytelling-creation",
-  },
-  {
-    id: "design-thinking",
-    slug: "design-thinking",
-    title: {
-      en: "Design Thinking & UX Methods",
-      fr: "Design Thinking & Méthodes UX",
-    },
-    description: {
-      en: "A structured process to discover customer challenges, generate innovative ideas, and prototype client-focused solutions.",
-      fr: "Un atelier pratique pour comprendre les défis clients, générer des idées créatives et prototyper des solutions.",
-    },
-    duration: {
-      en: "2 Days (12 Hours)",
-      fr: "2 Jours (12 Heures)",
-    },
-    level: {
-      en: "Beginner to Intermediate",
-      fr: "Débutant à Intermédiaire",
-    },
-    topics: [
-      { en: "Empathy Mapping & User Interviews", fr: "Cartes d'empathie & interviews utilisateurs" },
-      { en: "Ideation Sessions & Solution Selection", fr: "Ateliers d'idéation & sélection de solutions" },
-      { en: "Low-Fidelity Prototyping and Fast Testing", fr: "Prototypage basse fidélité & tests rapides" },
-    ],
-    price: "$899 CAD",
-    targetAudience: {
-      en: "Product managers, designers, founders, and team leaders.",
-      fr: "Chefs de produit, designers, fondateurs et chefs d'équipe.",
-    },
-    skillsAcquired: [
-      { en: "Lead a design thinking workshop", fr: "Animer un atelier de Design Thinking" },
-      { en: "Test and pivot software ideas cost-effectively", fr: "Tester et réorienter des idées logicielles à moindre coût" },
-    ],
-    trainingCategory: "storytelling-creation",
-  },
-  {
-    id: "mobile-video-creation",
-    slug: "mobile-video-creation",
-    title: {
-      en: "Mobile Video Creation for Socials",
-      fr: "Création de Vidéo Mobile pour les Réseaux",
-    },
-    description: {
-      en: "Shoot and edit high-quality professional corporate video assets using only your smartphone and modern mobile apps.",
-      fr: "Filmez et montez des vidéos professionnelles percutantes en utilisant uniquement votre smartphone.",
+      en: "Optimize internal collaboration, structure project tracking tools, and streamline daily customer follow-up databases.",
+      fr: "Optimisez la collaboration interne de vos équipes, organisez la gestion de projet et centralisez le suivi client.",
     },
     duration: {
       en: "1 Day (6 Hours)",
@@ -515,54 +131,21 @@ export const courses: Course[] = [
       en: "Beginner",
       fr: "Débutant",
     },
-    topics: [
-      { en: "Mobile Camera Setup, Lighting & Mic Placement", fr: "Réglages caméra mobile, éclairage & microphone" },
-      { en: "Filming Techniques & Directing Corporate Testimonials", fr: "Techniques de cadrage & réalisation de témoignages" },
-      { en: "Editing on Mobile (CapCut, Premiere Rush)", fr: "Montage vidéo sur mobile (CapCut, Premiere Rush)" },
-    ],
     price: "$599 CAD",
-    targetAudience: {
-      en: "Content creators, communication managers, and social managers.",
-      fr: "Créateurs de contenu, chargés de communication et social managers.",
-    },
-    skillsAcquired: [
-      { en: "Shoot and export professional social videos", fr: "Filmer et exporter des vidéos réseaux sociaux de qualité pro" },
-      { en: "Edit dynamic clips with graphics and transitions", fr: "Monter des clips dynamiques avec textes et transitions" },
-    ],
-    trainingCategory: "storytelling-creation",
-  },
-  {
-    id: "website-creation",
-    slug: "website-creation-nocode",
-    title: {
-      en: "No-Code Website Creation for Small Businesses",
-      fr: "Création de Site Web No-Code pour PME",
-    },
-    description: {
-      en: "A step-by-step bootcamp to design, build, launch, and manage your small business website without writing code.",
-      fr: "Un bootcamp pratique pour concevoir, publier et administrer le site internet de votre PME sans coder.",
-    },
-    duration: {
-      en: "2 Days (12 Hours)",
-      fr: "2 Jours (12 Heures)",
-    },
-    level: {
-      en: "Beginner",
-      fr: "Débutant",
-    },
     topics: [
-      { en: "Choosing Platforms & Custom Domain Setup", fr: "Choix de la plateforme & configuration du domaine" },
-      { en: "Visual Editing, Page Structures, and Form Integrations", fr: "Édition visuelle, structures de pages & formulaires" },
-      { en: "SEO Basics, Analytics Config, and Launch Procedures", fr: "Bases du SEO, statistiques & mise en ligne" },
+      { en: "Collaborative suites (Google Workspace, Microsoft 365)", fr: "Maîtrise des suites collaboratives (Google Workspace / M365)" },
+      { en: "Project tracking and task boards (Notion, Trello, Asana)", fr: "Suivi de projet et gestion de tâches (Notion, Trello, Asana)" },
+      { en: "Introduction to CRM software for client interactions", fr: "Découverte des CRM pour le suivi de relation client" },
+      { en: "Time management techniques and digital organization", fr: "Gestion du temps et organisation de fichiers partagés" },
     ],
-    price: "$899 CAD",
     targetAudience: {
-      en: "Entrepreneurs, local business owners, and administrative staff.",
-      fr: "Entrepreneurs, propriétaires d'entreprises locales et personnel administratif.",
+      en: "Administrative assistants, office managers, and team delegates.",
+      fr: "Adjoints administratifs, coordonnateurs de projet et équipes de bureau.",
     },
     skillsAcquired: [
-      { en: "Launch and edit a responsive corporate website", fr: "Créer et éditer un site vitrine professionnel réactif" },
-      { en: "Manage online customer contact integrations", fr: "Gérer l'intégration des contacts clients en ligne" },
+      { en: "Streamline team task allocation workflows", fr: "Fluidifier l'attribution et le suivi des tâches" },
+      { en: "Structure centralized shared file databases", fr: "Organiser les espaces documentaires cloud" },
+      { en: "Improve customer relationship logging efficiency", fr: "Optimiser la saisie des interactions clients" },
     ],
     trainingCategory: "storytelling-creation",
   },

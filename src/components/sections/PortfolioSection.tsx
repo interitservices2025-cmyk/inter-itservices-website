@@ -32,14 +32,14 @@ export default function PortfolioSection({ dict, locale }: PortfolioSectionProps
   });
 
   return (
-    <SectionContainer id="portfolio" bgType="gradient-dark">
+    <SectionContainer id="portfolio" bgType="light">
       {/* Title */}
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0B163F] mb-4">
           {dict.portfolio.title}
         </h2>
-        <div className="h-1 w-20 bg-amber-500 mx-auto rounded-full mb-6" />
-        <p className="text-slate-400 text-base sm:text-lg">
+        <div className="h-1 w-20 bg-[#F7931E] mx-auto rounded-full mb-6" />
+        <p className="text-slate-600 text-base sm:text-lg">
           {dict.portfolio.subtitle}
         </p>
       </div>
@@ -52,8 +52,8 @@ export default function PortfolioSection({ dict, locale }: PortfolioSectionProps
             onClick={() => setActiveFilter(option.key)}
             className={`px-4 py-2 rounded-lg text-xs font-semibold tracking-wide uppercase transition-all duration-300 cursor-pointer border ${
               activeFilter === option.key
-                ? "bg-amber-500 text-slate-950 border-amber-500 font-bold shadow-md shadow-amber-500/10"
-                : "bg-slate-900/50 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700"
+                ? "bg-[#F7931E] text-white border-[#F7931E] shadow-md shadow-[#F7931E]/10 font-bold"
+                : "bg-white text-slate-600 border-slate-200 hover:text-[#F7931E] hover:border-[#F7931E]/30 shadow-sm"
             }`}
           >
             {option.label}
@@ -75,7 +75,7 @@ export default function PortfolioSection({ dict, locale }: PortfolioSectionProps
             >
               <Card
                 glowColor="primary"
-                className="h-full flex flex-col justify-between border-slate-800 bg-slate-900/40 p-6"
+                className="h-full flex flex-col justify-between border-slate-200 bg-white p-6 shadow-sm hover:border-[#0B163F]/10 transition-all duration-300 hover:scale-[1.01]"
               >
                 <div>
                   {/* Category Badge & Date */}
@@ -89,7 +89,7 @@ export default function PortfolioSection({ dict, locale }: PortfolioSectionProps
                   </div>
 
                   {/* Title & Client */}
-                  <h3 className="text-base font-bold text-white mb-2 line-clamp-1">
+                  <h3 className="text-base font-bold text-[#0B163F] mb-2 line-clamp-1">
                     {project.title}
                   </h3>
                   <p className="text-[10px] text-slate-500 font-semibold mb-4">
@@ -97,20 +97,20 @@ export default function PortfolioSection({ dict, locale }: PortfolioSectionProps
                   </p>
 
                   {/* Description */}
-                  <p className="text-slate-400 text-xs leading-relaxed mb-6 line-clamp-3">
+                  <p className="text-slate-600 text-xs leading-relaxed mb-6 line-clamp-3">
                     {project.description[locale as "en" | "fr"]}
                   </p>
                 </div>
 
                 {/* Footer Link */}
-                <div className="pt-4 border-t border-slate-900 flex items-center justify-between">
-                  <div className="flex items-center gap-1 text-[11px] text-slate-400">
-                    <Folder className="h-3.5 w-3.5 text-amber-500/80" />
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                  <div className="flex items-center gap-1 text-[11px] text-slate-600">
+                    <Folder className="h-3.5 w-3.5 text-[#F7931E]" />
                     <span>Case Study</span>
                   </div>
                   <Link
                     href={`/${locale}/portfolio/${project.slug}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-500 hover:text-amber-400 transition-colors group cursor-pointer"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#F7931E] hover:text-[#F7931E]/80 transition-colors group cursor-pointer"
                   >
                     <span>Read More</span>
                     <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />

@@ -49,71 +49,69 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
   };
 
   return (
-    <SectionContainer id="contact" bgType="gradient-dark">
+    <SectionContainer id="contact" bgType="light">
       {/* Title */}
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0B163F] mb-4">
           {dict.contact.title}
         </h2>
-        <div className="h-1 w-20 bg-amber-500 mx-auto rounded-full mb-6" />
-        <p className="text-slate-400 text-base sm:text-lg">
+        <div className="h-1 w-20 bg-[#F7931E] mx-auto rounded-full mb-6" />
+        <p className="text-slate-600 text-base sm:text-lg">
           {dict.contact.subtitle}
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-6xl mx-auto items-stretch">
-        {/* Contact Info (4 Columns) */}
+        {/* Contact Info (5 Columns) */}
         <div className="lg:col-span-5 flex flex-col justify-between gap-6">
           <div className="space-y-6">
             {/* Address */}
-            <Card hoverEffect={true} className="border-slate-800 bg-slate-900/30 p-5 flex gap-4 items-start">
-              <div className="bg-amber-500/10 text-amber-500 p-2.5 rounded-lg border border-amber-500/10 shrink-0">
+            <Card hoverEffect={true} className="border-slate-200 bg-white p-5 flex gap-4 items-start hover:border-[#0B163F]/10 transition-all duration-300 hover:scale-[1.01]">
+              <div className="bg-[#F7931E]/10 text-[#F7931E] p-2.5 rounded-lg border border-[#F7931E]/20 shrink-0">
                 <MapPin className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="text-white font-bold text-sm mb-1">{dict.contact.info.address}</h4>
-                <p className="text-slate-400 text-xs leading-relaxed">
+                <h4 className="text-[#0B163F] font-bold text-sm mb-1">{dict.contact.info.address}</h4>
+                <p className="text-slate-600 text-xs leading-relaxed">
                   {dict.footer.address}
-                  <br />
-                  Brampton, Ontario, Canada
                 </p>
               </div>
             </Card>
 
             {/* Email */}
-            <Card hoverEffect={true} className="border-slate-800 bg-slate-900/30 p-5 flex gap-4 items-start">
-              <div className="bg-amber-500/10 text-amber-500 p-2.5 rounded-lg border border-amber-500/10 shrink-0">
+            <Card hoverEffect={true} className="border-slate-200 bg-white p-5 flex gap-4 items-start hover:border-[#0B163F]/10 transition-all duration-300 hover:scale-[1.01]">
+              <div className="bg-[#F7931E]/10 text-[#F7931E] p-2.5 rounded-lg border border-[#F7931E]/20 shrink-0">
                 <Mail className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="text-white font-bold text-sm mb-1">{dict.contact.info.email}</h4>
-                <a href={`mailto:${dict.common.email}`} className="text-slate-400 hover:text-amber-500 text-xs transition-colors">
+                <h4 className="text-[#0B163F] font-bold text-sm mb-1">{dict.contact.info.email}</h4>
+                <a href={`mailto:${dict.common.email}`} className="text-slate-600 hover:text-[#F7931E] text-xs transition-colors">
                   {dict.common.email}
                 </a>
               </div>
             </Card>
 
             {/* Phone */}
-            <Card hoverEffect={true} className="border-slate-800 bg-slate-900/30 p-5 flex gap-4 items-start">
-              <div className="bg-amber-500/10 text-amber-500 p-2.5 rounded-lg border border-amber-500/10 shrink-0">
+            <Card hoverEffect={true} className="border-slate-200 bg-white p-5 flex gap-4 items-start hover:border-[#0B163F]/10 transition-all duration-300 hover:scale-[1.01]">
+              <div className="bg-[#F7931E]/10 text-[#F7931E] p-2.5 rounded-lg border border-[#F7931E]/20 shrink-0">
                 <Phone className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="text-white font-bold text-sm mb-1">{dict.contact.info.phone}</h4>
-                <a href={`tel:${dict.common.phone.replace(/[^0-9+]/g, "")}`} className="text-slate-400 hover:text-amber-500 text-xs transition-colors">
+                <h4 className="text-[#0B163F] font-bold text-sm mb-1">{dict.contact.info.phone}</h4>
+                <a href={`tel:${dict.common.phone.replace(/[^0-9+]/g, "")}`} className="text-slate-600 hover:text-[#F7931E] text-xs transition-colors">
                   {dict.common.phone}
                 </a>
               </div>
             </Card>
 
             {/* Business Hours */}
-            <Card hoverEffect={true} className="border-slate-800 bg-slate-900/30 p-5 flex gap-4 items-start">
-              <div className="bg-amber-500/10 text-amber-500 p-2.5 rounded-lg border border-amber-500/10 shrink-0">
+            <Card hoverEffect={true} className="border-slate-200 bg-white p-5 flex gap-4 items-start hover:border-[#0B163F]/10 transition-all duration-300 hover:scale-[1.01]">
+              <div className="bg-[#F7931E]/10 text-[#F7931E] p-2.5 rounded-lg border border-[#F7931E]/20 shrink-0">
                 <Clock className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="text-white font-bold text-sm mb-1">{dict.contact.info.hours}</h4>
-                <p className="text-slate-400 text-xs leading-relaxed">
+                <h4 className="text-[#0B163F] font-bold text-sm mb-1">{dict.contact.info.hours}</h4>
+                <p className="text-slate-600 text-xs leading-relaxed">
                   {dict.contact.info.hoursVal}
                 </p>
               </div>
@@ -123,13 +121,13 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
 
         {/* Form (7 Columns) */}
         <div className="lg:col-span-7">
-          <Card hoverEffect={false} className="border-slate-800 bg-slate-900/40 p-6 sm:p-8 h-full flex flex-col justify-center">
+          <Card hoverEffect={false} className="border-slate-200 bg-white p-6 sm:p-8 h-full flex flex-col justify-center shadow-sm">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Name */}
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="name" className="text-slate-300 text-xs font-semibold">
-                    {dict.contact.form.name} <span className="text-amber-500">*</span>
+                  <label htmlFor="name" className="text-slate-700 text-xs font-semibold">
+                    {dict.contact.form.name} <span className="text-[#F7931E]">*</span>
                   </label>
                   <input
                     type="text"
@@ -137,15 +135,15 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="bg-slate-950 border border-slate-800 focus:border-amber-500 focus:outline-none rounded-lg px-4 py-2 text-xs text-white placeholder-slate-600 transition-colors"
+                    className="bg-white border border-slate-300 focus:border-[#F7931E] focus:ring-1 focus:ring-[#F7931E]/30 focus:outline-none rounded-lg px-4 py-2.5 text-xs text-slate-900 placeholder-slate-400 transition-colors"
                     required
                   />
                 </div>
 
                 {/* Email */}
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="email" className="text-slate-300 text-xs font-semibold">
-                    {dict.contact.form.email} <span className="text-amber-500">*</span>
+                  <label htmlFor="email" className="text-slate-700 text-xs font-semibold">
+                    {dict.contact.form.email} <span className="text-[#F7931E]">*</span>
                   </label>
                   <input
                     type="email"
@@ -153,7 +151,7 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="bg-slate-950 border border-slate-800 focus:border-amber-500 focus:outline-none rounded-lg px-4 py-2 text-xs text-white placeholder-slate-600 transition-colors"
+                    className="bg-white border border-slate-300 focus:border-[#F7931E] focus:ring-1 focus:ring-[#F7931E]/30 focus:outline-none rounded-lg px-4 py-2.5 text-xs text-slate-900 placeholder-slate-400 transition-colors"
                     required
                   />
                 </div>
@@ -162,7 +160,7 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Phone */}
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="phone" className="text-slate-300 text-xs font-semibold">
+                  <label htmlFor="phone" className="text-slate-700 text-xs font-semibold">
                     {dict.contact.form.phone}
                   </label>
                   <input
@@ -171,38 +169,38 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="bg-slate-950 border border-slate-800 focus:border-amber-500 focus:outline-none rounded-lg px-4 py-2 text-xs text-white placeholder-slate-600 transition-colors"
+                    className="bg-white border border-slate-300 focus:border-[#F7931E] focus:ring-1 focus:ring-[#F7931E]/30 focus:outline-none rounded-lg px-4 py-2.5 text-xs text-slate-900 placeholder-slate-400 transition-colors"
                   />
                 </div>
 
                 {/* Subject / Help request selection */}
                 <div className="flex flex-col gap-1.5 font-sans">
-                  <label htmlFor="subject" className="text-slate-300 text-xs font-semibold">
-                    {dict.contact.form.helpQuestion} <span className="text-amber-500">*</span>
+                  <label htmlFor="subject" className="text-slate-700 text-xs font-semibold">
+                    {dict.contact.form.helpQuestion} <span className="text-[#F7931E]">*</span>
                   </label>
                   <select
                     id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="bg-slate-950 border border-slate-800 focus:border-amber-500 focus:outline-none rounded-lg px-4 py-2.5 text-xs text-white transition-colors cursor-pointer"
+                    className="bg-white border border-slate-300 focus:border-[#F7931E] focus:ring-1 focus:ring-[#F7931E]/30 focus:outline-none rounded-lg px-4 py-2.5 text-xs text-slate-900 transition-colors cursor-pointer"
                     required
                   >
-                    <option value="" disabled className="text-slate-600 bg-slate-950">
+                    <option value="" disabled>
                       {locale === "fr" ? "Sélectionnez une option" : "Select an option"}
                     </option>
-                    <option value="visibility" className="bg-slate-950">{dict.contact.form.helpOptions.visibility}</option>
-                    <option value="operations" className="bg-slate-950">{dict.contact.form.helpOptions.operations}</option>
-                    <option value="tools" className="bg-slate-950">{dict.contact.form.helpOptions.tools}</option>
-                    <option value="training" className="bg-slate-950">{dict.contact.form.helpOptions.training}</option>
+                    <option value="visibility">{dict.contact.form.helpOptions.visibility}</option>
+                    <option value="operations">{dict.contact.form.helpOptions.operations}</option>
+                    <option value="tools">{dict.contact.form.helpOptions.tools}</option>
+                    <option value="training">{dict.contact.form.helpOptions.training}</option>
                   </select>
                 </div>
               </div>
 
               {/* Message */}
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="message" className="text-slate-300 text-xs font-semibold">
-                  {dict.contact.form.message} <span className="text-amber-500">*</span>
+                <label htmlFor="message" className="text-slate-700 text-xs font-semibold">
+                  {dict.contact.form.message} <span className="text-[#F7931E]">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -210,7 +208,7 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="bg-slate-950 border border-slate-800 focus:border-amber-500 focus:outline-none rounded-lg px-4 py-2.5 text-xs text-white placeholder-slate-600 resize-none transition-colors"
+                  className="bg-white border border-slate-300 focus:border-[#F7931E] focus:ring-1 focus:ring-[#F7931E]/30 focus:outline-none rounded-lg px-4 py-2.5 text-xs text-slate-900 placeholder-slate-400 resize-none transition-colors"
                   required
                 />
               </div>
@@ -220,7 +218,7 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
                 <motion.div
                   initial={{ opacity: 0, y: 5 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="flex items-center gap-2 p-3 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs rounded-lg"
+                  className="flex items-center gap-2 p-3 bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 text-xs rounded-lg"
                 >
                   <CheckCircle className="h-4.5 w-4.5 shrink-0" />
                   <span>{dict.contact.form.success}</span>
@@ -231,7 +229,7 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
                 <motion.div
                   initial={{ opacity: 0, y: 5 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="flex items-center gap-2 p-3 bg-red-500/10 border border-red-500/20 text-red-400 text-xs rounded-lg"
+                  className="flex items-center gap-2 p-3 bg-red-500/10 border border-red-500/20 text-red-600 text-xs rounded-lg"
                 >
                   <AlertCircle className="h-4.5 w-4.5 shrink-0" />
                   <span>{dict.contact.form.error}</span>
@@ -244,14 +242,14 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
                   type="submit"
                   variant="secondary"
                   isLoading={status === "loading"}
-                  className="w-full gap-2 text-sm py-2.5 shadow-md shadow-amber-500/10"
+                  className="w-full gap-2 text-sm py-2.5 shadow-md shadow-[#F7931E]/10"
                 >
                   <span>{dict.common.cta.submit}</span>
                   <Send className="h-4 w-4" />
                 </Button>
                 
-                <div className="flex items-center justify-center gap-1.5 mt-3 text-slate-400 text-[11px]">
-                  <Clock className="h-3.5 w-3.5 text-amber-500/80" />
+                <div className="flex items-center justify-center gap-1.5 mt-3 text-slate-500 text-[11px]">
+                  <Clock className="h-3.5 w-3.5 text-[#F7931E]/80" />
                   <span>{dict.contact.form.responseTime}</span>
                 </div>
               </div>

@@ -61,10 +61,10 @@ export default function Header({ locale }: HeaderProps) {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
         isScrolled
-          ? "bg-slate-950/85 backdrop-blur-md py-4 border-slate-900/60 shadow-lg shadow-slate-950/20"
-          : "bg-transparent py-6"
+          ? "bg-[#0B163F]/95 backdrop-blur-md py-4 border-white/10 shadow-md shadow-slate-950/20"
+          : "bg-[#0B163F] py-6 border-white/5"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,7 +76,7 @@ export default function Header({ locale }: HeaderProps) {
               alt="INTER-IT SERVICES INC"
               width={140}
               height={48}
-              className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105 brightness-0 invert"
               priority
             />
           </Link>
@@ -96,8 +96,8 @@ export default function Header({ locale }: HeaderProps) {
                   >
                     <button
                       className={cn(
-                        "text-sm font-medium transition-colors hover:text-amber-500 cursor-pointer flex items-center gap-1 py-1 focus:outline-none",
-                        isAnySubActive ? "text-amber-500 font-semibold" : "text-slate-300"
+                        "text-sm font-medium transition-colors hover:text-[#F7931E] cursor-pointer flex items-center gap-1 py-1 focus:outline-none",
+                        isAnySubActive ? "text-[#F7931E] font-semibold" : "text-white/90"
                       )}
                     >
                       <span>{link.label}</span>
@@ -106,7 +106,7 @@ export default function Header({ locale }: HeaderProps) {
 
                     {/* Solutions Dropdown Menu */}
                     {isDesktopDropdownOpen && (
-                      <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-56 rounded-xl border border-slate-800 bg-slate-950/95 backdrop-blur-md p-2 shadow-xl shadow-slate-950/50 z-50">
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-56 rounded-xl border border-white/10 bg-[#0B163F]/95 backdrop-blur-md p-2 shadow-xl shadow-slate-950/30 z-50">
                         {dropdownItems.map((subLink) => {
                           const isSubActive = pathname === subLink.href;
                           return (
@@ -114,8 +114,8 @@ export default function Header({ locale }: HeaderProps) {
                               key={subLink.href}
                               href={subLink.href}
                               className={cn(
-                                "block w-full text-left text-xs font-semibold px-4 py-2.5 rounded-lg transition-colors hover:bg-slate-900 hover:text-amber-500 cursor-pointer",
-                                isSubActive ? "text-amber-500 bg-slate-900/40" : "text-slate-300"
+                                "block w-full text-left text-xs font-semibold px-4 py-2.5 rounded-lg transition-colors hover:bg-white/5 hover:text-[#F7931E] cursor-pointer",
+                                isSubActive ? "text-[#F7931E] bg-white/5" : "text-white/80"
                               )}
                             >
                               {subLink.label}
@@ -136,13 +136,13 @@ export default function Header({ locale }: HeaderProps) {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "text-sm font-medium transition-colors hover:text-amber-500 cursor-pointer relative py-1",
-                    isActive ? "text-amber-500 font-semibold" : "text-slate-300"
+                    "text-sm font-medium transition-colors hover:text-[#F7931E] cursor-pointer relative py-1",
+                    isActive ? "text-[#F7931E] font-semibold" : "text-white/90"
                   )}
                 >
                   {link.label}
                   {isActive && (
-                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-amber-500 rounded-full" />
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#F7931E] rounded-full" />
                   )}
                 </Link>
               );
@@ -153,7 +153,7 @@ export default function Header({ locale }: HeaderProps) {
           <div className="hidden md:flex items-center space-x-4">
             <LanguageSwitcher />
             <Link href={`/${locale}/contact`}>
-              <button className="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 hover:from-amber-400 hover:to-amber-500 transition-all duration-300 active:scale-[0.98] cursor-pointer gap-1.5 shadow-md shadow-amber-500/10">
+              <button className="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold bg-[#F7931E] text-white hover:bg-[#F7931E]/90 transition-all duration-300 active:scale-[0.98] cursor-pointer gap-1.5 shadow-md shadow-[#F7931E]/20">
                 <span>{ctaText}</span>
                 <ArrowRight className="h-4 w-4" />
               </button>
@@ -165,7 +165,7 @@ export default function Header({ locale }: HeaderProps) {
             <LanguageSwitcher />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-300 hover:text-white focus:outline-none p-1.5 rounded-lg border border-slate-800 bg-slate-900/50 cursor-pointer"
+              className="text-white hover:text-[#F7931E] focus:outline-none p-1.5 rounded-lg border border-white/10 bg-white/5 cursor-pointer"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -177,7 +177,7 @@ export default function Header({ locale }: HeaderProps) {
       {/* Mobile menu drawer */}
       <div
         className={cn(
-          "fixed inset-x-0 top-[73px] bottom-0 z-40 bg-slate-950 border-t border-slate-900 px-6 py-8 flex flex-col justify-between transition-transform duration-300 md:hidden overflow-y-auto",
+          "fixed inset-x-0 top-[73px] bottom-0 z-40 bg-[#0B163F] border-t border-white/10 px-6 py-8 flex flex-col justify-between transition-transform duration-300 md:hidden overflow-y-auto",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
@@ -191,8 +191,8 @@ export default function Header({ locale }: HeaderProps) {
                   <button
                     onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
                     className={cn(
-                      "text-lg font-medium py-2 border-b border-slate-900 flex items-center justify-between transition-colors hover:text-amber-500 cursor-pointer w-full text-left",
-                      isAnySubActive ? "text-amber-500 font-semibold" : "text-slate-300"
+                      "text-lg font-medium py-2 border-b border-white/10 flex items-center justify-between transition-colors hover:text-[#F7931E] cursor-pointer w-full text-left",
+                      isAnySubActive ? "text-[#F7931E] font-semibold" : "text-white/90"
                     )}
                   >
                     <span>{link.label}</span>
@@ -201,7 +201,7 @@ export default function Header({ locale }: HeaderProps) {
 
                   {/* Collapsible Mobile Sub-items */}
                   {isMobileDropdownOpen && (
-                    <div className="pl-4 py-2 flex flex-col space-y-2 border-l border-slate-900 mt-1 bg-slate-900/10 rounded-lg">
+                    <div className="pl-4 py-2 flex flex-col space-y-2 border-l border-white/10 mt-1 bg-white/5 rounded-lg">
                       {dropdownItems.map((subLink) => {
                         const isSubActive = pathname === subLink.href;
                         return (
@@ -210,8 +210,8 @@ export default function Header({ locale }: HeaderProps) {
                             href={subLink.href}
                             onClick={() => setIsOpen(false)}
                             className={cn(
-                              "text-sm font-semibold py-1.5 transition-colors hover:text-amber-500 cursor-pointer",
-                              isSubActive ? "text-amber-500 font-bold" : "text-slate-400"
+                              "text-sm font-semibold py-1.5 transition-colors hover:text-[#F7931E] cursor-pointer",
+                              isSubActive ? "text-[#F7931E] font-bold" : "text-white/70"
                             )}
                           >
                             {subLink.label}
@@ -233,8 +233,8 @@ export default function Header({ locale }: HeaderProps) {
                 href={link.href}
                 onClick={() => setIsOpen(false)}
                 className={cn(
-                  "text-lg font-medium py-2 border-b border-slate-900 transition-colors hover:text-amber-500 cursor-pointer",
-                  isActive ? "text-amber-500 font-semibold" : "text-slate-300"
+                  "text-lg font-medium py-2 border-b border-white/10 transition-colors hover:text-[#F7931E] cursor-pointer",
+                  isActive ? "text-[#F7931E] font-semibold" : "text-white/90"
                 )}
               >
                 {link.label}
@@ -245,7 +245,7 @@ export default function Header({ locale }: HeaderProps) {
 
         <div className="pb-8 mt-6">
           <Link href={`/${locale}/contact`} onClick={() => setIsOpen(false)}>
-            <button className="w-full inline-flex items-center justify-center rounded-lg px-5 py-3.5 text-base font-semibold bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 hover:from-amber-400 hover:to-amber-500 transition-all duration-300 cursor-pointer gap-2 shadow-lg shadow-amber-500/10">
+            <button className="w-full inline-flex items-center justify-center rounded-lg px-5 py-3.5 text-base font-semibold bg-[#F7931E] text-white hover:bg-[#F7931E]/90 transition-all duration-300 cursor-pointer gap-2 shadow-md shadow-[#F7931E]/20">
               <span>{ctaText}</span>
               <ArrowRight className="h-5 w-5" />
             </button>
