@@ -4,9 +4,9 @@ import HeroSection from "@/components/sections/HeroSection";
 import TrustedBy from "@/components/sections/TrustedBy";
 import ServicesSection from "@/components/sections/ServicesSection";
 import WhyUsSection from "@/components/sections/WhyUsSection";
+import AISectionHome from "@/components/sections/AISectionHome";
 import PortfolioSection from "@/components/sections/PortfolioSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import TrainingSection from "@/components/sections/TrainingSection";
 import CTASection from "@/components/sections/CTASection";
 import ContactSection from "@/components/sections/ContactSection";
 
@@ -32,14 +32,14 @@ export default async function HomePage({ params }: HomePageProps) {
       {/* 5. Why Choose Us Section */}
       <WhyUsSection dict={dict} />
 
+      {/* 5.5 Premium AI & Automation Section */}
+      <AISectionHome dict={dict} locale={locale} />
+
       {/* 6. Featured Portfolio Case Studies */}
       <PortfolioSection dict={dict} locale={locale} />
 
       {/* 7. Client Testimonials */}
       <TestimonialsSection dict={dict} locale={locale} />
-
-      {/* 8. Training Programs Section */}
-      <TrainingSection dict={dict} locale={locale} />
 
       {/* 9. Interactive Call-To-Action Banner */}
       <CTASection dict={dict} locale={locale} />

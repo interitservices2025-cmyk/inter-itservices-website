@@ -37,6 +37,8 @@ export interface Project {
   description: LocalizedString;
   challenges: LocalizedString;
   solutions: LocalizedString;
+  businessValue: LocalizedString;
+  projectLink?: string;
   technologies: string[];
   imageUrl: string;
   completionDate: string;

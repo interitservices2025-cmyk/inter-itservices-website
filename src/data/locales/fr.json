@@ -16,118 +16,157 @@
   "nav": {
     "home": "Accueil",
     "about": "À Propos",
-    "services": "Services",
-    "aiSolutions": "Solutions IA",
-    "portfolio": "Portfolio",
+    "services": "Solutions",
+    "projects": "Projets",
     "training": "Formations",
     "blog": "Blog",
-    "products": "Produits",
-    "contact": "Contact"
+    "contact": "Contact",
+    "solutionsDropdown": {
+      "title": "Solutions",
+      "webDev": "Développement Web",
+      "automationAi": "Automatisation & IA",
+      "businessApps": "Applications Métiers",
+      "digitalMarketing": "Marketing Digital",
+      "training": "Formations"
+    }
   },
   "hero": {
-    "badge": "Expert IT & IA (Canada & International)",
-    "title": "Solutions Tech, Design, Marketing & IA au Canada & à l'International",
-    "subtitle": "INTER-IT SERVICES INC, basée à Brampton (Ontario), est votre partenaire de confiance pour des solutions de développement web, design graphique, marketing digital, formations et logiciels SaaS au Canada et à l'international.",
-    "ctaPrimary": "Découvrir nos Services",
-    "ctaSecondary": "Réserver une Consultation"
+    "badge": "Conseil & Intégration Technologique",
+    "title": "Transformez votre entreprise grâce aux solutions numériques et à l'intelligence artificielle",
+    "subtitle": "Nous aidons les PME, entrepreneurs et organisations à améliorer leur visibilité, automatiser leurs processus et moderniser leurs opérations grâce à des solutions technologiques pratiques et adaptées à leurs besoins.",
+    "ctaPrimary": "Réserver une Consultation",
+    "ctaSecondary": "Découvrir nos Solutions"
   },
   "trusted": {
-    "title": "Propulsé par la confiance des entreprises innovantes"
+    "title": "Propulsé par la confiance d'entreprises et d'organisations d'ici"
   },
   "aiSolutions": {
-    "title": "Solutions d'Intelligence Artificielle",
-    "subtitle": "Tirez parti de l'IA de nouvelle génération et de l'automatisation pour simplifier vos opérations et ouvrir de nouvelles perspectives.",
-    "solutions": {
-      "automation": {
-        "title": "Automatisation par l'IA",
-        "description": "Automatisez les tâches répétitives et volumineuses grâce à des agents logiciels intelligents pour réduire vos coûts et booster la productivité."
+    "title": "L'Intelligence Artificielle pour une Croissance d'Entreprise Concrète",
+    "subtitle": "Découvrez comment l'intégration pratique de l'intelligence artificielle et de l'automatisation permet aux PME d'accélérer leur développement.",
+    "cta": "Explorer nos solutions d'automatisation & IA",
+    "benefits": {
+      "tasks": {
+        "title": "Réduire les tâches répétitives",
+        "description": "Automatisez les saisies manuelles et les flux administratifs pour recentrer vos équipes sur les tâches essentielles."
       },
-      "customAI": {
-        "title": "LLMs & Chatbots Personnalisés",
-        "description": "Développez des agents conversationnels sécurisés et propriétaires, entraînés sur vos données d'entreprise pour accompagner vos équipes et clients."
+      "support": {
+        "title": "Améliorer le service client",
+        "description": "Déployez des assistants IA intelligents capables de répondre instantanément aux demandes de vos clients 24h/24."
       },
-      "predictive": {
-        "title": "Analyses Prédictives",
-        "description": "Utilisez des algorithmes de machine learning pour analyser les tendances passées, anticiper les évolutions et prendre des décisions fondées."
+      "communications": {
+        "title": "Automatiser les communications",
+        "description": "Connectez vos emails, SMS, CRM et outils de gestion pour un suivi client fluide et sans effort."
+      },
+      "documents": {
+        "title": "Optimiser la gestion documentaire",
+        "description": "Utilisez l'extraction intelligente de données (OCR) pour classer, lire et traiter vos documents en quelques secondes."
+      },
+      "productivity": {
+        "title": "Accroître la productivité",
+        "description": "Intégrez des outils d'IA sur mesure pour analyser vos données et accélérer vos processus d'affaires."
       }
     }
   },
   "services": {
-    "title": "Nos Services",
-    "subtitle": "Des solutions technologiques complètes de bout en bout adaptées aux exigences uniques de votre entreprise.",
+    "title": "Nos Solutions par Objectifs Métiers",
+    "subtitle": "Nous organisons nos services pour répondre directement aux résultats d'affaires que vous recherchez.",
     "items": {
-      "websiteDevelopment": {
-        "title": "Développement de Sites Web",
-        "description": "Des sites web d'entreprise et des portails web performants, sécurisés et optimisés pour le SEO à l'aide de frameworks modernes."
+      "web-development": {
+        "title": "Développement Web",
+        "description": "Création de sites internet performants, ergonomiques et optimisés pour le SEO afin d'assurer votre présence en ligne."
       },
-      "graphicDesignPrint": {
-        "title": "Design Graphique & Impression",
-        "description": "Création d'identités de marque percutantes, logos et supports marketing de haute qualité prêts pour l'impression."
+      "automation-ai": {
+        "title": "Automatisation & IA",
+        "description": "Intégration d'outils d'IA générative et de flux d'automatisation de tâches pour simplifier vos opérations quotidiennes."
       },
-      "digitalMarketing": {
-        "title": "Marketing Numérique",
-        "description": "Campagnes de référencement (SEO), marketing de contenu et stratégies publicitaires axées sur les données pour accroître votre présence en ligne."
+      "business-applications": {
+        "title": "Applications Métiers",
+        "description": "Conception d'applications web, de portails clients et de logiciels sur mesure pour soutenir vos flux de travail spécifiques."
       },
-      "learningWorkshops": {
-        "title": "Ateliers de Formation",
-        "description": "Montez en compétences grâce à nos ateliers pratiques et bootcamps technologiques animés par des experts seniors."
+      "digital-marketing": {
+        "title": "Marketing Digital",
+        "description": "Stratégies d'acquisition, de référencement local et de marketing de contenu adaptées à votre marché cible."
       },
-      "aiSolutions": {
-        "title": "Solutions d'Intelligence Artificielle",
-        "description": "Intégrez des modèles de langage souverains (LLM), des chatbots personnalisés et des flux d'automatisation IA sécurisés."
+      "training": {
+        "title": "Formations",
+        "description": "Bootcamps et ateliers pratiques pour rendre vos collaborateurs pleinement autonomes sur les nouveaux outils numériques."
       }
     }
   },
+  "servicesCategories": {
+    "title": "Nos Solutions par Objectifs Métiers",
+    "subtitle": "Nous organisons nos services pour répondre directement aux résultats d'affaires que vous recherchez.",
+    "cat1": {
+      "title": "Augmenter Votre Visibilité",
+      "description": "Attirez de nouveaux clients et renforcez votre présence locale et en ligne.",
+      "items": ["Sites internet sur mesure", "Optimisation SEO & Google Business", "Marketing numérique", "Campagnes d'acquisition locales"]
+    },
+    "cat2": {
+      "title": "Automatiser Vos Opérations",
+      "description": "Éliminez les tâches manuelles et gagnez du temps au quotidien.",
+      "items": ["Chatbots & assistants IA", "Automatisation administrative", "Intégration et synchronisation CRM", "Flux de travail automatisés"]
+    },
+    "cat3": {
+      "title": "Créer des Outils Métiers sur Mesure",
+      "description": "Bâtissez les solutions logicielles qui soutiennent votre croissance.",
+      "items": ["Applications web performantes", "Portails clients sécurisés", "Applications mobiles natives & hybrides", "Logiciels d'affaires sur mesure"]
+    },
+    "cat4": {
+      "title": "Développer les Compétences de Votre Équipe",
+      "description": "Rendez vos collaborateurs autonomes face aux outils numériques de demain.",
+      "items": ["Formations IA (ChatGPT, Midjourney)", "Ateliers de marketing digital", "Sensibilisation à la cybersécurité", "Outils de productivité numérique"]
+    }
+  },
   "whyUs": {
-    "title": "Pourquoi Choisir INTER-IT ?",
-    "subtitle": "Nous combinons expertise technique, proximité locale et passion de l'excellence pour offrir des résultats concrets à nos clients.",
+    "title": "Pourquoi Choisir INTER-IT SERVICES ?",
+    "subtitle": "Un accompagnement de proximité et une expertise moderne pour répondre aux enjeux réels des PME.",
     "reasons": {
-      "expertise": {
-        "title": "Expertise Approfondie",
-        "description": "Une équipe de développeurs full-stack seniors, d'ingénieurs IA et de designers chevronnés engagés pour la qualité."
+      "personalizedSupport": {
+        "title": "Accompagnement Personnalisé",
+        "description": "Chaque organisation est unique et mérite des solutions adaptées à sa réalité."
       },
-      "clientFirst": {
-        "title": "Approche Centrée Client",
-        "description": "Nous adaptons nos méthodes de travail à votre flux, en assurant une communication limpide et des livraisons jalonnées."
+      "modernExpertise": {
+        "title": "Expertise Numérique Moderne",
+        "description": "Développement web, automatisation de processus, marketing digital et intégration d'intelligence artificielle."
       },
-      "localPresence": {
-        "title": "Présence Locale & Internationale",
-        "description": "Basés à Brampton (Ontario), nous intervenons à l'échelle locale, nationale et internationale avec une réactivité totale."
+      "resultsOriented": {
+        "title": "Approche Axée Résultats",
+        "description": "Nous nous concentrons sur la résolution de vos défis opérationnels et commerciaux les plus concrets."
       },
-      "innovation": {
-        "title": "Orientés vers l'Innovation",
-        "description": "Nous intégrons en permanence les dernières nouveautés IA et architectures Cloud pour maintenir votre avance concurrentielle."
+      "knowledgeTransfer": {
+        "title": "Formation & Transfert",
+        "description": "Nous formons et accompagnons vos équipes afin de les rendre pleinement autonomes au quotidien."
       }
     }
   },
   "portfolio": {
-    "title": "Notre Portfolio",
-    "subtitle": "Découvrez nos dernières réalisations de transformation numérique et de développement logiciel sur mesure.",
+    "title": "Nos Projets & Études de Cas",
+    "subtitle": "Découvrez comment nous aidons nos partenaires à grandir grâce à notre dévouement et notre savoir-faire technique.",
     "categories": {
       "all": "Tous les projets",
       "ai": "IA & Automatisation",
       "web": "Développement Web",
       "mobile": "Apps Mobiles",
-      "design": "Design & UI/UX"
+      "design": "Branding & UI/UX"
     }
   },
   "testimonials": {
-    "title": "Témoignages Clients",
-    "subtitle": "Découvrez comment nous aidons nos partenaires à grandir grâce à notre dévouement et notre savoir-faire technique."
+    "title": "Avis de nos Clients",
+    "subtitle": "Découvrez l'avis des PME et entrepreneurs qui nous font confiance pour moderniser leurs opérations et accélérer leur croissance."
   },
   "training": {
     "title": "Formations Professionnelles & Ateliers",
-    "subtitle": "Montez en compétences avec nos bootcamps pratiques guidés par des experts seniors de l'industrie.",
+    "subtitle": "Montez en compétences avec nos bootcamps pratiques guidés par des experts de l'industrie.",
     "cta": "Parcourir les modules de cours"
   },
   "ctaSection": {
     "title": "Prêt à Accélérer Votre Croissance Numérique ?",
-    "subtitle": "Contactez notre siège de Brampton (Ontario) dès aujourd'hui pour échanger sur votre projet au Canada ou à l'international.",
-    "button": "Obtenir une Consultation Gratuite"
+    "subtitle": "Contactez notre bureau de Brampton (Ontario) dès aujourd'hui pour échanger sur votre projet au Canada ou à l'international.",
+    "button": "Réserver une Consultation"
   },
   "contact": {
     "title": "Contactez-nous",
-    "subtitle": "Vous avez un projet en tête ou besoin de conseils techniques ? Écrivez-nous.",
+    "subtitle": "Vous avez un projet en tête ou besoin d'un accompagnement technologique ? Écrivez-nous.",
     "info": {
       "address": "Adresse",
       "email": "Courriel",
@@ -139,27 +178,26 @@
       "name": "Nom Complet",
       "email": "Adresse Courriel",
       "phone": "Téléphone (Optionnel)",
-      "subject": "Service Souhaité",
+      "subject": "Sujet",
       "message": "Détails du projet / Message",
       "success": "Merci ! Votre message a été envoyé avec succès. Nous vous contacterons rapidement.",
-      "error": "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer ou nous téléphoner directement.",
+      "error": "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer ou nous contacter par téléphone.",
       "responseTime": "Nous répondons en moins de 24h ouvrées.",
-      "services": {
-        "web": "Développement de Sites Web (Canada & International)",
-        "design": "Design Graphique & Impression (Canada)",
-        "marketing": "Marketing Numérique & SEO",
-        "training": "Ateliers de Formation Professionnelle",
-        "ai": "Solutions IA & Automatisation",
-        "other": "Autre demande"
+      "helpQuestion": "Comment pouvons-nous vous aider ?",
+      "helpOptions": {
+        "visibility": "Augmenter ma visibilité",
+        "operations": "Automatiser mes opérations",
+        "tools": "Créer un outil sur mesure",
+        "training": "Former mon équipe"
       }
     }
   },
   "footer": {
-    "tagline": "Une entreprise technologique canadienne orientée IA (AI-First) offrant des solutions de Design, Digital, Formations et Logiciels SaaS.",
+    "tagline": "Un partenaire technologique proche des PME, spécialisé dans les solutions numériques, l'automatisation et l'intelligence artificielle.",
     "quickLinks": "Liens Rapides",
     "contactInfo": "Coordonnées",
     "newsletter": "Infolettre",
-    "newsletterDesc": "Abonnez-vous pour recevoir nos analyses sur l'automatisation IA et les tendances IT.",
+    "newsletterDesc": "Abonnez-vous pour recevoir nos analyses sur l'automatisation et les tendances technologiques.",
     "newsletterPlaceholder": "Votre adresse courriel",
     "copyright": "© {year} INTER-IT SERVICES INC. Tous droits réservés.",
     "legal": "Politique de Confidentialité | Conditions d'Utilisation",

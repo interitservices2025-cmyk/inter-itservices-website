@@ -1,265 +1,78 @@
 import { Service } from "@/types";
 
 export const services: Service[] = [
-  // PILLAR A - DESIGN & AUGMENTED CREATIVITY
   {
-    id: "visual-identity",
-    slug: "visual-identity",
+    id: "web-development",
+    slug: "web-development",
     title: {
-      en: "Visual Identity",
-      fr: "Identité Visuelle",
+      en: "Web Development",
+      fr: "Développement Web",
     },
     shortDescription: {
-      en: "AI-assisted brand creation, premium logo design, color palettes, and comprehensive guidelines.",
-      fr: "Création de marque assistée par l'IA, conception de logos, palettes stratégiques et chartes complètes.",
+      en: "High-performance, modern, and SEO-optimized corporate websites to establish a strong online presence.",
+      fr: "Création de sites internet professionnels, performants, réactifs et optimisés pour le référencement naturel.",
     },
     longDescription: {
-      en: "Establish a powerful and recognizable visual presence. Combining AI-assisted creative ideation with expert designer execution, we deliver premium logos, logo variations, typography systems, strategic color palettes, and full brand guidelines designed to build trust.",
-      fr: "Établissez une présence visuelle forte et mémorable. Combinant l'idéation créative assistée par l'IA avec le savoir-faire de nos designers, nous concevons des logos haut de gamme, des déclinaisons de logo, des choix typographiques, des palettes de couleurs stratégiques et des chartes graphiques complètes.",
-    },
-    iconName: "Fingerprint",
-    technologies: ["Adobe Illustrator", "Midjourney AI", "Figma", "Typography Systems", "Vector Art"],
-    features: [
-      {
-        en: "AI-Assisted Creative Ideation",
-        fr: "Idéation créative assistée par l'IA",
-      },
-      {
-        en: "Logo Design & Variations",
-        fr: "Conception de logos & déclinaisons",
-      },
-      {
-        en: "Complete Brand Guidelines",
-        fr: "Chartes graphiques complètes",
-      },
-      {
-        en: "Strategic Color Palettes & Typography",
-        fr: "Palettes stratégiques & typographie",
-      },
-    ],
-    pillar: "design",
-  },
-  {
-    id: "print-design",
-    slug: "print-design",
-    title: {
-      en: "Print Design",
-      fr: "Design Graphique & Impression",
-    },
-    shortDescription: {
-      en: "Premium print-ready marketing materials, brochures, corporate packaging, and professional signage.",
-      fr: "Supports marketing prêts à imprimer, brochures corporatives, packaging et signalétique.",
-    },
-    longDescription: {
-      en: "Bridge the digital gap with physical marketing assets designed to impress. We conceptualize and deliver print-ready corporate folders, brochures, flyers, catalogues, posters, annual reports, signage, and product packaging.",
-      fr: "Traduisez votre marque sur des supports physiques haut de gamme. Nous concevons et imprimons des dossiers de présentation d'entreprise, des brochures, des flyers, des catalogues, des affiches, des rapports annuels, de la signalétique et des emballages produits.",
-    },
-    iconName: "Printer",
-    technologies: ["Adobe InDesign", "Adobe Illustrator", "Print Preflight", "Packaging Design", "Vector Assets"],
-    features: [
-      {
-        en: "Brochures, Catalogues & Flyers",
-        fr: "Brochures, catalogues & flyers",
-      },
-      {
-        en: "Posters & Corporate Annual Reports",
-        fr: "Affiches & rapports annuels d'entreprise",
-      },
-      {
-        en: "Signage & Point of Sale Materials",
-        fr: "Signalétique & matériel de PLV",
-      },
-      {
-        en: "Product Packaging Design",
-        fr: "Conception d'emballages de produits",
-      },
-    ],
-    pillar: "design",
-  },
-  {
-    id: "digital-content-creation",
-    slug: "digital-content-creation",
-    title: {
-      en: "Digital Content Creation",
-      fr: "Création de Contenu Numérique",
-    },
-    shortDescription: {
-      en: "Vibrant web banners, social media templates, interactive infographics, and custom motion design.",
-      fr: "Bannières web, modèles de réseaux sociaux, infographies interactives et motion design.",
-    },
-    longDescription: {
-      en: "Engage your online audience with beautiful visual content. From web banners and tailored social media visuals to interactive infographics and high-impact motion design, we generate AI-enhanced visual assets that drive engagement.",
-      fr: "Captez l'attention de votre public en ligne avec des visuels saisissants. Des bannières web et visuels réseaux sociaux aux infographies interactives et motion design, nous concevons des actifs optimisés par l'IA pour maximiser votre portée.",
-    },
-    iconName: "Sparkles",
-    technologies: ["Adobe Photoshop", "After Effects", "Midjourney AI", "Figma", "Social Templates"],
-    features: [
-      {
-        en: "Web Banners & Ads Visuals",
-        fr: "Bannières web & visuels publicitaires",
-      },
-      {
-        en: "Social Media Templates",
-        fr: "Modèles pour réseaux sociaux",
-      },
-      {
-        en: "Interactive Infographics",
-        fr: "Infographies interactives",
-      },
-      {
-        en: "Motion Design & AI Visual Assets",
-        fr: "Motion design & créations visuelles IA",
-      },
-    ],
-    pillar: "design",
-  },
-  {
-    id: "multimedia-production",
-    slug: "multimedia-production",
-    title: {
-      en: "Multimedia Production",
-      fr: "Production Multimédia",
-    },
-    shortDescription: {
-      en: "Professional corporate videography, testimonial filming, field reports, and AI-assisted post-production.",
-      fr: "Vidéos d'entreprise, témoignages clients, photographies pro et post-production IA.",
-    },
-    longDescription: {
-      en: "Bring your brand story to life. We offer professional photography, corporate video shooting, customer testimonial capture, and high-end video editing combined with advanced AI-assisted post-production for optimal visual polish.",
-      fr: "Donnez vie à l'histoire de votre marque. Nous offrons des services de photographie professionnelle, de tournage de vidéos d'entreprise et de témoignages clients, de montage et de post-production optimisés par l'IA.",
-    },
-    iconName: "Video",
-    technologies: ["Premiere Pro", "DaVinci Resolve", "Camera Equipment", "AI Post-Production", "Color Grading"],
-    features: [
-      {
-        en: "Professional Photography",
-        fr: "Photographie professionnelle",
-      },
-      {
-        en: "Corporate & Testimonial Videos",
-        fr: "Vidéos d'entreprise & témoignages clients",
-      },
-      {
-        en: "Video Editing & AI Post-Production",
-        fr: "Montage & post-production assistée par l'IA",
-      },
-      {
-        en: "Field Reports & Case Study Videos",
-        fr: "Reportages terrain & études de cas vidéo",
-      },
-    ],
-    pillar: "design",
-  },
-
-  // PILLAR B - DIGITAL & WEB "AI-NATIVE"
-  {
-    id: "website-development",
-    slug: "website-development",
-    title: {
-      en: "Website Development",
-      fr: "Développement de Sites Web",
-    },
-    shortDescription: {
-      en: "High-performance corporate portals, custom business websites, e-commerce, and conversion landing pages.",
-      fr: "Portails d'affaires, boutiques e-commerce, landing pages et refontes de sites web.",
-    },
-    longDescription: {
-      en: "Build a robust web presence on modern frameworks. We specialize in high-performance corporate websites, customized business portals, secure Shopify/Next.js e-commerce storefronts, and conversion-optimized landing pages with full redesign & modernization services.",
-      fr: "Bâtissez un site web d'affaires de classe mondiale. Nous développons des portails corporatifs performants, des boutiques e-commerce robustes en Shopify/Next.js, des landing pages optimisées pour l'action et des projets complets de refonte.",
+      en: "We design and build modern corporate websites, portfolios, and landing pages using the latest technologies. Our websites are built to load instantly, rank high on search engines, and convert visitors into active leads.",
+      fr: "Nous concevons et développons des sites web professionnels, des portfolios et des pages de destination modernes. Nos solutions sont optimisées pour être rapides, visibles sur Google, et structurées pour transformer vos visiteurs en prospects.",
     },
     iconName: "Globe",
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel", "GraphQL"],
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel", "WordPress"],
     features: [
-      {
-        en: "Corporate & Business Websites",
-        fr: "Sites d'entreprise & portails d'affaires",
-      },
-      {
-        en: "E-Commerce Systems Integration",
-        fr: "Boutiques en ligne & systèmes e-commerce",
-      },
-      {
-        en: "Conversion Landing Pages",
-        fr: "Landing pages optimisées pour la conversion",
-      },
-      {
-        en: "Website Redesign & Modernization",
-        fr: "Refontes, migrations & modernisation",
-      },
+      { en: "Custom website development", fr: "Développement de sites sur mesure" },
+      { en: "SEO optimization & performance", fr: "Optimisation SEO & performance" },
+      { en: "Responsive, mobile-first layouts", fr: "Conception réactive et mobile-first" },
+      { en: "Google Business optimization", fr: "Optimisation de fiche Google Business" },
     ],
     pillar: "digital",
   },
   {
-    id: "mobile-development",
-    slug: "mobile-development",
+    id: "automation-ai",
+    slug: "automation-ai",
     title: {
-      en: "Mobile App Development",
-      fr: "Développement Mobile",
+      en: "Automation & AI Solutions",
+      fr: "Automatisation & IA",
     },
     shortDescription: {
-      en: "Native iOS & Android applications, cross-platform hybrid apps, PWAs, and predictive monitoring.",
-      fr: "Applications natives iOS/Android, applications hybrides, PWAs et maintenance prédictive.",
+      en: "Integrate custom AI models and automated workflows to simplify operations and eliminate repetitive tasks.",
+      fr: "Intégration d'outils d'IA générative et d'automatisation de tâches pour simplifier vos opérations quotidiennes.",
     },
     longDescription: {
-      en: "Deploy state-of-the-art mobile experiences. We develop native iOS and Android apps, cross-platform hybrid solutions (React Native/Flutter), Progressive Web Apps (PWAs), secure API integrations, and predictive performance monitoring.",
-      fr: "Déployez des applications mobiles innovantes. Nous concevons des applications natives iOS & Android, des solutions hybrides (React Native, Flutter), des PWA, des intégrations d'API sécurisées et des outils de surveillance de performance.",
+      en: "Streamline your workflows by automating manual processes. We develop secure AI chatbots, customize CRM integrations, and set up administrative automation to help your team focus on high-value business objectives.",
+      fr: "Optimisez vos flux de travail en éliminant les tâches manuelles. Nous concevons des chatbots IA personnalisés, configurons des intégrations de CRM et mettons en place des automatisations administratives pour libérer du temps à vos équipes.",
     },
-    iconName: "Smartphone",
-    technologies: ["React Native", "Flutter", "Swift", "Kotlin", "PWAs", "API Integrations"],
+    iconName: "Cpu",
+    technologies: ["Python", "OpenAI API", "n8n", "Zapier", "LangChain", "Qdrant"],
     features: [
-      {
-        en: "Native iOS & Android Applications",
-        fr: "Applications natives iOS & Android",
-      },
-      {
-        en: "Cross-Platform Hybrid Applications",
-        fr: "Applications hybrides multiplateformes",
-      },
-      {
-        en: "Progressive Web Apps (PWA)",
-        fr: "Progressive Web Apps (PWA)",
-      },
-      {
-        en: "API Integration & Predictive Monitoring",
-        fr: "Intégration d'APIs & surveillance prédictive",
-      },
+      { en: "Custom AI chatbot development", fr: "Développement d'assistants et chatbots IA" },
+      { en: "Administrative & CRM automation", fr: "Automatisation administrative et CRM" },
+      { en: "Sovereign AI integrations", fr: "Intégration de modèles d'IA sécurisés" },
+      { en: "Automated report generation", fr: "Génération de rapports automatiques" },
     ],
     pillar: "digital",
   },
   {
-    id: "ux-ui-design",
-    slug: "ux-ui-design",
+    id: "business-applications",
+    slug: "business-applications",
     title: {
-      en: "UX/UI Design",
-      fr: "Design UX/UI",
+      en: "Business Applications",
+      fr: "Applications Métiers",
     },
     shortDescription: {
-      en: "Interactive wireframes, user experience mapping, high-fidelity prototypes, and WCAG accessibility.",
-      fr: "Prototypes interactifs, parcours utilisateurs, design mobile-first et accessibilité WCAG.",
+      en: "Bespoke software, secure client portals, and web applications tailored to your specific workflows.",
+      fr: "Conception d'applications web, de portails clients et de logiciels sur mesure pour soutenir vos flux spécifiques.",
     },
     longDescription: {
-      en: "Design interfaces users love. Our process covers wireframing, high-fidelity interactive prototyping, mobile-first layouts, extensive user testing, customer journey mapping, and full WCAG accessibility compliance (AODA in Ontario).",
-      fr: "Concevez des interfaces que vos utilisateurs vont adorer. Notre approche englobe la conception de maquettes (wireframes), le prototypage interactif, des mises en page mobile-first, des tests utilisateurs et la conformité stricte aux critères d'accessibilité WCAG.",
+      en: "Empower your team and engage your clients with custom software tools. From secure client portals to complex web interfaces, we build custom solutions designed to scale with your business operations.",
+      fr: "Engagez vos clients et facilitez le travail de vos collaborateurs grâce à des outils sur mesure. Des portails clients sécurisés aux applications web interactives, nous concevons des outils dimensionnés pour votre activité.",
     },
     iconName: "Layout",
-    technologies: ["Figma", "Prototyping", "User Journeys", "A/B Testing", "WCAG Compliance"],
+    technologies: ["Next.js", "Node.js", "PostgreSQL", "Tailwind CSS", "REST APIs", "Auth0"],
     features: [
-      {
-        en: "Wireframing & High-Fidelity Prototyping",
-        fr: "Wireframes & prototypes interactifs haute fidélité",
-      },
-      {
-        en: "Mobile-First & Adaptive Layouts",
-        fr: "Design mobile-first & adaptatif",
-      },
-      {
-        en: "User Testing & Journey Optimization",
-        fr: "Tests utilisateurs & optimisation des parcours",
-      },
-      {
-        en: "WCAG 2.1 AA Accessibility Standards",
-        fr: "Normes d'accessibilité WCAG 2.1 AA",
-      },
+      { en: "Secure client portals", fr: "Portails clients & espaces sécurisés" },
+      { en: "Interactive dashboard creation", fr: "Tableaux de bord interactifs" },
+      { en: "Custom API & system integrations", fr: "Intégration d'APIs et de systèmes tiers" },
+      { en: "Database optimization & design", fr: "Création et gestion de bases de données" },
     ],
     pillar: "digital",
   },
@@ -267,36 +80,49 @@ export const services: Service[] = [
     id: "digital-marketing",
     slug: "digital-marketing",
     title: {
-      en: "SEO / SEA & Digital Marketing",
-      fr: "Marketing Numérique & SEO",
+      en: "Digital Marketing",
+      fr: "Marketing Digital",
     },
     shortDescription: {
-      en: "Data-driven SEO, Google Ads, local & international optimization, and conversion rate optimization (CRO).",
-      fr: "Référencement SEO, Google Ads, optimisation locale & internationale et optimisation de conversion.",
+      en: "Data-driven organic search (SEO), local optimization, and lead generation campaigns to grow your business.",
+      fr: "Stratégies d'acquisition, de référencement local (SEO) et de marketing de contenu adaptées à votre marché.",
     },
     longDescription: {
-      en: "Maximize your business reach. We run local and international search engine optimization campaigns, manage high-performing Google Ads, implement data analytics, and conduct conversion rate optimization (CRO) testing to scale your ROI.",
-      fr: "Maximisez la portée commerciale de votre entreprise. Nous gérons vos campagnes de référencement (SEO) local et international, optimisons vos budgets Google Ads et menons des tests d'optimisation des conversions (CRO) pour maximiser votre ROI.",
+      en: "Reach your local audience effectively. We execute tailored search engine optimization, content strategy campaigns, and targeted digital acquisition to ensure your business attracts qualified client inquiries.",
+      fr: "Ciblez efficacement vos clients locaux. Nous mettons en œuvre des campagnes d'optimisation pour les moteurs de recherche, du marketing de contenu, et de l'acquisition numérique pour attirer des contacts qualifiés.",
     },
     iconName: "Megaphone",
-    technologies: ["Google Analytics 4", "Google Ads", "SEM/SEO tools", "A/B testing tools", "Local SEO"],
+    technologies: ["Google Analytics 4", "Google Ads", "Local SEO", "Meta Ads", "Content Marketing"],
     features: [
-      {
-        en: "Search Engine Optimization (SEO)",
-        fr: "Référencement naturel (SEO)",
-      },
-      {
-        en: "Google Ads (SEA) Campaigns",
-        fr: "Campagnes payantes Google Ads (SEA)",
-      },
-      {
-        en: "Local SEO Ontario & Canada",
-        fr: "Référencement local (Ontario & Canada)",
-      },
-      {
-        en: "Conversion Optimization & Analytics",
-        fr: "Optimisation de conversion & analyses de performance",
-      },
+      { en: "Search Engine Optimization (SEO)", fr: "Optimisation pour les moteurs de recherche (SEO)" },
+      { en: "Local search and map optimization", fr: "Optimisation de fiches locales et cartes" },
+      { en: "Content strategy & copywriting", fr: "Stratégie éditoriale et rédaction de contenu" },
+      { en: "Targeted digital advertising", fr: "Publicités numériques ciblées" },
+    ],
+    pillar: "digital",
+  },
+  {
+    id: "training",
+    slug: "training",
+    title: {
+      en: "Professional Training",
+      fr: "Formations Professionnelles",
+    },
+    shortDescription: {
+      en: "Hands-on workshops and bootcamps to empower your team with AI tools, cybersecurity, and digital tools.",
+      fr: "Ateliers et bootcamps pratiques pour rendre vos collaborateurs autonomes sur les nouveaux outils numériques.",
+    },
+    longDescription: {
+      en: "We bridge the technology gap by training your staff. Our practical bootcamps cover AI adoption, digital marketing fundamentals, cybersecurity awareness, and modern digital productivity workflows.",
+      fr: "Nous accompagnons le changement en formant votre personnel. Nos ateliers couvrent la prise en main de l'IA (ChatGPT, Midjourney), le marketing digital, la cybersécurité et la productivité numérique.",
+    },
+    iconName: "Sparkles",
+    technologies: ["AI Productivity", "Cybersecurity Basics", "Prompt Engineering", "Digital Tools"],
+    features: [
+      { en: "AI productivity workshops", fr: "Ateliers d'initiation et de productivité avec l'IA" },
+      { en: "Cybersecurity awareness training", fr: "Sensibilisation à la sécurité informatique" },
+      { en: "Digital marketing fundamentals", fr: "Bases et outils du marketing en ligne" },
+      { en: "Personalized corporate coaching", fr: "Accompagnement et coaching d'équipe" },
     ],
     pillar: "digital",
   },

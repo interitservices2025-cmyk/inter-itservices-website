@@ -53,13 +53,13 @@ export default async function AboutPage({ params }: AboutPageProps) {
       <SectionContainer bgType="transparent" className="pb-8">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-6">
-            {locale === "fr" ? "À Propos d'INTER-IT" : "About INTER-IT SERVICES INC"}
+            {locale === "fr" ? "Un partenaire technologique proche des PME" : "A Technology Partner Close to SMEs"}
           </h1>
           <div className="h-1 w-24 bg-amber-500 mx-auto rounded-full mb-8" />
           <p className="text-slate-400 text-lg leading-relaxed">
             {locale === "fr"
-              ? "Fondée en Ontario, INTER-IT SERVICES INC s'efforce d'accélérer l'adoption des technologies de l'information et de l'intelligence artificielle pour les PME canadiennes et internationales."
-              : "Founded in Ontario, INTER-IT SERVICES INC works to accelerate IT and artificial intelligence adoption for Canadian SMEs and international clients alike."}
+              ? "INTER-IT Services se spécialise dans les solutions numériques, l'automatisation et l'intelligence artificielle. Notre mission est d'aider les organisations à adopter des technologies pratiques et accessibles alignées sur leurs objectifs. Nous croyons que l'innovation doit être utile, compréhensible et accessible."
+              : "INTER-IT Services specializes in digital solutions, automation and artificial intelligence. Our mission is to help organizations adopt practical and accessible technologies aligned with their objectives. We believe innovation should be useful, understandable and accessible."}
           </p>
         </div>
       </SectionContainer>
@@ -74,8 +74,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
             </h2>
             <p className="text-slate-400 text-sm leading-relaxed">
               {locale === "fr"
-                ? "Démocratiser l'accès à l'intelligence artificielle et concevoir des infrastructures logicielles haut de gamme qui libèrent le potentiel de croissance de nos clients."
-                : "To democratize artificial intelligence and build premium custom software architectures that unlock our clients' business scaling potentials."}
+                ? "Aider les PME et les organisations à intégrer des technologies utiles et adaptées pour simplifier leur quotidien opérationnel et stimuler leur croissance."
+                : "To help SMEs and organizations integrate useful, tailored technologies to simplify daily operations and foster business growth."}
             </p>
           </Card>
 
@@ -86,8 +86,8 @@ export default async function AboutPage({ params }: AboutPageProps) {
             </h2>
             <p className="text-slate-400 text-sm leading-relaxed">
               {locale === "fr"
-                ? "Devenir le partenaire technologique de référence en Ontario pour l'intégration de solutions logicielles d'IA intelligentes et éthiques."
-                : "To become Ontario's preferred technology partner for integrating intelligent, secure, and ethical corporate AI software solutions."}
+                ? "Démystifier l'accès à l'intelligence artificielle et aux solutions logicielles pour en faire des outils simples et rentables pour chaque entrepreneur."
+                : "To demystify artificial intelligence and web solutions, rendering them simple and cost-effective tools for every entrepreneur."}
             </p>
           </Card>
         </div>

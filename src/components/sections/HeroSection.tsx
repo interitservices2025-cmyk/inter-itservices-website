@@ -33,24 +33,13 @@ export default function HeroSection({ dict, locale }: HeroSectionProps) {
           <span>{dict.hero.badge}</span>
         </motion.div>
 
-        {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-[1.2] mb-6 max-w-4xl mx-auto"
         >
-          {locale === "fr" ? (
-            <>
-              Solutions Tech, Design, Marketing &{" "}
-              <span className="text-gradient-secondary">IA à l'International</span>
-            </>
-          ) : (
-            <>
-              Tech, Design, Marketing &{" "}
-              <span className="text-gradient-secondary">AI Solutions Worldwide</span>
-            </>
-          )}
+          {dict.hero.title}
         </motion.h1>
 
         {/* Subtitle */}
@@ -70,14 +59,14 @@ export default function HeroSection({ dict, locale }: HeroSectionProps) {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Link href={`/${locale}/services`} className="w-full sm:w-auto">
+          <Link href={`/${locale}/contact`} className="w-full sm:w-auto">
             <Button variant="secondary" size="lg" className="w-full sm:w-auto gap-2">
               <span>{dict.hero.ctaPrimary}</span>
               <ArrowRight className="h-5 w-5" />
             </Button>
           </Link>
 
-          <Link href={`/${locale}/contact`} className="w-full sm:w-auto">
+          <Link href={`/${locale}/services`} className="w-full sm:w-auto">
             <Button variant="outline" size="lg" className="w-full sm:w-auto">
               {dict.hero.ctaSecondary}
             </Button>

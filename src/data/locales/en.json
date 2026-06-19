@@ -16,93 +16,132 @@
   "nav": {
     "home": "Home",
     "about": "About Us",
-    "services": "Services",
-    "aiSolutions": "AI Solutions",
-    "portfolio": "Portfolio",
+    "services": "Solutions",
+    "projects": "Projects",
     "training": "Training",
     "blog": "Blog",
-    "products": "Products",
-    "contact": "Contact"
+    "contact": "Contact",
+    "solutionsDropdown": {
+      "title": "Solutions",
+      "webDev": "Web Development",
+      "automationAi": "Automation & AI",
+      "businessApps": "Business Applications",
+      "digitalMarketing": "Digital Marketing",
+      "training": "Training"
+    }
   },
   "hero": {
-    "badge": "IT & AI Expert (Canada & International)",
-    "title": "Tech, Design, Marketing & AI Solutions in Canada & Internationally",
-    "subtitle": "Based in Brampton (Ontario), INTER-IT SERVICES INC is your trusted technology partner for web development, graphic design, digital marketing, professional training, and SaaS solutions across Canada and worldwide.",
-    "ctaPrimary": "Explore Our Services",
-    "ctaSecondary": "Book a Consultation"
+    "badge": "Technology Consulting & Integration",
+    "title": "Transform your business through digital solutions and artificial intelligence",
+    "subtitle": "We help SMEs, entrepreneurs and organizations improve visibility, automate processes and modernize operations through practical technology solutions tailored to their needs.",
+    "ctaPrimary": "Book a Consultation",
+    "ctaSecondary": "Explore Our Solutions"
   },
   "trusted": {
-    "title": "Trusted by forward-thinking companies"
+    "title": "Trusted by local companies and organizations"
   },
   "aiSolutions": {
-    "title": "Artificial Intelligence Solutions",
-    "subtitle": "Leverage next-generation AI and automation to streamline operations and unlock new opportunities.",
-    "solutions": {
-      "automation": {
-        "title": "AI Automation",
-        "description": "Automate repetitive, high-volume tasks with intelligent software agents to cut costs and increase productivity."
+    "title": "Artificial Intelligence for Practical Business Growth",
+    "subtitle": "Discover how the practical integration of artificial intelligence and automation enables SMEs to accelerate their development.",
+    "cta": "Explore Automation & AI Solutions",
+    "benefits": {
+      "tasks": {
+        "title": "Reduce repetitive tasks",
+        "description": "Automate manual data entry and administrative workflows to focus your teams on core business activities."
       },
-      "customAI": {
-        "title": "Custom LLMs & Chatbots",
-        "description": "Build proprietary, secure conversational agents trained on your business data to support your teams and customers."
+      "support": {
+        "title": "Improve customer support",
+        "description": "Deploy intelligent AI assistants capable of instantly responding to customer inquiries 24/7."
       },
-      "predictive": {
-        "title": "Predictive Analytics",
-        "description": "Utilize machine learning algorithms to analyze historical patterns, forecast trends, and make data-driven decisions."
+      "communications": {
+        "title": "Automate communications",
+        "description": "Connect your emails, SMS, CRM, and management tools for smooth, effortless client touchpoints."
+      },
+      "documents": {
+        "title": "Optimize document management",
+        "description": "Utilize smart data extraction (OCR) to sort, read, and process files in seconds."
+      },
+      "productivity": {
+        "title": "Increase productivity",
+        "description": "Integrate tailored AI tools to analyze datasets and speed up your internal business workflows."
       }
     }
   },
   "services": {
-    "title": "Our Services",
-    "subtitle": "Comprehensive end-to-end technology solutions tailored to your unique business requirements.",
+    "title": "Our Solutions by Business Outcomes",
+    "subtitle": "We organize our services to align directly with the business outcomes you want to achieve.",
     "items": {
-      "websiteDevelopment": {
-        "title": "Website Development",
-        "description": "High-performance, secure, and SEO-optimized corporate websites and web portals built on modern frameworks."
+      "web-development": {
+        "title": "Web Development",
+        "description": "Building high-performance, responsive, and SEO-optimized websites to secure your online presence."
       },
-      "graphicDesignPrint": {
-        "title": "Graphic Design & Print",
-        "description": "Creating impactful brand identities, logos, and high-quality print-ready marketing materials."
+      "automation-ai": {
+        "title": "Automation & AI",
+        "description": "Integrating generative AI and custom task automation to simplify your daily operations."
       },
-      "digitalMarketing": {
+      "business-applications": {
+        "title": "Business Applications",
+        "description": "Designing customized web apps, secure client portals, and bespoke software to support your specific workflows."
+      },
+      "digital-marketing": {
         "title": "Digital Marketing",
-        "description": "Data-driven SEO, content marketing, and advertising campaigns designed to grow your online visibility."
+        "description": "Targeted acquisition, local SEO, and content marketing strategies designed for your market."
       },
-      "learningWorkshops": {
-        "title": "Learning Workshops",
-        "description": "Hands-on technical bootcamps and workshops led by senior industry experts to upskill your teams."
-      },
-      "aiSolutions": {
-        "title": "AI Solutions",
-        "description": "Custom LLM integration, secure chatbot development, and AI-driven automation workflows."
+      "training": {
+        "title": "Training",
+        "description": "Hands-on bootcamps and workshops to empower your teams on modern digital tools."
       }
     }
   },
+  "servicesCategories": {
+    "title": "Our Solutions by Business Outcomes",
+    "subtitle": "We organize our services to align directly with the business outcomes you want to achieve.",
+    "cat1": {
+      "title": "Increase Your Visibility",
+      "description": "Attract new clients and strengthen your local and online presence.",
+      "items": ["Custom Website Design", "SEO & Google Business Optimization", "Digital Marketing Strategy", "Local Target Acquisition Campaigns"]
+    },
+    "cat2": {
+      "title": "Automate Your Operations",
+      "description": "Eliminate manual tasks and save time every single day.",
+      "items": ["AI Chatbots & Assistants", "Administrative Automation", "CRM Integration & Sync", "Automated Task Workflows"]
+    },
+    "cat3": {
+      "title": "Build Custom Business Tools",
+      "description": "Build custom software solutions that support your growth.",
+      "items": ["High-Performance Web Apps", "Secure Client Portals", "Native & Hybrid Mobile Apps", "Bespoke Enterprise Software"]
+    },
+    "cat4": {
+      "title": "Develop Your Team's Skills",
+      "description": "Empower your employees to navigate tomorrow's digital workspace.",
+      "items": ["AI Training (ChatGPT, Midjourney)", "Digital Marketing Workshops", "Cybersecurity Awareness", "Digital Productivity Tools"]
+    }
+  },
   "whyUs": {
-    "title": "Why Choose INTER-IT?",
-    "subtitle": "We combine technological expertise, local proximity, and a passion for excellence to deliver tangible business results.",
+    "title": "Why Choose INTER-IT SERVICES?",
+    "subtitle": "Dedicated support and modern expertise to meet the real challenges of SMEs.",
     "reasons": {
-      "expertise": {
-        "title": "Deep Expertise",
-        "description": "A team of senior full-stack developers, AI engineers, and creative designers committed to high standards."
+      "personalizedSupport": {
+        "title": "Personalized Support",
+        "description": "Every organization is unique and deserves solutions adapted to its reality."
       },
-      "clientFirst": {
-        "title": "Client-Centric Approach",
-        "description": "We adapt our methodologies to fit your workflow, providing transparent communication and milestone-based deliveries."
+      "modernExpertise": {
+        "title": "Modern Digital Expertise",
+        "description": "Web development, task automation, digital marketing, and practical AI integration."
       },
-      "localPresence": {
-        "title": "Local & International Presence",
-        "description": "Based in Brampton (Ontario), we serve clients locally, nationally, and internationally with absolute responsiveness."
+      "resultsOriented": {
+        "title": "Results-Oriented Approach",
+        "description": "We focus on solving your most concrete operational and commercial challenges."
       },
-      "innovation": {
-        "title": "Innovation-Driven",
-        "description": "We continually integrate the latest developments in AI and cloud architecture to keep you ahead of the competition."
+      "knowledgeTransfer": {
+        "title": "Training & Knowledge Transfer",
+        "description": "We train and support your teams to ensure they are fully autonomous in their daily tasks."
       }
     }
   },
   "portfolio": {
-    "title": "Our Featured Portfolio",
-    "subtitle": "Explore case studies of digital transformation and custom software solutions we have proudly delivered.",
+    "title": "Our Projects & Case Studies",
+    "subtitle": "Explore how we help our partners succeed through dedication and modern technical expertise.",
     "categories": {
       "all": "All Projects",
       "ai": "AI & Automation",
@@ -112,22 +151,22 @@
     }
   },
   "testimonials": {
-    "title": "Client Testimonials",
-    "subtitle": "Discover how we help our partners succeed through our dedication and technical expertise."
+    "title": "What Our Clients Say",
+    "subtitle": "Read feedback from the SMEs and entrepreneurs who trust us to modernize their operations and accelerate growth."
   },
   "training": {
     "title": "Professional Training & Workshops",
-    "subtitle": "Upskill your internal teams with hands-on technical bootcamps led by senior industry practitioners.",
+    "subtitle": "Upskill your internal teams with hands-on bootcamps led by industry practitioners.",
     "cta": "Explore Course Modules"
   },
   "ctaSection": {
     "title": "Ready to Accelerate Your Digital Growth?",
-    "subtitle": "Contact our Brampton (Ontario) headquarters today to discuss your project in Canada or internationally.",
-    "button": "Get a Free Consultation"
+    "subtitle": "Contact our Brampton (Ontario) office today to discuss your project in Canada or internationally.",
+    "button": "Book a Consultation"
   },
   "contact": {
-    "title": "Get in Touch",
-    "subtitle": "Have a project in mind or need technical consultation? Reach out to us.",
+    "title": "Contact Us",
+    "subtitle": "Have a project in mind or need digital transformation consulting? Reach out to us.",
     "info": {
       "address": "Address",
       "email": "Email Address",
@@ -139,27 +178,26 @@
       "name": "Full Name",
       "email": "Email Address",
       "phone": "Phone Number (Optional)",
-      "subject": "Service Requested",
+      "subject": "Subject",
       "message": "Message / Project Details",
       "success": "Thank you! Your message has been sent successfully. We will contact you soon.",
       "error": "An error occurred while sending your message. Please try again or call us directly.",
       "responseTime": "We respond in less than 24 business hours.",
-      "services": {
-        "web": "Website Development (Canada & International)",
-        "design": "Graphic Design & Print Canada",
-        "marketing": "Digital Marketing & SEO",
-        "training": "Corporate Training & Workshops",
-        "ai": "AI Solutions & Automation",
-        "other": "Other Inquiry"
+      "helpQuestion": "What would you like help with?",
+      "helpOptions": {
+        "visibility": "Increase Visibility",
+        "operations": "Automate Operations",
+        "tools": "Build a Custom Tool",
+        "training": "Train Your Team"
       }
     }
   },
   "footer": {
-    "tagline": "A Canadian AI-First Technology Company delivering Design, Digital Solutions, Training and SaaS Products.",
+    "tagline": "A technology partner close to SMEs, specializing in digital solutions, automation, and artificial intelligence.",
     "quickLinks": "Quick Links",
     "contactInfo": "Contact Information",
     "newsletter": "Newsletter",
-    "newsletterDesc": "Subscribe to receive insights on AI automation and technology trends.",
+    "newsletterDesc": "Subscribe to receive insights on automation and technological trends.",
     "newsletterPlaceholder": "Your email address",
     "copyright": "© {year} INTER-IT SERVICES INC. All rights reserved.",
     "legal": "Privacy Policy | Terms of Service",

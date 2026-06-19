@@ -2,12 +2,11 @@
 
 import React from "react";
 import Link from "next/link";
-import { Fingerprint, Printer, Sparkles, Video, Globe, Smartphone, Layout, Megaphone, ArrowRight, Code } from "lucide-react";
+import { Eye, Cpu, Hammer, GraduationCap, CheckCircle2, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { services } from "@/data/services";
 import SectionContainer from "../ui/SectionContainer";
 import Card from "../ui/Card";
-import Badge from "../ui/Badge";
+import Button from "../ui/Button";
 
 interface ServicesSectionProps {
   dict: any;
@@ -15,119 +14,128 @@ interface ServicesSectionProps {
 }
 
 export default function ServicesSection({ dict, locale }: ServicesSectionProps) {
-  // Map icon names to Lucide icons
-  const iconMap: Record<string, React.ComponentType<any>> = {
-    Fingerprint: Fingerprint,
-    Printer: Printer,
-    Sparkles: Sparkles,
-    Video: Video,
-    Globe: Globe,
-    Smartphone: Smartphone,
-    Layout: Layout,
-    Megaphone: Megaphone,
-  };
+  // 4 Business outcome categories
+  const categories = [
+    {
+      key: "cat1",
+      icon: Eye,
+      color: "from-amber-500 to-orange-600",
+      bgLight: "bg-amber-500/10",
+      borderLight: "border-amber-500/20",
+      title: dict.servicesCategories.cat1.title,
+      description: dict.servicesCategories.cat1.description,
+      items: dict.servicesCategories.cat1.items,
+      link: `/${locale}/services/web-development`,
+    },
+    {
+      key: "cat2",
+      icon: Cpu,
+      color: "from-indigo-500 to-purple-600",
+      bgLight: "bg-indigo-500/10",
+      borderLight: "border-indigo-500/20",
+      title: dict.servicesCategories.cat2.title,
+      description: dict.servicesCategories.cat2.description,
+      items: dict.servicesCategories.cat2.items,
+      link: `/${locale}/services/automation-ai`,
+    },
+    {
+      key: "cat3",
+      icon: Hammer,
+      color: "from-blue-500 to-cyan-600",
+      bgLight: "bg-blue-500/10",
+      borderLight: "border-blue-500/20",
+      title: dict.servicesCategories.cat3.title,
+      description: dict.servicesCategories.cat3.description,
+      items: dict.servicesCategories.cat3.items,
+      link: `/${locale}/services/business-applications`,
+    },
+    {
+      key: "cat4",
+      icon: GraduationCap,
+      color: "from-emerald-500 to-teal-600",
+      bgLight: "bg-emerald-500/10",
+      borderLight: "border-emerald-500/20",
+      title: dict.servicesCategories.cat4.title,
+      description: dict.servicesCategories.cat4.description,
+      items: dict.servicesCategories.cat4.items,
+      link: `/${locale}/training`,
+    },
+  ];
 
-  const pillarA = services.filter((s) => s.pillar === "design");
-  const pillarB = services.filter((s) => s.pillar === "digital");
-
-  const renderGrid = (items: typeof services, title: string, subtitle: string) => (
-    <div className="space-y-8 mt-16 first:mt-0">
-      <div className="border-l-4 border-amber-500 pl-4">
-        <h3 className="text-2xl font-extrabold text-white tracking-tight uppercase">
-          {title}
-        </h3>
-        <p className="text-slate-400 text-xs sm:text-sm mt-1 max-w-2xl">
-          {subtitle}
+  return (
+    <SectionContainer id="services" bgType="light">
+      {/* Header */}
+      <div className="text-center max-w-3xl mx-auto mb-16">
+        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-4">
+          {dict.servicesCategories.title}
+        </h2>
+        <div className="h-1 w-20 bg-amber-500 mx-auto rounded-full mb-6" />
+        <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
+          {dict.servicesCategories.subtitle}
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {items.map((service, index) => {
-          const IconComponent = iconMap[service.iconName] || Code;
+      {/* Categories Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+        {categories.map((cat, index) => {
+          const IconComponent = cat.icon;
 
           return (
             <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
+              key={cat.key}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Card
-                glowColor="primary"
-                className="h-full flex flex-col justify-between border-slate-800 bg-slate-900/50 p-6"
+                glowColor={index % 2 === 0 ? "primary" : "secondary"}
+                className="h-full flex flex-col justify-between border-slate-800 bg-slate-900/40 p-8 hover:border-slate-700 transition-all duration-300"
               >
                 <div>
-                  {/* Icon */}
-                  <div className="bg-slate-800/80 text-slate-100 p-2.5 rounded-lg inline-flex mb-5 border border-slate-700/40">
-                    <IconComponent className="h-4.5 w-4.5 text-amber-500" />
+                  {/* Category Header */}
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className={`${cat.bgLight} text-amber-500 p-3 rounded-xl border ${cat.borderLight} shrink-0`}>
+                      <IconComponent className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white tracking-tight">
+                      {cat.title}
+                    </h3>
                   </div>
 
-                  {/* Title & Description */}
-                  <h4 className="text-base font-bold text-white mb-2 leading-tight">
-                    {service.title[locale as "en" | "fr"]}
-                  </h4>
-                  <p className="text-slate-400 text-[11px] leading-relaxed mb-5 line-clamp-3">
-                    {service.shortDescription[locale as "en" | "fr"]}
+                  {/* Description */}
+                  <p className="text-slate-300 text-sm leading-relaxed mb-6">
+                    {cat.description}
                   </p>
 
-                  {/* Technologies tags */}
-                  <div className="flex flex-wrap gap-1 mb-5">
-                    {service.technologies.slice(0, 3).map((tech) => (
-                      <Badge key={tech} variant="primary" className="text-[9px] px-1.5 py-0.5">
-                        {tech}
-                      </Badge>
+                  {/* Items list */}
+                  <ul className="space-y-3 mb-8">
+                    {cat.items.map((item: string, itemIdx: number) => (
+                      <li key={itemIdx} className="flex items-start gap-3">
+                        <CheckCircle2 className="h-4.5 w-4.5 text-amber-500 mt-0.5 shrink-0" />
+                        <span className="text-slate-300 text-xs sm:text-sm font-medium">
+                          {item}
+                        </span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
 
-                {/* Learn More link */}
-                <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between">
-                  <Link
-                    href={`/${locale}/services/${service.slug}`}
-                    className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-300 hover:text-amber-500 transition-colors group cursor-pointer"
-                  >
-                    <span>{dict.common.cta.learnMore}</span>
-                    <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
+                {/* Footer link button */}
+                <div className="pt-6 border-t border-slate-800/80 flex items-center justify-between">
+                  <Link href={cat.link} className="w-full">
+                    <Button variant="outline" size="sm" className="w-full justify-between group py-2">
+                      <span className="text-slate-300 group-hover:text-amber-500 transition-colors">
+                        {locale === "fr" ? "En savoir plus" : "Learn More"}
+                      </span>
+                      <ArrowRight className="h-4 w-4 text-amber-500 transition-transform group-hover:translate-x-1" />
+                    </Button>
                   </Link>
                 </div>
               </Card>
             </motion.div>
           );
         })}
-      </div>
-    </div>
-  );
-
-  return (
-    <SectionContainer id="services" bgType="light">
-      {/* Header */}
-      <div className="text-center max-w-3xl mx-auto mb-16">
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
-          {dict.services.title}
-        </h2>
-        <div className="h-1 w-20 bg-amber-500 mx-auto rounded-full mb-6" />
-        <p className="text-slate-400 text-base sm:text-lg">
-          {dict.services.subtitle}
-        </p>
-      </div>
-
-      <div className="space-y-16 max-w-7xl mx-auto">
-        {renderGrid(
-          pillarA,
-          locale === "fr" ? "Pilier A — Design & Créativité Augmentée" : "Pillar A — Design & Augmented Creativity",
-          locale === "fr"
-            ? "L'intégration de l'IA dans le processus créatif repousse les limites artistiques tout en optimisant les délais de livraison."
-            : "Integrating AI into the creative pipeline pushes artistic limits while drastically speeding up delivery timelines."
-        )}
-
-        {renderGrid(
-          pillarB,
-          locale === "fr" ? "Pilier B — Digital & Web \"AI-Native\"" : "Pillar B — Digital & Web \"AI-Native\"",
-          locale === "fr"
-            ? "Le développement web et les stratégies digitales incorporent l'IA pour offrir des performances web et de conversion inégalées."
-            : "Web development and digital tactics harness AI to deliver unrivaled runtime performance and conversion metrics."
-        )}
       </div>
     </SectionContainer>
   );

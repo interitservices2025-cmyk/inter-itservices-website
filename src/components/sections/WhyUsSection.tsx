@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Award, Users, MapPin, Zap } from "lucide-react";
+import { Users, Award, Zap, GraduationCap } from "lucide-react";
 import { motion } from "framer-motion";
 import SectionContainer from "../ui/SectionContainer";
 import Card from "../ui/Card";
@@ -13,28 +13,28 @@ interface WhyUsSectionProps {
 export default function WhyUsSection({ dict }: WhyUsSectionProps) {
   const reasons = [
     {
-      key: "expertise",
-      icon: Award,
-      title: dict.whyUs.reasons.expertise.title,
-      description: dict.whyUs.reasons.expertise.description,
-    },
-    {
-      key: "clientFirst",
+      key: "personalizedSupport",
       icon: Users,
-      title: dict.whyUs.reasons.clientFirst.title,
-      description: dict.whyUs.reasons.clientFirst.description,
+      title: dict.whyUs.reasons.personalizedSupport.title,
+      description: dict.whyUs.reasons.personalizedSupport.description,
     },
     {
-      key: "localPresence",
-      icon: MapPin,
-      title: dict.whyUs.reasons.localPresence.title,
-      description: dict.whyUs.reasons.localPresence.description,
+      key: "modernExpertise",
+      icon: Award,
+      title: dict.whyUs.reasons.modernExpertise.title,
+      description: dict.whyUs.reasons.modernExpertise.description,
     },
     {
-      key: "innovation",
+      key: "resultsOriented",
       icon: Zap,
-      title: dict.whyUs.reasons.innovation.title,
-      description: dict.whyUs.reasons.innovation.description,
+      title: dict.whyUs.reasons.resultsOriented.title,
+      description: dict.whyUs.reasons.resultsOriented.description,
+    },
+    {
+      key: "knowledgeTransfer",
+      icon: GraduationCap,
+      title: dict.whyUs.reasons.knowledgeTransfer.title,
+      description: dict.whyUs.reasons.knowledgeTransfer.description,
     },
   ];
 

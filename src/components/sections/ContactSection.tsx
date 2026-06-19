@@ -175,28 +175,26 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
                   />
                 </div>
 
-                {/* Subject / Service Selection */}
-                <div className="flex flex-col gap-1.5">
+                {/* Subject / Help request selection */}
+                <div className="flex flex-col gap-1.5 font-sans">
                   <label htmlFor="subject" className="text-slate-300 text-xs font-semibold">
-                    {dict.contact.form.subject} <span className="text-amber-500">*</span>
+                    {dict.contact.form.helpQuestion} <span className="text-amber-500">*</span>
                   </label>
                   <select
                     id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="bg-slate-950 border border-slate-800 focus:border-amber-500 focus:outline-none rounded-lg px-4 py-2 text-xs text-white transition-colors"
+                    className="bg-slate-950 border border-slate-800 focus:border-amber-500 focus:outline-none rounded-lg px-4 py-2.5 text-xs text-white transition-colors cursor-pointer"
                     required
                   >
                     <option value="" disabled className="text-slate-600 bg-slate-950">
-                      {locale === "fr" ? "Sélectionnez un service" : "Select a service"}
+                      {locale === "fr" ? "Sélectionnez une option" : "Select an option"}
                     </option>
-                    <option value="web" className="bg-slate-950">{dict.contact.form.services.web}</option>
-                    <option value="design" className="bg-slate-950">{dict.contact.form.services.design}</option>
-                    <option value="marketing" className="bg-slate-950">{dict.contact.form.services.marketing}</option>
-                    <option value="training" className="bg-slate-950">{dict.contact.form.services.training}</option>
-                    <option value="ai" className="bg-slate-950">{dict.contact.form.services.ai}</option>
-                    <option value="other" className="bg-slate-950">{dict.contact.form.services.other}</option>
+                    <option value="visibility" className="bg-slate-950">{dict.contact.form.helpOptions.visibility}</option>
+                    <option value="operations" className="bg-slate-950">{dict.contact.form.helpOptions.operations}</option>
+                    <option value="tools" className="bg-slate-950">{dict.contact.form.helpOptions.tools}</option>
+                    <option value="training" className="bg-slate-950">{dict.contact.form.helpOptions.training}</option>
                   </select>
                 </div>
               </div>
