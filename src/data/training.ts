@@ -2,6 +2,47 @@ import { Course } from "@/types";
 
 export const courses: Course[] = [
   {
+    id: "formation-odoo",
+    slug: "formation-odoo",
+    title: {
+      en: "Odoo ERP: Practical Mastery for Business Teams",
+      fr: "Odoo ERP : Prise en Main & Maîtrise Opérationnelle",
+    },
+    description: {
+      en: "Hands-on training to master Odoo modules: CRM, sales, invoicing, inventory, and project tracking to boost day-to-day productivity.",
+      fr: "Formation pratique pour maîtriser les modules clés d'Odoo : CRM, ventes, facturation, stocks et gestion de projet au quotidien.",
+    },
+    duration: {
+      en: "2 Days (12 Hours)",
+      fr: "2 Jours (12 Heures)",
+    },
+    level: {
+      en: "Beginner to Intermediate",
+      fr: "Débutant à Intermédiaire",
+    },
+    format: {
+      en: "In-person, Remote, or Hybrid",
+      fr: "Présentiel, Distanciel ou Hybride",
+    },
+    topics: [
+      { en: "Odoo architecture and interface navigation", fr: "Architecture générale et prise en main de l'interface Odoo" },
+      { en: "CRM & Sales pipeline: from lead to validated quote", fr: "CRM & Ventes : du prospect au devis signé et facturé" },
+      { en: "Inventory management and stock movements", fr: "Gestion des stocks, articles et mouvements d'inventaire" },
+      { en: "Invoicing workflows and customer payment follow-up", fr: "Facturation, relances clients et suivi des règlements" },
+      { en: "Custom dashboards and operational reporting", fr: "Création de tableaux de bord et rapports d'activité" },
+    ],
+    targetAudience: {
+      en: "SMEs, professionals, administrative teams, francophone associations, and organizations looking to strengthen their operational digital skills.",
+      fr: "PME, professionnels, équipes administratives, associations francophones, centres d'emploi et organisations souhaitant renforcer les compétences numériques de leurs équipes.",
+    },
+    skillsAcquired: [
+      { en: "Navigate and use Odoo comfortably", fr: "Naviguer et exploiter Odoo en toute autonomie" },
+      { en: "Manage sales cycles and invoicing end-to-end", fr: "Gérer le cycle complet vente-facturation" },
+      { en: "Monitor stock and operational performance", fr: "Suivre les stocks et indicateurs d'activité" },
+    ],
+    trainingCategory: "ai-communication",
+  },
+  {
     id: "formation-ia",
     slug: "formation-ia",
     title: {
@@ -9,8 +50,8 @@ export const courses: Course[] = [
       fr: "IA & Automatisation pour la Productivité",
     },
     description: {
-      en: "Learn to integrate generative AI tools like ChatGPT and Midjourney, and build automated workflows to save hours on repetitive operations.",
-      fr: "Apprenez à intégrer l'IA générative comme ChatGPT et Midjourney, et à concevoir des automatisations pour libérer du temps au quotidien.",
+      en: "Learn to integrate generative AI tools and build automated workflows to save hours on repetitive daily operations.",
+      fr: "Apprenez à intégrer l'IA générative et à concevoir des flux automatisés pour éliminer les tâches répétitives au quotidien.",
     },
     duration: {
       en: "2 Days (12 Hours)",
@@ -20,21 +61,24 @@ export const courses: Course[] = [
       en: "Beginner to Intermediate",
       fr: "Débutant à Intermédiaire",
     },
-    price: "$799 CAD",
+    format: {
+      en: "In-person, Remote, or Hybrid",
+      fr: "Présentiel, Distanciel ou Hybride",
+    },
     topics: [
-      { en: "Prompt engineering foundations (ChatGPT, Claude)", fr: "Bases de l'ingénierie des requêtes (ChatGPT, Claude)" },
-      { en: "Generative images & commercial visual assets (Midjourney)", fr: "Création de visuels et supports publicitaires (Midjourney)" },
-      { en: "Task automation & workflow integration (Zapier, Make)", fr: "Automatisation de tâches et connexion d'outils (Zapier, Make)" },
-      { en: "Establishing an enterprise AI adoption roadmap", fr: "Mise en place d'une feuille de route d'adoption de l'IA" },
+      { en: "Prompt engineering foundations for business tasks", fr: "Fondamentaux de l'ingénierie des invites (prompts) professionnels" },
+      { en: "Automating document drafting and summarization", fr: "Rédaction assistée, synthèses et traitement documentaire" },
+      { en: "Workflow automation with no-code tools (Zapier, Make)", fr: "Automatisation de flux avec les outils no-code (Zapier, Make)" },
+      { en: "Data privacy and security guidelines for AI use", fr: "Bonnes pratiques de sécurité et de confidentialité des données" },
     ],
     targetAudience: {
-      en: "SME owners, managers, administrators, and professionals.",
-      fr: "Dirigeants de PME, gestionnaires, adjoints administratifs et professionnels.",
+      en: "Professionals, schools, employment centers, francophone organizations, and corporate teams eager to boost efficiency.",
+      fr: "Professionnels, écoles, centres d'emploi, associations francophones et organisations souhaitant optimiser leur productivité quotidienne.",
     },
     skillsAcquired: [
-      { en: "Automate administrative tasks", fr: "Automatiser des flux administratifs" },
-      { en: "Design advanced custom prompts", fr: "Concevoir des invites complexes et structurées" },
-      { en: "Configure low-code system integrations", fr: "Mettre en place des intégrations sans code" },
+      { en: "Automate routine administrative workflows", fr: "Automatiser les tâches administratives courantes" },
+      { en: "Write precise, structured business prompts", fr: "Structurer des invites IA pour des résultats fiables" },
+      { en: "Deploy simple no-code business connections", fr: "Connecter des applications d'entreprise sans coder" },
     ],
     trainingCategory: "ai-communication",
   },
@@ -42,12 +86,12 @@ export const courses: Course[] = [
     id: "formation-marketing",
     slug: "formation-marketing",
     title: {
-      en: "Digital Marketing & Local Client Acquisition",
+      en: "Digital Marketing & Online Client Acquisition",
       fr: "Marketing Numérique & Acquisition de Clientèle",
     },
     description: {
-      en: "Learn to attract local clients, optimize your search engine visibility (SEO), and run high-performing advertising campaigns.",
-      fr: "Attirez de nouveaux clients, optimisez votre visibilité locale (Google Business & SEO) et lancez des campagnes publicitaires rentables.",
+      en: "Learn to attract qualified inquiries, optimize search engine visibility (SEO), and run high-performing digital campaigns.",
+      fr: "Attirez des prospects qualifiés, optimisez votre référencement naturel (SEO) et déployez des campagnes numériques ciblées.",
     },
     duration: {
       en: "2 Days (12 Hours)",
@@ -57,21 +101,24 @@ export const courses: Course[] = [
       en: "Beginner to Intermediate",
       fr: "Débutant à Intermédiaire",
     },
-    price: "$699 CAD",
+    format: {
+      en: "In-person, Remote, or Hybrid",
+      fr: "Présentiel, Distanciel ou Hybride",
+    },
     topics: [
-      { en: "Search Engine Optimization (SEO) & Google Business", fr: "Référencement naturel (SEO) et visibilité locale Google" },
-      { en: "Social media strategies (Facebook, Instagram, LinkedIn)", fr: "Animation de réseaux sociaux et calendriers éditoriaux" },
-      { en: "Digital advertising campaign setup (Meta & Google Ads)", fr: "Lancement de campagnes publicitaires (Meta et Google Ads)" },
-      { en: "Performance tracking and newsletter automation", fr: "Mesure d'audience (GA4) et marketing par courriel" },
+      { en: "Search Engine Optimization (SEO) fundamentals", fr: "Principes fondamentaux du référencement naturel (SEO)" },
+      { en: "Content strategy and editorial calendar planning", fr: "Stratégie éditoriale et planification de contenus" },
+      { en: "Targeted digital advertising & lead generation", fr: "Campagnes d'acquisition en ligne et génération de leads" },
+      { en: "Analytics setup and ROI performance tracking", fr: "Mesure de performance et analyse du retour sur investissement" },
     ],
     targetAudience: {
-      en: "Entrepreneurs, business owners, and marketing managers.",
-      fr: "Entrepreneurs, propriétaires de PME et responsables marketing.",
+      en: "Entrepreneurs, marketing managers, community organizations, and job training centers seeking digital acquisition skills.",
+      fr: "Entrepreneurs, responsables marketing, organismes communautaires, centres d'emploi et professionnels en transition.",
     },
     skillsAcquired: [
-      { en: "Build target customer acquisition pipelines", fr: "Bâtir des tunnels d'acquisition client ciblés" },
-      { en: "Optimize ranking in Google Search maps", fr: "Optimiser le classement local sur Google Maps" },
-      { en: "Measure return on advertising spend", fr: "Analyser et mesurer le retour sur investissement publicitaire" },
+      { en: "Build targeted customer acquisition funnels", fr: "Construire un tunnel d'acquisition de prospects" },
+      { en: "Improve organic visibility on Google", fr: "Améliorer le positionnement sur les moteurs de recherche" },
+      { en: "Measure return on marketing initiatives", fr: "Mesurer et optimiser les retombées de ses actions" },
     ],
     trainingCategory: "digital-marketing",
   },
@@ -79,12 +126,12 @@ export const courses: Course[] = [
     id: "formation-cybersecurite",
     slug: "formation-cybersecurite",
     title: {
-      en: "Cybersecurity & Data Protection for SMEs",
-      fr: "Cybersécurité & Protection des Données",
+      en: "Cybersecurity & Data Protection for Organizations",
+      fr: "Cybersécurité & Protection des Données pour PME",
     },
     description: {
-      en: "Protect your organization against cyber threats, secure internal networks and client databases, and implement security policies.",
-      fr: "Protégez votre entreprise contre les cybermenaces, sécurisez vos réseaux et terminaux, et appliquez les politiques de conformité.",
+      en: "Protect your organization against cyber threats, secure internal networks, and implement practical data privacy policies.",
+      fr: "Protégez votre organisation contre les cybermenaces, sécurisez vos postes de travail et appliquez les bonnes pratiques de conformité.",
     },
     duration: {
       en: "2 Days (12 Hours)",
@@ -94,59 +141,25 @@ export const courses: Course[] = [
       en: "Beginner to Advanced",
       fr: "Débutant à Avancé",
     },
-    price: "$899 CAD",
+    format: {
+      en: "In-person, Remote, or Hybrid",
+      fr: "Présentiel, Distanciel ou Hybride",
+    },
     topics: [
-      { en: "Anatomy of modern threats (Phishing, Ransomware)", fr: "Anatomie des menaces modernes (Hameçonnage, Ransomware)" },
-      { en: "Securing corporate networks, devices, and cloud databases", fr: "Sécurisation des accès cloud, réseaux et appareils mobiles" },
-      { en: "Drafting an incident response and business continuity plan", fr: "Plan de continuité d'activité et gestion de crise" },
-      { en: "Regulatory compliance and client data privacy standards", fr: "Conformité réglementaire et lois sur la vie privée (LPRPDE)" },
+      { en: "Anatomy of modern cyber threats (Phishing, Ransomware)", fr: "Comprendre les menaces actuelles (Hameçonnage, Rançongiciels)" },
+      { en: "Securing devices, passwords, and cloud accounts", fr: "Sécurisation des terminaux, mots de passe et accès cloud" },
+      { en: "Incident response protocols and backup hygiene", fr: "Politiques de sauvegarde et réflexes en cas d'incident" },
+      { en: "Privacy laws and confidential data management", fr: "Réglementations sur la vie privée et données sensibles" },
     ],
     targetAudience: {
-      en: "IT staff, business managers, and operations leads.",
-      fr: "Responsables techniques, chefs d'entreprise et managers.",
+      en: "Operations leads, administrative staff, IT coordinators, schools, and francophone community organizations.",
+      fr: "Gestionnaires d'opérations, équipes administratives, coordinateurs informatiques, écoles et associations.",
     },
     skillsAcquired: [
-      { en: "Conduct basic internal security audits", fr: "Réaliser un diagnostic de sécurité interne" },
-      { en: "Establish incident reporting protocols", fr: "Mettre en place des protocoles de sécurité préventifs" },
-      { en: "Secure employee workstation environments", fr: "Sécuriser l'environnement de travail des collaborateurs" },
+      { en: "Identify and prevent common cyber attack vectors", fr: "Détecter et déjouer les tentatives d'intrusion" },
+      { en: "Apply robust workstation and cloud security standards", fr: "Appliquer des règles d'accès et d'authentification solides" },
+      { en: "Establish an actionable internal security checklist", fr: "Mettre en place une procédure de sécurité interne" },
     ],
     trainingCategory: "ai-communication",
-  },
-  {
-    id: "formation-productivite",
-    slug: "formation-productivite",
-    title: {
-      en: "Digital Productivity & Collaborative Workspace",
-      fr: "Productivité Numérique & Outils Collaboratifs",
-    },
-    description: {
-      en: "Optimize internal collaboration, structure project tracking tools, and streamline daily customer follow-up databases.",
-      fr: "Optimisez la collaboration interne de vos équipes, organisez la gestion de projet et centralisez le suivi client.",
-    },
-    duration: {
-      en: "1 Day (6 Hours)",
-      fr: "1 Jour (6 Heures)",
-    },
-    level: {
-      en: "Beginner",
-      fr: "Débutant",
-    },
-    price: "$599 CAD",
-    topics: [
-      { en: "Collaborative suites (Google Workspace, Microsoft 365)", fr: "Maîtrise des suites collaboratives (Google Workspace / M365)" },
-      { en: "Project tracking and task boards (Notion, Trello, Asana)", fr: "Suivi de projet et gestion de tâches (Notion, Trello, Asana)" },
-      { en: "Introduction to CRM software for client interactions", fr: "Découverte des CRM pour le suivi de relation client" },
-      { en: "Time management techniques and digital organization", fr: "Gestion du temps et organisation de fichiers partagés" },
-    ],
-    targetAudience: {
-      en: "Administrative assistants, office managers, and team delegates.",
-      fr: "Adjoints administratifs, coordonnateurs de projet et équipes de bureau.",
-    },
-    skillsAcquired: [
-      { en: "Streamline team task allocation workflows", fr: "Fluidifier l'attribution et le suivi des tâches" },
-      { en: "Structure centralized shared file databases", fr: "Organiser les espaces documentaires cloud" },
-      { en: "Improve customer relationship logging efficiency", fr: "Optimiser la saisie des interactions clients" },
-    ],
-    trainingCategory: "storytelling-creation",
   },
 ];

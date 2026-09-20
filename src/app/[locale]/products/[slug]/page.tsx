@@ -152,30 +152,26 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
           </div>
         </div>
 
-        {/* Calendly Booking Section */}
+        {/* Demo Request Section */}
         <div className="mt-16 max-w-6xl mx-auto">
-          <Card className="border-slate-200 bg-slate-50 p-6 sm:p-8 shadow-sm">
-            <div className="text-center max-w-3xl mx-auto mb-8">
-              <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 mb-3">
-                {locale === "fr" ? "Planifier une démonstration en direct" : "Schedule a Live Demo"}
+          <Card className="border-slate-200 bg-slate-50 p-8 sm:p-10 shadow-sm text-center">
+            <div className="max-w-2xl mx-auto space-y-4">
+              <h2 className="text-xl sm:text-2xl font-extrabold text-[#1D2140]">
+                {locale === "fr" ? "Planifier une démonstration guidée" : "Schedule a Guided Demo"}
               </h2>
-              <p className="text-slate-600 text-xs sm:text-sm">
+              <div className="h-0.5 w-16 bg-[#F39200] mx-auto rounded-full" />
+              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
                 {locale === "fr"
-                  ? "Choisissez un créneau ci-dessous pour assister à une démonstration guidée du produit avec un ingénieur d'INTER-IT SERVICES INC."
-                  : "Select a time slot below to watch a guided product walk-through with an INTER-IT SERVICES INC. engineer."}
+                  ? "Contactez nos ingénieurs pour assister à une démonstration en direct et évaluer l'intégration du logiciel avec vos processus d'affaires."
+                  : "Contact our engineering team to schedule a live product walk-through and evaluate integration with your business workflows."}
               </p>
-              <div className="h-0.5 w-16 bg-orange-500 mx-auto mt-4 rounded-full" />
-            </div>
-
-            <div className="w-full rounded-xl overflow-hidden border border-slate-200 bg-white h-[600px]">
-              <iframe
-                src="https://calendly.com/interitservices-brampton/30min?embed_domain=inter-itservices.ca&embed_type=inline&hide_event_type_details=1&background_color=ffffff&text_color=0f172a&primary_color=f39200"
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                title="Calendly Scheduler"
-                className="w-full h-full min-h-[550px]"
-              ></iframe>
+              <div className="pt-4">
+                <Link href={`/${locale}/contact`}>
+                  <Button variant="secondary" className="px-8 py-3 text-xs font-bold uppercase tracking-wider shadow-md shadow-[#F39200]/20">
+                    {locale === "fr" ? "Demander une démonstration" : "Request Product Demo"}
+                  </Button>
+                </Link>
+              </div>
             </div>
           </Card>
         </div>

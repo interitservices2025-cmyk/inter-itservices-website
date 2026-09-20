@@ -1,28 +1,29 @@
 {
   "common": {
     "companyName": "INTER-IT SERVICES INC",
-    "location": "Brampton, Ontario, Canada",
+    "location": "Ontario, Canada",
     "email": "contact@inter-itservices.ca",
-    "phone": "(416) 871-9045",
     "cta": {
       "contactUs": "Contactez-nous",
       "getStarted": "Démarrer",
       "learnMore": "En savoir plus",
-      "submit": "Envoyer le message",
+      "submit": "Envoyer ma demande",
       "viewAll": "Voir tout",
-      "register": "S'inscrire maintenant"
+      "register": "Demander un atelier",
+      "talkOdoo": "Parler de votre projet Odoo",
+      "discoverOdoo": "Découvrir Odoo"
     }
   },
   "nav": {
     "home": "Accueil",
     "about": "À Propos",
     "services": "Solutions",
-    "projects": "Projets",
-    "training": "Formations",
-    "blog": "Blog",
+    "training": "Ateliers de formation",
+    "blog": "Insights & Blog",
     "contact": "Contact",
     "solutionsDropdown": {
       "title": "Solutions",
+      "odoo": "Odoo Implementation",
       "webDev": "Développement Web",
       "automationAi": "Automatisation & IA",
       "businessApps": "Applications Métiers",
@@ -31,176 +32,189 @@
     }
   },
   "hero": {
-    "badge": "Conseil & Intégration Technologique",
-    "title": "Transformez votre entreprise grâce aux solutions numériques et à l'intelligence artificielle",
-    "subtitle": "Nous aidons les PME, entrepreneurs et organisations à améliorer leur visibilité, automatiser leurs processus et moderniser leurs opérations grâce à des solutions technologiques pratiques et adaptées à leurs besoins.",
-    "ctaPrimary": "Réserver une Consultation",
-    "ctaSecondary": "Découvrir nos Solutions"
+    "badge": "ODOO IMPLEMENTATION",
+    "title": "Simplifiez la gestion de votre entreprise avec Odoo",
+    "subtitle": "INTER-IT Services vous accompagne dans l’implémentation d’Odoo pour centraliser vos opérations, automatiser vos processus et mieux gérer votre entreprise.",
+    "ctaPrimary": "Parler de votre projet Odoo",
+    "ctaSecondary": "Découvrir Odoo"
   },
-  "trusted": {
-    "title": "Propulsé par la confiance d'entreprises et d'organisations d'ici"
+  "intro": {
+    "badge": "Qui est INTER-IT Services ?",
+    "title": "Un partenaire technologique dédié à la performance des PME",
+    "description": "Nous accompagnons les dirigeants, PME et organisations dans la modernisation de leurs opérations. Spécialisés dans l'implémentation de solutions Odoo, le développement web sur mesure, l'automatisation de processus et la formation, nous créons des outils pratiques et durables au service de votre croissance."
   },
-  "aiSolutions": {
-    "title": "L'Intelligence Artificielle pour une Croissance d'Entreprise Concrète",
-    "subtitle": "Découvrez comment l'intégration pratique de l'intelligence artificielle et de l'automatisation permet aux PME d'accélérer leur développement.",
-    "cta": "Explorer nos solutions d'automatisation & IA",
+  "odooHome": {
+    "badge": "Centralisation & Efficacité",
+    "title": "Odoo pour centraliser et simplifier votre entreprise",
+    "subtitle": "Éliminez les silos de données et les outils hétérogènes. Odoo réunit l'ensemble de votre gestion opérationnelle au sein d'une solution modulaire et intuitive.",
+    "cta": "Découvrir notre accompagnement Odoo",
     "benefits": {
-      "tasks": {
-        "title": "Réduire les tâches répétitives",
-        "description": "Automatisez les saisies manuelles et les flux administratifs pour recentrer vos équipes sur les tâches essentielles."
+      "centralization": {
+        "title": "Gestion centralisée",
+        "description": "Unifiez CRM, ventes, facturation, comptabilité, stocks et projets au sein d'une unique plateforme partagée."
+      },
+      "automation": {
+        "title": "Automatisation des processus",
+        "description": "Supprimez les saisies manuelles redondantes et fluidifiez la transmission d'informations entre vos équipes."
+      },
+      "visibility": {
+        "title": "Visibilité sur les opérations",
+        "description": "Suivez vos indicateurs clés en temps réel via des tableaux de bord clairs pour piloter votre activité avec confiance."
+      },
+      "consolidation": {
+        "title": "Réduction des outils dispersés",
+        "description": "Remplacez de multiples abonnements isolés par une suite cohérente, réduisant vos coûts et la charge de maintenance."
+      },
+      "collaboration": {
+        "title": "Meilleure collaboration",
+        "description": "Permettez à vos collaborateurs de travailler de manière synchronisée avec les mêmes données clients et financières."
       },
       "support": {
-        "title": "Améliorer le service client",
-        "description": "Déployez des assistants IA intelligents capables de répondre instantanément aux demandes de vos clients 24h/24."
-      },
-      "communications": {
-        "title": "Automatiser les communications",
-        "description": "Connectez vos emails, SMS, CRM et outils de gestion pour un suivi client fluide et sans effort."
-      },
-      "documents": {
-        "title": "Optimiser la gestion documentaire",
-        "description": "Utilisez l'extraction intelligente de données (OCR) pour classer, lire et traiter vos documents en quelques secondes."
-      },
-      "productivity": {
-        "title": "Accroître la productivité",
-        "description": "Intégrez des outils d'IA sur mesure pour analyser vos données et accélérer vos processus d'affaires."
+        "title": "Accompagnement par INTER-IT Services",
+        "description": "De l'analyse préalable des besoins au paramétrage, à la migration de données et à la formation de vos équipes."
       }
     }
   },
-  "services": {
-    "title": "Nos Solutions par Objectifs Métiers",
-    "subtitle": "Nous organisons nos services pour répondre directement aux résultats d'affaires que vous recherchez.",
-    "items": {
-      "web-development": {
-        "title": "Développement Web",
-        "description": "Création de sites internet performants, ergonomiques et optimisés pour le SEO afin d'assurer votre présence en ligne."
-      },
-      "automation-ai": {
-        "title": "Automatisation & IA",
-        "description": "Intégration d'outils d'IA générative et de flux d'automatisation de tâches pour simplifier vos opérations quotidiennes."
-      },
-      "business-applications": {
-        "title": "Applications Métiers",
-        "description": "Conception d'applications web, de portails clients et de logiciels sur mesure pour soutenir vos flux de travail spécifiques."
-      },
-      "digital-marketing": {
-        "title": "Marketing Digital",
-        "description": "Stratégies d'acquisition, de référencement local et de marketing de contenu adaptées à votre marché cible."
-      },
-      "training": {
-        "title": "Formations",
-        "description": "Bootcamps et ateliers pratiques pour rendre vos collaborateurs pleinement autonomes sur les nouveaux outils numériques."
-      }
-    }
+  "solutionsOverview": {
+    "badge": "Nos Domaines d'Expertise",
+    "title": "Des Solutions Technologiques Conçues pour Vos Enjeux Métiers",
+    "subtitle": "Un éventail de compétences complémentaires pour moderniser chaque dimension de votre organisation."
   },
-  "servicesCategories": {
-    "title": "Nos Solutions par Objectifs Métiers",
-    "subtitle": "Nous organisons nos services pour répondre directement aux résultats d'affaires que vous recherchez.",
-    "cat1": {
-      "title": "Augmenter Votre Visibilité",
-      "description": "Attirez de nouveaux clients et renforcez votre présence locale et en ligne.",
-      "items": ["Sites internet sur mesure", "Optimisation SEO & Google Business", "Marketing numérique", "Campagnes d'acquisition locales"]
+  "odooPage": {
+    "badge": "Odoo Implementation Services",
+    "title": "Implémentation Odoo : Centralisez et Pilotez Votre Entreprise",
+    "subtitle": "INTER-IT Services vous accompagne dans le déploiement, la configuration et l'adoption d'Odoo pour unifier vos opérations quotidiennes et soutenir votre croissance.",
+    "cta": "Discuter de votre projet Odoo",
+    "whatIs": {
+      "title": "Odoo, c'est quoi ?",
+      "description": "Odoo est une suite intégrée d'applications professionnelles qui couvre l'ensemble des besoins de gestion d'une entreprise : de la gestion de la relation client (CRM) jusqu'à la comptabilité, en passant par les ventes, les stocks et la facturation. Modulaire et évolutive, elle permet à chaque organisation de démarrer avec les fonctionnalités prioritaires puis d'ajouter des modules au fil de son développement."
     },
-    "cat2": {
-      "title": "Automatiser Vos Opérations",
-      "description": "Éliminez les tâches manuelles et gagnez du temps au quotidien.",
-      "items": ["Chatbots & assistants IA", "Automatisation administrative", "Intégration et synchronisation CRM", "Flux de travail automatisés"]
+    "modules": {
+      "title": "Une couverture modulaire pour chaque département",
+      "subtitle": "Activez uniquement les applications pertinentes pour votre modèle d'affaires :",
+      "items": [
+        { "name": "CRM & Ventes", "desc": "Gestion des prospects, opportunités commerciales, devis en ligne et signatures électroniques." },
+        { "name": "Facturation & Comptabilité", "desc": "Automatisation de la facturation, suivi des paiements, réconciliation bancaire et rapports financiers." },
+        { "name": "Inventaire & Achats", "desc": "Traçabilité des stocks en temps réel, commandes fournisseurs, réapprovisionnement automatique." },
+        { "name": "Gestion de Projets", "desc": "Planification des tâches, suivi des temps passés, feuilles d'heures et rentabilité des projets." },
+        { "name": "Ressources Humaines", "desc": "Gestion des employés, congés, notes de frais et recrutement centralisé." },
+        { "name": "Marketing & Communication", "desc": "Campagnes par courriel, formulaires web intégrés et marketing automation." }
+      ]
     },
-    "cat3": {
-      "title": "Créer des Outils Métiers sur Mesure",
-      "description": "Bâtissez les solutions logicielles qui soutiennent votre croissance.",
-      "items": ["Applications web performantes", "Portails clients sécurisés", "Applications mobiles natives & hybrides", "Logiciels d'affaires sur mesure"]
+    "process": {
+      "title": "Notre Processus d'Accompagnement en 8 Étapes",
+      "subtitle": "Une méthodologie rigoureuse pour garantir un déploiement fluide et une adhésion totale de vos utilisateurs :",
+      "steps": [
+        { "num": "01", "title": "Analyse des besoins", "desc": "Diagnostic approfondi de votre organisation, de vos défis actuels et de vos objectifs d'affaires." },
+        { "num": "02", "title": "Étude des processus", "desc": "Cartographie des flux de travail opérationnels pour aligner les modules Odoo sur votre réalité métier." },
+        { "num": "03", "title": "Configuration & Paramétrage", "desc": "Configuration des règles de gestion, taxes, devises, modèles de documents et droits d'accès." },
+        { "num": "04", "title": "Personnalisation lorsque nécessaire", "desc": "Ajustement des vues, des champs spécifiques et des flux personnalisés pour respecter vos spécificités." },
+        { "num": "05", "title": "Migration des données", "desc": "Nettoyage, mise en forme et importation sécurisée de vos données existantes (clients, articles, historique)." },
+        { "num": "06", "title": "Formation des équipes", "desc": "Sessions de formation pratiques adaptées à chaque profil utilisateur pour assurer une prise en main rapide." },
+        { "num": "07", "title": "Déploiement & Mise en production", "desc": "Basculement maîtrisé vers votre nouvel environnement avec une assistance renforcée le jour J." },
+        { "num": "08", "title": "Accompagnement post-déploiement", "desc": "Support continu, ajustements post-lancement et conseils d'évolution pour maximiser votre retour sur investissement." }
+      ]
     },
-    "cat4": {
-      "title": "Développer les Compétences de Votre Équipe",
-      "description": "Rendez vos collaborateurs autonomes face aux outils numériques de demain.",
-      "items": ["Formations IA (ChatGPT, Midjourney)", "Ateliers de marketing digital", "Sensibilisation à la cybersécurité", "Outils de productivité numérique"]
+    "targetAudience": {
+      "title": "Pour Quelles Entreprises ?",
+      "subtitle": "L'implémentation Odoo par INTER-IT Services s'adresse particulièrement aux :",
+      "items": [
+        { "title": "PME en croissance", "desc": "Entreprises qui ont dépassé le stade des feuilles de calcul et ont besoin d'une structure robuste." },
+        { "title": "Organisations multi-outils", "desc": "Sociétés fatiguées de jongler entre logiciels incompatibles et souhaitant une plateforme unifiée." },
+        { "title": "Entreprises de services & négoce", "desc": "Structures ayant besoin d'un lien direct entre ventes, projets, stocks et facturation." },
+        { "title": "Organisations souhaitant centraliser leurs opérations", "desc": "Dirigeants cherchant une visibilité globale et un pilotage financier consolidé." }
+      ]
     }
   },
   "whyUs": {
     "title": "Pourquoi Choisir INTER-IT SERVICES ?",
-    "subtitle": "Un accompagnement de proximité et une expertise moderne pour répondre aux enjeux réels des PME.",
+    "subtitle": "Une équipe de proximité, une solide culture d'ingénierie et une approche orientée résultats concrets.",
     "reasons": {
       "personalizedSupport": {
         "title": "Accompagnement Personnalisé",
-        "description": "Chaque organisation est unique et mérite des solutions adaptées à sa réalité."
+        "description": "Nous prenons le temps de comprendre votre contexte métier spécifique pour concevoir des solutions véritablement adaptées."
       },
       "modernExpertise": {
-        "title": "Expertise Numérique Moderne",
-        "description": "Développement web, automatisation de processus, marketing digital et intégration d'intelligence artificielle."
+        "title": "Expertise Technologique Moderne",
+        "description": "Implémentation Odoo, architecture web moderne, intégration d'API et automatisation : nous maîtrisons les technologies actuelles."
       },
       "resultsOriented": {
         "title": "Approche Axée Résultats",
-        "description": "Nous nous concentrons sur la résolution de vos défis opérationnels et commerciaux les plus concrets."
+        "description": "Nous nous concentrons sur la simplification opérationnelle, le gain de temps et la rentabilité concrète de vos investissements."
       },
       "knowledgeTransfer": {
-        "title": "Formation & Transfert",
-        "description": "Nous formons et accompagnons vos équipes afin de les rendre pleinement autonomes au quotidien."
+        "title": "Formation & Autonomie",
+        "description": "Nous assurons un transfert continu de compétences afin que vos équipes deviennent pleinement autonomes sur leurs nouveaux outils."
       }
     }
   },
-  "portfolio": {
-    "title": "Nos Projets & Études de Cas",
-    "subtitle": "Découvrez comment nous aidons nos partenaires à grandir grâce à notre dévouement et notre savoir-faire technique.",
-    "categories": {
-      "all": "Tous les projets",
-      "ai": "IA & Automatisation",
-      "web": "Développement Web",
-      "mobile": "Apps Mobiles",
-      "design": "Branding & UI/UX"
-    }
+  "processSection": {
+    "badge": "Notre Méthodologie",
+    "title": "Comment Nous Accompagnons Nos Clients",
+    "subtitle": "Une démarche structurée et collaborative, du premier échange jusqu'au support à long terme.",
+    "steps": [
+      { "step": "1", "title": "Écoute & Cadrage", "desc": "Échange initial pour cerner vos priorités, contraintes techniques et délais souhaités." },
+      { "step": "2", "title": "Conception & Stratégie", "desc": "Élaboration d'un plan d'action clair avec jalons mesurables et architecture adaptée." },
+      { "step": "3", "title": "Réalisation & Paramétrage", "desc": "Développement et configuration agile avec points d'étape réguliers pour valider les avancées." },
+      { "step": "4", "title": "Déploiement & Formation", "desc": "Mise en service opérationnelle, formation des utilisateurs et accompagnement réactif." }
+    ]
   },
-  "testimonials": {
-    "title": "Avis de nos Clients",
-    "subtitle": "Découvrez l'avis des PME et entrepreneurs qui nous font confiance pour moderniser leurs opérations et accélérer leur croissance."
+  "blogHome": {
+    "badge": "Insights & Veille Technologique",
+    "title": "Insights & Blog",
+    "subtitle": "Découvrez nos derniers articles et conseils pour optimiser la gestion, l'automatisation et les outils numériques de votre entreprise.",
+    "cta": "Voir tous les articles",
+    "readMore": "Lire l'article"
   },
-  "training": {
-    "title": "Formations Professionnelles & Ateliers",
-    "subtitle": "Montez en compétences avec nos bootcamps pratiques guidés par des experts de l'industrie.",
-    "cta": "Parcourir les modules de cours"
-  },
-  "ctaSection": {
-    "title": "Prêt à Accélérer Votre Croissance Numérique ?",
-    "subtitle": "Contactez notre bureau de Brampton (Ontario) dès aujourd'hui pour échanger sur votre projet au Canada ou à l'international.",
-    "button": "Réserver une Consultation"
+  "trainingHome": {
+    "badge": "Montée en Compétences",
+    "title": "Formations Professionnelles Pratiques",
+    "subtitle": "Renforcez les compétences numériques de vos collaborateurs grâce à des ateliers ciblés et concrets.",
+    "targetBadge": "Public cible",
+    "formatBadge": "Format",
+    "cta": "Voir le catalogue des formations",
+    "enrollCta": "Demander une formation"
   },
   "contact": {
     "title": "Contactez-nous",
-    "subtitle": "Vous avez un projet en tête ou besoin d'un accompagnement technologique ? Écrivez-nous.",
+    "subtitle": "Un projet d'implémentation Odoo, de développement web ou d'automatisation ? Échangeons sur vos besoins.",
     "info": {
-      "address": "Adresse",
+      "address": "Localisation",
       "email": "Courriel",
-      "phone": "Téléphone",
-      "hours": "Heures d'ouverture",
+      "hours": "Heures de service",
       "hoursVal": "Lun - Ven, 9:00 - 17:00 HNE"
     },
     "form": {
-      "name": "Nom Complet",
-      "email": "Adresse Courriel",
-      "phone": "Téléphone (Optionnel)",
-      "subject": "Sujet",
-      "message": "Détails du projet / Message",
-      "success": "Merci ! Votre message a été envoyé avec succès. Nous vous contacterons rapidement.",
-      "error": "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer ou nous contacter par téléphone.",
-      "responseTime": "Nous répondons en moins de 24h ouvrées.",
-      "helpQuestion": "Comment pouvons-nous vous aider ?",
-      "helpOptions": {
-        "visibility": "Augmenter ma visibilité",
-        "operations": "Automatiser mes opérations",
-        "tools": "Créer un outil sur mesure",
-        "training": "Former mon équipe"
-      }
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "name": "Nom complet",
+      "email": "Courriel professionnel",
+      "phone": "Téléphone",
+      "company": "Entreprise / Organisation",
+      "service": "Service recherché",
+      "servicesOptions": {
+        "odoo": "Odoo Implementation",
+        "web": "Web Development",
+        "ai": "Automation & AI",
+        "apps": "Business Applications",
+        "marketing": "Digital Marketing",
+        "training": "Training",
+        "other": "Autre demande"
+      },
+      "message": "Décrivez votre projet ou votre besoin",
+      "submit": "Envoyer ma demande",
+      "success": "Merci ! Votre demande a été reçue avec succès. Notre équipe vous répondra dans les plus brefs délais.",
+      "error": "Une erreur est survenue lors de l'envoi de votre demande. Veuillez réessayer ou nous contacter directement par courriel.",
+      "responseTime": "Nous répondons en moins de 24h ouvrées."
     }
   },
   "footer": {
-    "tagline": "Un partenaire technologique proche des PME, spécialisé dans les solutions numériques, l'automatisation et l'intelligence artificielle.",
-    "quickLinks": "Liens Rapides",
-    "contactInfo": "Coordonnées",
-    "newsletter": "Infolettre",
-    "newsletterDesc": "Abonnez-vous pour recevoir nos analyses sur l'automatisation et les tendances technologiques.",
-    "newsletterPlaceholder": "Votre adresse courriel",
+    "tagline": "Solutions technologiques pour les PME et organisations : implémentation Odoo, développement web, automatisation de processus et formations professionnelles.",
+    "solutionsTitle": "Solutions",
+    "companyTitle": "Entreprise",
+    "contactTitle": "Contact & Informations",
+    "address": "Ontario, Canada",
     "copyright": "© {year} INTER-IT SERVICES INC. Tous droits réservés.",
-    "legal": "Politique de Confidentialité | Conditions d'Utilisation",
-    "address": "Brampton, ON, Canada"
+    "legal": "Mentions Légales | Confidentialité"
   }
 }

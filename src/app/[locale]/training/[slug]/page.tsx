@@ -2,7 +2,20 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, BookOpen, Clock, Compass, Users, CheckCircle2, ChevronRight, GraduationCap } from "lucide-react";
+import {
+  ArrowLeft,
+  BookOpen,
+  Clock,
+  Compass,
+  Users,
+  CheckCircle2,
+  ChevronRight,
+  GraduationCap,
+  Sparkles,
+  ArrowRight,
+  ShieldCheck,
+  Calendar,
+} from "lucide-react";
 import { courses } from "@/data/training";
 import SectionContainer from "@/components/ui/SectionContainer";
 import Card from "@/components/ui/Card";
@@ -17,17 +30,22 @@ export async function generateMetadata({
   params,
 }: CourseDetailPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
+  const isFr = locale === "fr";
   const course = courses.find((c) => c.slug === slug);
   if (!course) return {};
 
   return {
-    title: `${course.title[locale as "en" | "fr"]} | Corporate Training | INTER-IT SERVICES INC`,
+    title: `${course.title[locale as "en" | "fr"]} | ${isFr ? "Ateliers de formation" : "Workshops"} | INTER-IT SERVICES INC`,
     description: course.description[locale as "en" | "fr"],
+    alternates: {
+      canonical: `https://inter-itservices.ca/${locale}/training/${slug}`,
+    },
   };
 }
 
 export default async function CourseDetailPage({ params }: CourseDetailPageProps) {
   const { locale, slug } = await params;
+  const isFr = locale === "fr";
 
   const course = courses.find((c) => c.slug === slug);
   if (!course) {
@@ -35,52 +53,109 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
   }
 
   return (
-    <div className="pt-24 pb-16 flex-grow bg-white">
-      <SectionContainer bgType="transparent">
-        {/* Back Link */}
-        <Link
-          href={`/${locale}/training`}
-          className="inline-flex items-center gap-2 text-xs font-semibold text-slate-600 hover:text-[#F7931E] mb-8 transition-colors cursor-pointer"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          <span>{locale === "fr" ? "Retour aux formations" : "Back to training"}</span>
-        </Link>
+    <div className="flex-grow bg-white">
+      {/* 1. High-Tech Hero Section */}
+      <section className="relative pt-28 pb-20 sm:pt-36 sm:pb-28 bg-[#1D2140] text-white overflow-hidden">
+        {/* Cyber grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] rounded-full bg-[#F39200]/12 blur-[120px] pointer-events-none" />
 
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          {/* Back Link */}
+          <div className="mb-8 text-left">
+            <Link
+              href={`/${locale}/training`}
+              className="inline-flex items-center gap-2 text-xs font-semibold text-white/70 hover:text-[#F39200] transition-colors cursor-pointer"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              <span>{isFr ? "Retour aux ateliers de formation" : "Back to workshops"}</span>
+            </Link>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full border border-[#F39200]/40 bg-[#F39200]/15 text-[#F39200] text-xs font-bold uppercase tracking-wider">
+              <Sparkles className="h-3.5 w-3.5" />
+              <span>{isFr ? "ATELIER DE FORMATION" : "TRAINING WORKSHOP"}</span>
+            </span>
+            {course.format && (
+              <span className="px-3 py-1 rounded-full bg-white/10 text-white text-xs font-bold uppercase tracking-wider border border-white/15">
+                {course.format[locale as "en" | "fr"]}
+              </span>
+            )}
+          </div>
+
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight max-w-4xl mx-auto">
+            {course.title[locale as "en" | "fr"]}
+          </h1>
+
+          <p className="text-base sm:text-lg text-slate-200 max-w-3xl mx-auto mb-10 leading-relaxed">
+            {course.description[locale as "en" | "fr"]}
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href={`/${locale}/contact`} className="w-full sm:w-auto">
+              <Button
+                variant="secondary"
+                size="lg"
+                className="w-full sm:w-auto gap-2 px-8 py-3.5 text-sm font-bold uppercase tracking-wider shadow-lg shadow-[#F39200]/25 hover:scale-105 transition-transform"
+              >
+                <span>{isFr ? "Demander cet atelier" : "Request This Workshop"}</span>
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+            <a href="#curriculum" className="w-full sm:w-auto">
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full sm:w-auto gap-2 px-8 py-3.5 text-sm font-bold uppercase tracking-wider text-white border-white/20 hover:bg-white/10"
+              >
+                <span>{isFr ? "Voir le programme" : "View Curriculum"}</span>
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. Main Content & Sidebar */}
+      <SectionContainer id="curriculum" bgType="transparent" className="py-16 sm:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-6xl mx-auto">
           {/* Main Info (8 Columns) */}
-          <div className="lg:col-span-8 space-y-8">
-            <div>
-              <div className="flex items-center gap-2 mb-3">
-                <Badge variant="secondary" className="bg-orange-50 text-[#F7931E] border-orange-100">LEARNING WORKSHOPS</Badge>
+          <div className="lg:col-span-8 space-y-10">
+            {/* Target Audience */}
+            {course.targetAudience && (
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+                <div className="flex items-center gap-2 text-xs font-bold text-[#1D2140] uppercase tracking-wider">
+                  <Users className="h-4 w-4 text-[#F39200]" />
+                  <span>{isFr ? "Public Cible & Prérequis" : "Target Audience & Prerequisites"}</span>
+                </div>
+                <p className="text-slate-700 text-sm leading-relaxed">
+                  {course.targetAudience[locale as "en" | "fr"]}
+                </p>
               </div>
-              <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0B163F]">
-                {course.title[locale as "en" | "fr"]}
-              </h1>
-              <div className="h-1 w-20 bg-[#F7931E] rounded-full mt-4" />
-            </div>
+            )}
 
-            {/* Overview / Description */}
-            <div className="space-y-4">
-              <h2 className="text-xl font-bold text-[#0B163F] flex items-center gap-2">
-                <BookOpen className="h-5 w-5 text-[#F7931E]" />
-                <span>{locale === "fr" ? "Aperçu du Programme" : "Program Overview"}</span>
-              </h2>
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                {course.description[locale as "en" | "fr"]}
-              </p>
-            </div>
-
-            {/* Curriculum / Objectives */}
-            <div className="space-y-4">
-              <h2 className="text-xl font-bold text-[#0B163F] flex items-center gap-2">
-                <GraduationCap className="h-5 w-5 text-[#F7931E]" />
-                <span>{locale === "fr" ? "Objectifs Pédagogiques & Curriculum" : "Learning Curriculum"}</span>
-              </h2>
-              <div className="space-y-3">
+            {/* Curriculum / Topics */}
+            <div className="space-y-5">
+              <div className="flex items-center gap-3">
+                <div className="p-2.5 rounded-xl bg-[#F39200]/10 text-[#F39200] border border-[#F39200]/20">
+                  <BookOpen className="h-5 w-5" />
+                </div>
+                <h2 className="text-xl sm:text-2xl font-bold text-[#1D2140]">
+                  {isFr ? "Programme & Modules de l'Atelier" : "Workshop Curriculum & Modules"}
+                </h2>
+              </div>
+              <div className="space-y-3 pl-2">
                 {course.topics.map((topic, index) => (
-                  <div key={index} className="flex gap-3 items-start text-xs sm:text-sm text-slate-600">
-                    <span className="text-[#F7931E] font-bold shrink-0 mt-0.5">•</span>
-                    <span>{topic[locale as "en" | "fr"]}</span>
+                  <div
+                    key={index}
+                    className="p-4 rounded-xl bg-white border border-slate-200/80 hover:border-[#F39200]/40 transition-all flex items-start gap-3.5 shadow-2xs"
+                  >
+                    <span className="flex items-center justify-center h-6 w-6 rounded-full bg-[#F39200]/15 text-[#F39200] font-mono text-xs font-bold shrink-0 mt-0.5">
+                      {index + 1}
+                    </span>
+                    <span className="text-slate-700 text-sm font-medium leading-relaxed">
+                      {topic[locale as "en" | "fr"]}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -88,16 +163,24 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
 
             {/* Skills Acquired */}
             {course.skillsAcquired && (
-              <div className="space-y-4">
-                <h2 className="text-xl font-bold text-[#0B163F] flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-[#F7931E]" />
-                  <span>{locale === "fr" ? "Compétences Acquises" : "Skills Acquired"}</span>
-                </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="space-y-5 pt-4">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-xl bg-[#F39200]/10 text-[#F39200] border border-[#F39200]/20">
+                    <CheckCircle2 className="h-5 w-5" />
+                  </div>
+                  <h2 className="text-xl sm:text-2xl font-bold text-[#1D2140]">
+                    {isFr ? "Compétences Concrètes Développées" : "Practical Skills Acquired"}
+                  </h2>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pl-2">
                   {course.skillsAcquired.map((skill, index) => (
-                    <Card key={index} hoverEffect={true} className="border-slate-200 bg-slate-50 p-4 flex gap-2.5 items-start shadow-sm">
-                      <ChevronRight className="h-4 w-4 text-[#F7931E] shrink-0 mt-0.5" />
-                      <span className="text-slate-600 text-xs leading-relaxed">
+                    <Card
+                      key={index}
+                      hoverEffect={true}
+                      className="border-slate-200 bg-white p-4 flex gap-3 items-start shadow-sm rounded-xl hover:border-[#F39200]/30"
+                    >
+                      <ChevronRight className="h-4 w-4 text-[#F39200] shrink-0 mt-0.5" />
+                      <span className="text-slate-700 text-xs sm:text-sm leading-relaxed font-medium">
                         {skill[locale as "en" | "fr"]}
                       </span>
                     </Card>
@@ -109,95 +192,57 @@ export default async function CourseDetailPage({ params }: CourseDetailPageProps
 
           {/* Sidebar (4 Columns) */}
           <div className="lg:col-span-4 space-y-6">
-            <Card hoverEffect={false} className="border-slate-200 bg-white p-6 space-y-6 shadow-sm">
-              {/* Meta information */}
+            <Card hoverEffect={false} className="border-slate-200 bg-white p-7 space-y-6 shadow-md rounded-2xl sticky top-28">
+              {/* Meta details */}
               <div className="space-y-4 pb-6 border-b border-slate-100">
                 <div className="flex items-center gap-3 text-xs text-slate-700">
-                  <Clock className="h-4.5 w-4.5 text-[#F7931E] shrink-0" />
+                  <Clock className="h-5 w-5 text-[#F39200] shrink-0" />
                   <div>
-                    <span className="text-[10px] text-slate-500 block font-semibold">{locale === "fr" ? "DURÉE" : "DURATION"}</span>
-                    <span className="font-bold">{course.duration[locale as "en" | "fr"]}</span>
+                    <span className="text-[10px] text-slate-400 block font-bold uppercase">{isFr ? "DURÉE" : "DURATION"}</span>
+                    <span className="font-bold text-sm text-[#1D2140]">{course.duration[locale as "en" | "fr"]}</span>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3 text-xs text-slate-700">
-                  <Compass className="h-4.5 w-4.5 text-[#F7931E] shrink-0" />
+                  <Compass className="h-5 w-5 text-[#F39200] shrink-0" />
                   <div>
-                    <span className="text-[10px] text-slate-500 block font-semibold">{locale === "fr" ? "NIVEAU" : "LEVEL"}</span>
-                    <span className="font-bold">{course.level[locale as "en" | "fr"]}</span>
+                    <span className="text-[10px] text-slate-400 block font-bold uppercase">{isFr ? "NIVEAU" : "LEVEL"}</span>
+                    <span className="font-bold text-sm text-[#1D2140]">{course.level[locale as "en" | "fr"]}</span>
                   </div>
                 </div>
 
-                {course.price && (
+                {course.format && (
                   <div className="flex items-center gap-3 text-xs text-slate-700">
-                    <GraduationCap className="h-4.5 w-4.5 text-[#F7931E] shrink-0" />
+                    <Sparkles className="h-5 w-5 text-[#F39200] shrink-0" />
                     <div>
-                      <span className="text-[10px] text-slate-500 block font-semibold">{locale === "fr" ? "TARIF D'INSCRIPTION" : "REGISTRATION FEE"}</span>
-                      <span className="font-bold">{course.price}</span>
+                      <span className="text-[10px] text-slate-400 block font-bold uppercase">{isFr ? "MODALITÉ" : "FORMAT"}</span>
+                      <span className="font-bold text-sm text-[#1D2140]">{course.format[locale as "en" | "fr"]}</span>
                     </div>
                   </div>
                 )}
               </div>
 
-              {/* Target Audience */}
-              {course.targetAudience && (
-                <div>
-                  <h3 className="text-xs font-bold text-[#0B163F] uppercase tracking-wider mb-3 flex items-center gap-1.5">
-                    <Users className="h-4 w-4 text-[#F7931E]" />
-                    <span>{locale === "fr" ? "Public Cible" : "Target Audience"}</span>
-                  </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    {course.targetAudience[locale as "en" | "fr"]}
-                  </p>
-                </div>
-              )}
-
-              {/* Registration CTA Block */}
-              <div className="pt-6 border-t border-slate-100 space-y-4">
-                <h4 className="text-xs font-semibold text-[#0B163F] uppercase tracking-wider">
-                  {locale === "fr" ? "S'inscrire à cet Atelier ?" : "Enroll Today"}
+              {/* Action Block */}
+              <div className="space-y-4">
+                <h4 className="text-sm font-bold text-[#1D2140] uppercase tracking-wider">
+                  {isFr ? "Planifier cet atelier" : "Schedule This Workshop"}
                 </h4>
-                <p className="text-[11px] text-slate-600 leading-relaxed">
-                  {locale === "fr"
-                    ? "Réservez une session privée pour vos collaborateurs au Canada (Brampton/Ontario) ou à distance à l'international."
-                    : "Book a private session for your team in Canada (Brampton/Ontario) or join our live remote cohorts worldwide."}
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {isFr
+                    ? "Organisez une cohorte privée dans vos locaux au Canada ou en virtuel. Recevez les détails pédagogiques et les dates disponibles."
+                    : "Schedule a private cohort on-premise or online. Receive curriculum specifics and available workshop dates."}
                 </p>
                 <Link href={`/${locale}/contact`} className="block w-full">
-                  <Button variant="secondary" className="w-full text-xs py-2.5 shadow-md shadow-[#F7931E]/20">
-                    {locale === "fr" ? "Demander une inscription" : "Request Registration"}
+                  <Button
+                    variant="secondary"
+                    className="w-full text-xs py-3 font-bold uppercase tracking-wider shadow-md shadow-[#F39200]/20 hover:scale-102 transition-transform"
+                  >
+                    {isFr ? "Demander un atelier" : "Request Workshop"}
                   </Button>
                 </Link>
               </div>
             </Card>
           </div>
-        </div>
-
-        {/* Calendly Booking Section */}
-        <div className="mt-16 max-w-6xl mx-auto">
-          <Card className="border-slate-200 bg-slate-50 p-6 sm:p-8 shadow-sm">
-            <div className="text-center max-w-3xl mx-auto mb-8">
-              <h2 className="text-xl sm:text-2xl font-extrabold text-[#0B163F] mb-3">
-                {locale === "fr" ? "Réserver votre créneau d'atelier" : "Schedule your Workshop Session"}
-              </h2>
-              <p className="text-slate-600 text-xs sm:text-sm">
-                {locale === "fr"
-                  ? "Choisissez un créneau ci-dessous pour planifier votre atelier ou discuter d'un programme sur-mesure pour vos collaborateurs."
-                  : "Select a time slot below to schedule your workshop or discuss a tailored program for your team."}
-              </p>
-              <div className="h-0.5 w-16 bg-[#F7931E] mx-auto mt-4 rounded-full" />
-            </div>
-
-            <div className="w-full rounded-xl overflow-hidden border border-slate-200 bg-white h-[600px]">
-              <iframe
-                src="https://calendly.com/interitservices-brampton/30min?embed_domain=inter-itservices.ca&embed_type=inline&hide_event_type_details=1&background_color=ffffff&text_color=0f172a&primary_color=f7931e"
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                title="Calendly Scheduler"
-                className="w-full h-full min-h-[550px]"
-              ></iframe>
-            </div>
-          </Card>
         </div>
       </SectionContainer>
     </div>

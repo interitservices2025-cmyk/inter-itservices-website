@@ -1,13 +1,13 @@
 import React from "react";
 import { getDictionary } from "@/lib/get-dictionary";
 import HeroSection from "@/components/sections/HeroSection";
-import TrustedBy from "@/components/sections/TrustedBy";
+import IntroSection from "@/components/sections/IntroSection";
 import ServicesSection from "@/components/sections/ServicesSection";
+import OdooSectionHome from "@/components/sections/OdooSectionHome";
 import WhyUsSection from "@/components/sections/WhyUsSection";
-import AISectionHome from "@/components/sections/AISectionHome";
-import PortfolioSection from "@/components/sections/PortfolioSection";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import CTASection from "@/components/sections/CTASection";
+import ProcessSection from "@/components/sections/ProcessSection";
+import TrainingSection from "@/components/sections/TrainingSection";
+import BlogSectionHome from "@/components/sections/BlogSectionHome";
 import ContactSection from "@/components/sections/ContactSection";
 
 interface HomePageProps {
@@ -20,31 +20,31 @@ export default async function HomePage({ params }: HomePageProps) {
 
   return (
     <div className="flex flex-col w-full min-h-screen">
-      {/* 1. Hero Section */}
+      {/* 1. Hero Section - Odoo Priority */}
       <HeroSection dict={dict} locale={locale} />
 
-      {/* 2. Trusted By Branding Bar */}
-      <TrustedBy dict={dict} />
+      {/* 2. Short Presentation: Who is INTER-IT Services? */}
+      <IntroSection dict={dict} locale={locale} />
 
-      {/* 3. Core Services Section */}
+      {/* 3. Core 6 Solutions (Odoo, Web, AI, Apps, Marketing, Training) */}
       <ServicesSection dict={dict} locale={locale} />
 
-      {/* 5. Why Choose Us Section */}
+      {/* 4. Odoo Featured Section (Centralize & Simplify) */}
+      <OdooSectionHome dict={dict} locale={locale} />
+
+      {/* 5. Why Choose INTER-IT Services? (Verified arguments) */}
       <WhyUsSection dict={dict} />
 
-      {/* 5.5 Premium AI & Automation Section */}
-      <AISectionHome dict={dict} locale={locale} />
+      {/* 6. Proven 4-step Delivery Methodology */}
+      <ProcessSection dict={dict} locale={locale} />
 
-      {/* 6. Featured Portfolio Case Studies */}
-      <PortfolioSection dict={dict} locale={locale} />
+      {/* 7. Hands-on Training & Upskilling */}
+      <TrainingSection dict={dict} locale={locale} />
 
-      {/* 7. Client Testimonials */}
-      <TestimonialsSection dict={dict} locale={locale} />
+      {/* 8. Insights & Blog (Odoo & SME Digitalization) */}
+      <BlogSectionHome dict={dict} locale={locale} />
 
-      {/* 9. Interactive Call-To-Action Banner */}
-      <CTASection dict={dict} locale={locale} />
-
-      {/* 10. Contact Information & Message Form */}
+      {/* 9. Real Functional Contact Form */}
       <ContactSection dict={dict} locale={locale} />
     </div>
   );

@@ -8,13 +8,17 @@ export const BRAND = {
 
   email: "contact@inter-itservices.ca",
 
-  phone: "(647) 638-4583",
-
-  location: "Brampton, Ontario",
+  location: "Ontario, Canada",
 
   colors: {
     primary: "#1D2140",
     secondary: "#F39200",
     white: "#FFFFFF",
+  },
+
+  socials: {
+    facebook: "https://www.facebook.com/interitservicesca",
+    instagram: "https://www.instagram.com/inter.itservices",
+    linkedin: "https://www.linkedin.com/company/inter-it-services-inc",
   },
 };

@@ -14,17 +14,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         disabled={isLoading || props.disabled}
         className={cn(
-          "inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-2 focus:ring-[#F7931E]/50 cursor-pointer",
+          "inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-2 focus:ring-[#F39200]/50 cursor-pointer",
           // Variants
           {
             // Primary: Brand Blue background with white text
-            "bg-[#0B163F] text-white hover:bg-[#0B163F]/95 hover:shadow-lg hover:shadow-[#0B163F]/15":
+            "bg-[#1D2140] text-white hover:bg-[#1D2140]/90 hover:shadow-lg hover:shadow-[#1D2140]/15":
               variant === "primary",
             // Secondary: Brand Orange background with white text
-            "bg-[#F7931E] text-white font-semibold hover:bg-[#F7931E]/95 hover:shadow-lg hover:shadow-[#F7931E]/20":
+            "bg-[#F39200] text-white font-semibold hover:bg-[#F39200]/90 hover:shadow-lg hover:shadow-[#F39200]/20":
               variant === "secondary",
             // Outline: Transparent background with slate border and slate-700 text
-            "border border-slate-300 bg-transparent text-slate-700 hover:bg-slate-50 hover:text-slate-900 hover:border-slate-400":
+            "border border-slate-300 bg-transparent text-slate-700 hover:bg-slate-50 hover:text-[#1D2140] hover:border-slate-400":
               variant === "outline",
             // Ghost: Text only with light hover
             "bg-transparent text-slate-600 hover:bg-slate-100 hover:text-slate-900":

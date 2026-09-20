@@ -18,7 +18,7 @@ const Badge: React.FC<BadgeProps> = ({
         {
           "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200":
             variant === "primary",
-          "bg-orange-50 text-[#F7931E] border-orange-100 hover:bg-orange-100/80":
+          "bg-orange-50 text-[#F39200] border-orange-100 hover:bg-orange-100/80":
             variant === "secondary",
           "bg-emerald-50 text-emerald-700 border-emerald-100":
             variant === "success",

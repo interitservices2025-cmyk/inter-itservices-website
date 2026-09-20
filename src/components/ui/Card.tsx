@@ -15,9 +15,11 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
           "glass-panel rounded-xl p-6 transition-all duration-300",
           {
             "glass-panel-hover": hoverEffect,
-            "hover:shadow-[0_0_30px_rgba(11,22,63,0.1)] hover:border-[#0B163F]/20":
+            // Primary Glow (Dark Blue)
+            "hover:shadow-[0_0_30px_rgba(29,33,64,0.12)] hover:border-[#1D2140]/20":
               glowColor === "primary" && hoverEffect,
-            "hover:shadow-[0_0_30px_rgba(247,147,30,0.1)] hover:border-[#F7931E]/20":
+            // Secondary Glow (Brand Orange)
+            "hover:shadow-[0_0_30px_rgba(243,146,0,0.15)] hover:border-[#F39200]/30":
               glowColor === "secondary" && hoverEffect,
           },
           className

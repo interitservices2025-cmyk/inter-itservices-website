@@ -3,6 +3,23 @@ export interface LocalizedString {
   fr: string;
 }
 
+export interface ServiceModule {
+  name: LocalizedString;
+  desc: LocalizedString;
+  iconName?: string;
+}
+
+export interface ServiceProcessStep {
+  step: string;
+  title: LocalizedString;
+  desc: LocalizedString;
+}
+
+export interface TargetProfile {
+  title: LocalizedString;
+  desc: LocalizedString;
+}
+
 export interface Service {
   id: string;
   slug: string;
@@ -13,6 +30,12 @@ export interface Service {
   technologies: string[];
   features: LocalizedString[];
   pillar: "design" | "digital";
+  badge?: LocalizedString;
+  accentColor?: string;
+  kpis?: { label: LocalizedString; value: string }[];
+  modules?: ServiceModule[];
+  process?: ServiceProcessStep[];
+  targetProfiles?: TargetProfile[];
 }
 
 export interface AISolution {
@@ -54,6 +77,7 @@ export interface Course {
   topics: LocalizedString[];
   price?: string;
   targetAudience?: LocalizedString;
+  format?: LocalizedString;
   skillsAcquired?: LocalizedString[];
   trainingCategory: "ai-communication" | "digital-marketing" | "storytelling-creation";
 }

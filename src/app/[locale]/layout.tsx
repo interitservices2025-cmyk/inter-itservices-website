@@ -31,16 +31,16 @@ export async function generateMetadata({
 
   if (locale === "fr") {
     return {
-      title: "INTER-IT SERVICES INC | Intelligence Artificielle & Solutions Web",
+      title: "INTER-IT SERVICES INC | Implémentation Odoo & Solutions Technologiques",
       description:
-        "Solutions technologiques sur mesure au Canada et à l'international (siège à Brampton, Ontario). Web development, design graphique & print, formations professionnelles et logiciels SaaS.",
+        "Accompagnement dans l'implémentation et le déploiement d'Odoo ERP, développement web moderne, automatisation de processus et formations professionnelles au Canada.",
       alternates,
     };
   }
   return {
-    title: "INTER-IT SERVICES INC | Artificial Intelligence & Web Solutions",
+    title: "INTER-IT SERVICES INC | Odoo Implementation & Technology Solutions",
     description:
-      "Tailored technology solutions in Canada and internationally (headquartered in Brampton, Ontario). Web development, graphic design & print, training workshops, and SaaS products.",
+      "Expert guidance in Odoo ERP deployment, modern web engineering, workflow automation, and professional corporate training across Canada and internationally.",
     alternates,
   };
 }
@@ -61,11 +61,14 @@ export default async function LocaleLayout({
     "image": "https://inter-itservices.ca/images/logo/Logo%202.svg",
     "@id": "https://inter-itservices.ca/#organization",
     "url": "https://inter-itservices.ca",
-    "telephone": "(647) 638-4583",
+    "sameAs": [
+      "https://www.facebook.com/interitservicesca",
+      "https://www.instagram.com/inter.itservices",
+      "https://www.linkedin.com/company/inter-it-services-inc"
+    ],
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Brampton",
       "addressRegion": "ON",
       "addressCountry": "CA"
     },
@@ -94,7 +97,7 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-white text-slate-900 font-sans selection:bg-amber-500 selection:text-slate-950">
+      <body className="min-h-full flex flex-col bg-white text-slate-900 font-sans selection:bg-[#F39200] selection:text-white">
         <Header locale={locale} />
         <main className="flex-grow flex flex-col">{children}</main>
         <Footer locale={locale} />

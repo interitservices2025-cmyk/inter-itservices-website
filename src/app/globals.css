@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand Colors */
-  --brand-primary: #0B163F;
-  --brand-secondary: #F7931E;
-  --brand-dark: #FFFFFF;
+  /* Official Brand Colors */
+  --brand-primary: #1D2140;
+  --brand-secondary: #F39200;
+  --brand-dark: #1D2140;
   --brand-card-bg: #FFFFFF;
   --brand-card-border: #E2E8F0;
-  --brand-glow-primary: rgba(11, 22, 63, 0.05);
-  --brand-glow-secondary: rgba(247, 147, 30, 0.05);
+  --brand-glow-primary: rgba(29, 33, 64, 0.06);
+  --brand-glow-secondary: rgba(243, 146, 0, 0.08);
 }
 
 @theme {
@@ -67,13 +67,13 @@
 }
 
 .text-gradient-primary {
-  background: linear-gradient(135deg, #0f172a 30%, #0b163f 100%);
+  background: linear-gradient(135deg, #1d2140 30%, #0f172a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-secondary {
-  background: linear-gradient(135deg, #f7931e 0%, #d97706 100%);
+  background: linear-gradient(135deg, #f39200 0%, #d97706 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

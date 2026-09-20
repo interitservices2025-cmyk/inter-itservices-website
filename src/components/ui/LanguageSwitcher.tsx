@@ -26,7 +26,7 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
   };
 
   return (
-    <div className={cn("flex items-center space-x-1 bg-slate-100 p-1 rounded-lg border border-slate-200", className)}>
+    <div className={cn("flex items-center space-x-1 bg-white/10 p-1 rounded-lg border border-white/10 backdrop-blur-sm", className)}>
       <button
         onClick={() => handleLanguageChange("en")}
         aria-label="Switch language to English"
@@ -34,8 +34,8 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
         className={cn(
           "px-2.5 py-1 text-xs font-semibold rounded transition-all duration-200 cursor-pointer",
           currentLocale === "en"
-            ? "bg-orange-500 text-white shadow-sm"
-            : "text-slate-600 hover:text-slate-900"
+            ? "bg-[#F39200] text-white shadow-sm hover:bg-[#d98200]"
+            : "text-white/80 hover:text-white hover:bg-white/10"
         )}
       >
         EN
@@ -47,8 +47,8 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
         className={cn(
           "px-2.5 py-1 text-xs font-semibold rounded transition-all duration-200 cursor-pointer",
           currentLocale === "fr"
-            ? "bg-orange-500 text-white shadow-sm"
-            : "text-slate-600 hover:text-slate-900"
+            ? "bg-[#F39200] text-white shadow-sm hover:bg-[#d98200]"
+            : "text-white/80 hover:text-white hover:bg-white/10"
         )}
       >
         FR

@@ -2,45 +2,93 @@ import { BlogPost } from "@/types";
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "blog-1",
-    slug: "ai-automation-logistics-supply-chain",
+    id: "blog-odoo-1",
+    slug: "quest-ce-que-odoo-pourquoi-adopter-pme",
     title: {
-      en: "The Future of AI Automation in Supply Chain Logistics",
-      fr: "L'Avenir de l'Automatisation par l'IA dans la Logistique de la Chaîne d'Approvisionnement",
+      en: "What is Odoo and Why Should Growing SMEs Adopt It?",
+      fr: "Qu'est-ce qu'Odoo et pourquoi l'adopter pour votre PME ?",
     },
     excerpt: {
-      en: "How intelligent software agents and LLMs are transforming document routing, inventory tracking, and warehouse workflows.",
-      fr: "Comment les agents logiciels intelligents et les LLM transforment le routage des documents, le suivi des stocks et les flux de travail en entrepôt.",
+      en: "Discover how Odoo unifies CRM, invoicing, inventory, and sales into one modular, scalable ERP system tailored for SMEs.",
+      fr: "Découvrez comment Odoo unifie CRM, facturation, stocks et ventes au sein d'un ERP modulaire et évolutif conçu pour les PME.",
     },
     content: {
-      en: "AI and machine learning are no longer future concepts in logistics — they are actively reshaping how supply chains operate. By automating key data extraction from bills of lading using secure LLM pipelines, companies reduce processing time from hours to seconds. In this article, we explore the integration steps, cost reductions, and data sovereignty compliance guidelines for Canadian logistics leaders.",
-      fr: "L'IA et le machine learning ne sont plus des concepts futuristes dans la logistique — ils redéfinissent activement le fonctionnement des chaînes d'approvisionnement. En automatisant l'extraction de données clés à l'aide de pipelines LLM sécurisés, les entreprises réduisent le temps de traitement de quelques heures à quelques secondes. Dans cet article, nous explorons les étapes d'intégration, les réductions de coûts et les directives de conformité pour les leaders de la logistique au Canada.",
+      en: "For many growing businesses, managing operations across disconnected spreadsheets and separate apps leads to errors, delays, and wasted hours. Odoo provides a cohesive answer: an integrated ecosystem where every business app communicates seamlessly with the others. By implementing Odoo, SMEs gain complete operational visibility, automate redundant tasks, and build a sustainable foundation for scalable growth without excessive software licensing costs.",
+      fr: "Pour de nombreuses entreprises en croissance, gérer son activité à travers des tableurs disparates et des logiciels isolés engendre erreurs, retards et pertes de temps. Odoo apporte une réponse unifiée : un écosystème intégré où chaque application métier communique instantanément avec les autres. En implémentant Odoo, les PME obtiennent une visibilité opérationnelle totale, automatisent leurs tâches redondantes et posent les bases d'un développement pérenne.",
     },
-    publishedAt: "2026-05-15",
-    author: "Lead AI Architect, INTER-IT",
+    publishedAt: "2026-06-15",
+    author: "Consultant ERP, INTER-IT",
     imageUrl: "/images/blog/logistics.png",
     readTime: {
       en: "5 min read",
       fr: "5 min de lecture",
     },
-    tags: ["AI", "Automation", "Logistics"],
+    tags: ["Odoo", "ERP", "PME", "Gestion"],
   },
   {
-    id: "blog-2",
+    id: "blog-odoo-2",
+    slug: "erp-vs-logiciels-separes-centralisation",
+    title: {
+      en: "ERP vs. Disconnected Tools: How to Centralize Business Management",
+      fr: "ERP vs Logiciels séparés : Comment centraliser la gestion de son entreprise",
+    },
+    excerpt: {
+      en: "Compare the total cost, operational friction, and collaboration gains between fragmented software and a centralized ERP like Odoo.",
+      fr: "Comparez les coûts réels, les frictions opérationnelles et les gains de collaboration entre outils dispersés et ERP centralisé comme Odoo.",
+    },
+    content: {
+      en: "Juggling multiple subscriptions for CRM, billing, inventory, and project tracking often costs more in lost productivity than companies realize. A centralized ERP eliminates duplicate data entry, reduces communication silos between sales and accounting teams, and offers executive dashboards updated in real time. We explore the structural advantages of migrating from fragmented software to a centralized Odoo architecture.",
+      fr: "Jongler entre plusieurs abonnements pour le CRM, la facturation, la gestion des stocks et le suivi de projets coûte souvent bien plus cher en productivité perdue que les entreprises ne l'imaginent. Un ERP centralisé supprime les doubles saisies, élimine les silos entre départements commercial et comptable, et offre des indicateurs fiables en temps réel. Découvrez pourquoi centraliser votre gestion avec Odoo transforme la productivité de votre équipe.",
+    },
+    publishedAt: "2026-06-10",
+    author: "Consultant Solutions, INTER-IT",
+    imageUrl: "/images/blog/nextjs.png",
+    readTime: {
+      en: "6 min read",
+      fr: "6 min de lecture",
+    },
+    tags: ["Odoo", "Automatisation", "ERP", "Productivité"],
+  },
+  {
+    id: "blog-odoo-3",
+    slug: "etapes-cles-reussir-implementation-odoo",
+    title: {
+      en: "Key Steps to a Successful Odoo Implementation for Your Business",
+      fr: "Comment réussir son implémentation Odoo : Les étapes clés",
+    },
+    excerpt: {
+      en: "From initial workflow mapping to team training and post-launch support, discover the proven methodology for a smooth Odoo rollout.",
+      fr: "De la cartographie des processus à la formation des équipes et au support post-lancement, découvrez la méthode pour un déploiement Odoo réussi.",
+    },
+    content: {
+      en: "Implementing an ERP is not merely a software installation; it is an operational modernization project. Success relies on clear requirement scoping, phased configuration, thorough data cleansing, and hands-on user training. At INTER-IT Services, our structured 8-step methodology ensures that your Odoo deployment aligns precisely with your operational realities while guaranteeing high user adoption.",
+      fr: "L'implémentation d'un ERP n'est pas une simple installation logicielle : c'est un projet de modernisation des flux d'affaires. La clé du succès repose sur un cadrage précis des besoins, un paramétrage progressif, une migration rigoureuse des données et un accompagnement humain constant. Découvrez les 8 étapes incontournables appliquées par INTER-IT Services pour garantir la réussite de votre projet Odoo.",
+    },
+    publishedAt: "2026-06-05",
+    author: "Architecte Projets, INTER-IT",
+    imageUrl: "/images/blog/logistics.png",
+    readTime: {
+      en: "7 min read",
+      fr: "7 min de lecture",
+    },
+    tags: ["Odoo", "Méthodologie", "Déploiement", "Formation"],
+  },
+  {
+    id: "blog-tech-1",
     slug: "why-choose-nextjs-enterprise",
     title: {
-      en: "Choosing Next.js for Enterprise Web Applications",
+      en: "Choosing Next.js for High-Performance Enterprise Web Platforms",
       fr: "Pourquoi Choisir Next.js pour Vos Applications Web d'Entreprise",
     },
     excerpt: {
       en: "An in-depth look at Next.js rendering strategies, performance indicators, and why it is the standard for modern web platforms.",
-      fr: "Une analyse approfondie des stratégies de rendu de Next.js, des indicateurs de performance et des raisons pour lesquelles il s'agit de la norme pour les plateformes web modernes.",
+      fr: "Une analyse approfondie des stratégies de rendu de Next.js, des indicateurs de performance et de sécurité pour les plateformes web.",
     },
     content: {
       en: "Next.js offers a hybrid rendering model, combining Server-Side Rendering (SSR), Static Site Generation (SSG), and Client Components. For enterprises, this means lightning-fast page loading speeds, robust security (due to hidden backend APIs), and stellar out-of-the-box SEO. We review the latest App Router improvements and how we use them at INTER-IT to deliver premium user experiences.",
-      fr: "Next.js propose un modèle de rendu hybride, combinant le rendu côté serveur (SSR), la génération de sites statiques (SSG) et les composants client. Pour les entreprises, cela se traduit par des vitesses de chargement de page ultra-rapides, une sécurité robuste (grâce à des API backend cachées) et un référencement (SEO) exceptionnel dès le départ. Nous passons en revue les dernières améliorations de l'App Router et comment nous les utilisons chez INTER-IT pour offrir des expériences de qualité premium.",
+      fr: "Next.js propose un modèle de rendu hybride, combinant le rendu côté serveur (SSR), la génération de sites statiques (SSG) et les composants client. Pour les entreprises, cela se traduit par des vitesses de chargement de page ultra-rapides, une sécurité robuste (grâce à des API backend protégées) et un référencement (SEO) exceptionnel dès le départ. Nous passons en revue ses atouts pour concevoir des applications web durables.",
     },
-    publishedAt: "2026-05-01",
+    publishedAt: "2026-05-20",
     author: "Lead Web Developer, INTER-IT",
     imageUrl: "/images/blog/nextjs.png",
     readTime: {
@@ -48,77 +96,5 @@ export const blogPosts: BlogPost[] = [
       fr: "4 min de lecture",
     },
     tags: ["Web Dev", "Next.js", "React"],
-  },
-  {
-    id: "blog-3",
-    slug: "importance-graphic-design-print-branding-smes",
-    title: {
-      en: "The Impact of Premium Graphic Design and Print Branding for SMEs",
-      fr: "L'Impact d'un Design Graphique de Qualité et du Print pour les PME",
-    },
-    excerpt: {
-      en: "Why physical marketing assets and professional visual branding are critical for local authority and corporate trust.",
-      fr: "Pourquoi les supports physiques et une identité visuelle professionnelle sont indispensables pour asseoir sa crédibilité locale.",
-    },
-    content: {
-      en: "In a digital-first world, physical print media holds unique psychological value. Cohesive brand folders, textured business cards, and vector logo consistency across vehicles and workspaces establish instant professionalism. For local service companies in Canada (Ontario/Brampton) as well as global enterprises, combining high-end Next.js web portals with matching print materials ensures a unified omnichannel brand experience. At INTER-IT, we bridge the gap between digital excellence and physical print asset design.",
-      fr: "Dans un monde dominé par le numérique, les supports imprimés physiques conservent une valeur psychologique unique. Des pochettes d'entreprise cohérentes, des cartes de visite de qualité et un logo vectoriel décliné sur les véhicules et chantiers imposent le professionnalisme. Pour les entreprises locales au Canada (Brampton/Ontario) comme pour les acteurs internationaux, allier un portail Next.js haut de gamme à des supports print assortis garantit une expérience client omnicanale mémorable. Chez INTER-IT, nous unissons excellence numérique et design d'impression de premier plan.",
-    },
-    publishedAt: "2026-05-25",
-    author: "Lead Brand Designer, INTER-IT",
-    imageUrl: "/images/blog/logistics.png",
-    readTime: {
-      en: "4 min read",
-      fr: "4 min de lecture",
-    },
-    tags: ["Design", "Branding", "Print"],
-  },
-  {
-    id: "blog-4",
-    slug: "local-seo-digital-marketing-brampton-ontario",
-    title: {
-      en: "Mastering Local SEO and Digital Marketing in Ontario",
-      fr: "Maîtriser le SEO Local et le Marketing Numérique en Ontario",
-    },
-    excerpt: {
-      en: "Effective strategies to optimize local search rankings, target Ontario SMEs, and drive high-intent customer inquiries.",
-      fr: "Stratégies efficaces pour optimiser le référencement local, cibler les PME en Ontario et générer des demandes clients qualifiées.",
-    },
-    content: {
-      en: "To grow a business in Canada or internationally, generic marketing isn't enough. While optimizing local search in Ontario (such as Brampton) is crucial for SMEs, scaling globally requires advanced geo-targeting, schema integration, and optimized user journeys. Discover the algorithms behind local and international search layouts, and how dynamic SEO-friendly page loading directly impacts marketing conversion rates.",
-      fr: "Pour développer une entreprise au Canada ou à l'international, le marketing générique ne suffit pas. Si l'optimisation locale en Ontario (notamment à Brampton) est capitale pour les PME locales, l'expansion globale exige un ciblage géographique avancé, des données structurées et des parcours utilisateurs optimisés. Découvrez le fonctionnement des algorithmes de recherche locaux et internationaux, et l'impact du temps de chargement SEO sur vos conversions.",
-    },
-    publishedAt: "2026-06-02",
-    author: "Senior Marketing Strategist, INTER-IT",
-    imageUrl: "/images/blog/nextjs.png",
-    readTime: {
-      en: "5 min read",
-      fr: "5 min de lecture",
-    },
-    tags: ["Marketing", "SEO", "Business"],
-  },
-  {
-    id: "blog-5",
-    slug: "why-corporate-training-workshops-drive-growth",
-    title: {
-      en: "Why Technical Corporate Training is the Engine of Digital Growth",
-      fr: "Pourquoi la Formation Professionnelle Technique est le Moteur de la Croissance",
-    },
-    excerpt: {
-      en: "Upskilling internal developers and decision-makers on AI models and modern code workflows leads to rapid innovation and ROI.",
-      fr: "Former les développeurs et décideurs internes sur l'IA et les frameworks modernes accélère l'innovation et le retour sur investissement.",
-    },
-    content: {
-      en: "Technology moves faster than corporate hiring cycles. The most efficient way to scale tech capability is upskilling existing staff. Delivering structured Learning Workshops on Next.js/TypeScript and secure AI pipelines directly increases implementation speed and reduces external agency dependencies. At INTER-IT, our senior developer-led workshops in Ontario ensure teams build secure, scalable corporate architectures.",
-      fr: "La technologie évolue plus vite que les cycles de recrutement des entreprises. Le moyen le plus efficace d'accroître vos capacités techniques est de former vos collaborateurs. Animer des ateliers d'apprentissage structurés sur Next.js, TypeScript et l'IA sécurisée réduit les dépendances externes et booste la productivité. Chez INTER-IT, nos bootcamps menés par des développeurs seniors en Ontario garantissent que vos équipes créent des architectures robustes et pérennes.",
-    },
-    publishedAt: "2026-06-04",
-    author: "Director of Education, INTER-IT",
-    imageUrl: "/images/blog/logistics.png",
-    readTime: {
-      en: "6 min read",
-      fr: "6 min de lecture",
-    },
-    tags: ["Training", "Workshops", "Tech Trends"],
   },
 ];
