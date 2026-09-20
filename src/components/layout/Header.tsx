@@ -12,6 +12,13 @@ interface HeaderProps {
   locale: string;
 }
 
+interface SolutionItem {
+  href: string;
+  label: string;
+  isHighlight?: boolean;
+  tag?: string;
+}
+
 export default function Header({ locale }: HeaderProps) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +46,7 @@ export default function Header({ locale }: HeaderProps) {
     setIsMobileDropdownOpen(false);
   }, [pathname]);
 
-  const solutionsItems = [
+  const solutionsItems: SolutionItem[] = [
     {
       href: `/${locale}/solutions/odoo`,
       label: "Odoo Implementation",
