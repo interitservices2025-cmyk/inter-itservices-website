@@ -1,7 +1,5 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "@/data/blog";
-import { services } from "@/data/services";
-import { courses } from "@/data/training";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://inter-itservices.ca";
@@ -10,16 +8,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/solutions/odoo",
     "/about",
-    "/services",
-    "/ai-solutions",
-    "/training",
     "/contact",
     "/blog",
   ];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
-  // Static routes
+  // Active static routes only (no discontinued offerings)
   for (const path of staticPaths) {
     for (const locale of locales) {
       sitemapEntries.push({
@@ -27,30 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: "monthly",
         priority: path === "" ? 1.0 : path === "/solutions/odoo" ? 0.95 : 0.8,
-      });
-    }
-  }
-
-  // Dynamic services
-  for (const service of services) {
-    for (const locale of locales) {
-      sitemapEntries.push({
-        url: `${baseUrl}/${locale}/services/${service.slug}`,
-        lastModified: new Date(),
-        changeFrequency: "monthly",
-        priority: 0.8,
-      });
-    }
-  }
-
-  // Dynamic training courses
-  for (const course of courses) {
-    for (const locale of locales) {
-      sitemapEntries.push({
-        url: `${baseUrl}/${locale}/training/${course.slug}`,
-        lastModified: new Date(),
-        changeFrequency: "monthly",
-        priority: 0.75,
       });
     }
   }

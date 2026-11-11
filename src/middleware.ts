@@ -30,18 +30,51 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Check if pathname already has a supported locale
-  const pathnameHasLocale = locales.some(
+  const matchedLocale = locales.find(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
-  if (pathnameHasLocale) return;
+  if (!matchedLocale) {
+    // Redirect if there is no locale in the pathname
+    const locale = getLocale(request);
+    request.nextUrl.pathname = `/${locale}${pathname}`;
+    return NextResponse.redirect(request.nextUrl);
+  }
 
-  // Redirect if there is no locale in the pathname
-  const locale = getLocale(request);
-  request.nextUrl.pathname = `/${locale}${pathname}`;
+  // Extract the sub-path after /[locale]
+  const subPath = pathname.slice(`/${matchedLocale}`.length);
 
-  // Redirect to /[locale]/...
-  return NextResponse.redirect(request.nextUrl);
+  // Redirect legacy or non-commercialized offering routes
+  if (
+    subPath === "/services/odoo" ||
+    subPath === "/services/odoo-implementation" ||
+    subPath === "/solutions"
+  ) {
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.pathname = `/${matchedLocale}/solutions/odoo`;
+    return NextResponse.redirect(redirectUrl, 308);
+  }
+
+  // Block direct access to App Simulation Profil until officially launched, or any discontinued offerings
+  if (
+    subPath === "/services" ||
+    subPath.startsWith("/services/") ||
+    subPath === "/training" ||
+    subPath.startsWith("/training/") ||
+    subPath === "/ai-solutions" ||
+    subPath.startsWith("/ai-solutions/") ||
+    subPath === "/products" ||
+    subPath.startsWith("/products/") ||
+    subPath === "/portfolio" ||
+    subPath.startsWith("/portfolio/") ||
+    subPath === "/solutions/app-simulation-profil" ||
+    subPath.startsWith("/solutions/app-simulation-profil/")
+  ) {
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.pathname = `/${matchedLocale}`;
+    redirectUrl.hash = "solutions";
+    return NextResponse.redirect(redirectUrl, 308);
+  }
 }
 
 export const config = {

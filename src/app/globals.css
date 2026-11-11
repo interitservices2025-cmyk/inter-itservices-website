@@ -9,6 +9,8 @@
   --brand-card-border: #E2E8F0;
   --brand-glow-primary: rgba(29, 33, 64, 0.06);
   --brand-glow-secondary: rgba(243, 146, 0, 0.08);
+  --font-geist-sans: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-geist-mono: "Cascadia Code", "Fira Code", Consolas, monospace;
 }
 
 @theme {
@@ -49,33 +51,35 @@
   background: var(--brand-secondary);
 }
 
-/* Utilities */
-.glass-panel {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-}
+/* Utilities placed in @layer components so Tailwind utility classes always take precedence */
+@layer components {
+  .glass-panel {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  }
 
-.glass-panel-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.glass-panel-hover:hover {
-  background: #ffffff;
-  border-color: #cbd5e1;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
-}
+  .glass-panel-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-.text-gradient-primary {
-  background: linear-gradient(135deg, #1d2140 30%, #0f172a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+  .glass-panel-hover:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
 
-.text-gradient-secondary {
-  background: linear-gradient(135deg, #f39200 0%, #d97706 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  .text-gradient-primary {
+    background: linear-gradient(135deg, #1d2140 30%, #0f172a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-secondary {
+    background: linear-gradient(135deg, #f39200 0%, #d97706 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 /* Smooth Scrolling */

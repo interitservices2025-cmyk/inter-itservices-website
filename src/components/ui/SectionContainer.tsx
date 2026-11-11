@@ -7,24 +7,28 @@ interface SectionContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const SectionContainer: React.FC<SectionContainerProps> = ({
-  className,
+  className = "",
   id,
   bgType = "transparent",
   children,
   ...props
 }) => {
+  const hasCustomPy = /\bpy-\d/.test(className);
+  const hasCustomBg = /\bbg-/.test(className);
+  const hasCustomText = /\btext-(white|slate|\[)/.test(className);
+
   return (
     <section
       id={id}
       className={cn(
-        "py-20 sm:py-28 md:py-32 relative overflow-hidden",
-        {
-          "bg-white text-slate-900": bgType === "dark",
-          "bg-slate-50 text-slate-900": bgType === "light",
-          "bg-gradient-to-b from-white via-slate-50 to-white text-slate-900":
-            bgType === "gradient-dark",
-          "bg-transparent text-slate-900": bgType === "transparent",
+        "relative overflow-hidden",
+        !hasCustomPy && "py-20 sm:py-28",
+        !hasCustomBg && {
+          "bg-white": bgType === "dark" || bgType === "transparent",
+          "bg-slate-50": bgType === "light",
+          "bg-gradient-to-b from-white via-slate-50 to-white": bgType === "gradient-dark",
         },
+        !hasCustomText && "text-slate-900",
         className
       )}
       {...props}

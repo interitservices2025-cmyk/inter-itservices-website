@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node -e \"const fs=require('fs'),cp=require('child_process');const d=fs.realpathSync.native(process.cwd());process.exit(cp.spawnSync(process.execPath,['node_modules/next/dist/bin/next','dev',d,...process.argv.slice(1)],{cwd:d,stdio:'inherit'}).status??0)\" --",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

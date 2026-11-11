@@ -1,12 +1,10 @@
 import React from "react";
 import { getDictionary } from "@/lib/get-dictionary";
 import HeroSection from "@/components/sections/HeroSection";
-import IntroSection from "@/components/sections/IntroSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import OdooSectionHome from "@/components/sections/OdooSectionHome";
-import WhyUsSection from "@/components/sections/WhyUsSection";
-import ProcessSection from "@/components/sections/ProcessSection";
-import TrainingSection from "@/components/sections/TrainingSection";
+import ProprietaryProductSection from "@/components/sections/ProprietaryProductSection";
+import IntroSection from "@/components/sections/IntroSection";
 import BlogSectionHome from "@/components/sections/BlogSectionHome";
 import ContactSection from "@/components/sections/ContactSection";
 
@@ -20,31 +18,25 @@ export default async function HomePage({ params }: HomePageProps) {
 
   return (
     <div className="flex flex-col w-full min-h-screen">
-      {/* 1. Hero Section - Odoo Priority */}
+      {/* Section 1 – Hero */}
       <HeroSection dict={dict} locale={locale} />
 
-      {/* 2. Short Presentation: Who is INTER-IT Services? */}
+      {/* Section 2 – À propos d'INTER-IT */}
       <IntroSection dict={dict} locale={locale} />
 
-      {/* 3. Core 6 Solutions (Odoo, Web, AI, Apps, Marketing, Training) */}
+      {/* Section 3 – Nos solutions (Odoo Implementation [DISPONIBLE] & App Simulation Profil [EN DÉVELOPPEMENT]) */}
       <ServicesSection dict={dict} locale={locale} />
 
-      {/* 4. Odoo Featured Section (Centralize & Simplify) */}
+      {/* Section 4 – Focus Odoo */}
       <OdooSectionHome dict={dict} locale={locale} />
 
-      {/* 5. Why Choose INTER-IT Services? (Verified arguments) */}
-      <WhyUsSection dict={dict} />
+      {/* Section 5 – Nos propres solutions (App Simulation Profil) */}
+      <ProprietaryProductSection dict={dict} locale={locale} />
 
-      {/* 6. Proven 4-step Delivery Methodology */}
-      <ProcessSection dict={dict} locale={locale} />
-
-      {/* 7. Hands-on Training & Upskilling */}
-      <TrainingSection dict={dict} locale={locale} />
-
-      {/* 8. Insights & Blog (Odoo & SME Digitalization) */}
+      {/* Articles & Ressources Odoo */}
       <BlogSectionHome dict={dict} locale={locale} />
 
-      {/* 9. Real Functional Contact Form */}
+      {/* Section 6 – Contact */}
       <ContactSection dict={dict} locale={locale} />
     </div>
   );

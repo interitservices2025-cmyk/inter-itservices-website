@@ -2,7 +2,7 @@ export const BRAND = {
   name: "INTER-IT SERVICES INC",
 
   slogan:
-    "Solutions numériques, intelligence artificielle et innovation pour accélérer votre croissance",
+    "Des solutions technologiques concrètes pour votre avenir : implémentation Odoo et produits logiciels propriétaires",
 
   website: "https://inter-itservices.ca",
 

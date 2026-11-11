@@ -1,18 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { getDictionary } from "@/lib/get-dictionary";
 
 export async function generateMetadata({
   params,
@@ -20,7 +10,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const canonical = locale === "fr" ? "https://inter-itservices.ca/fr" : "https://inter-itservices.ca/en";
+  const isFr = locale === "fr";
+  const canonical = isFr ? "https://inter-itservices.ca/fr" : "https://inter-itservices.ca/en";
   const alternates = {
     canonical,
     languages: {
@@ -29,19 +20,37 @@ export async function generateMetadata({
     },
   };
 
-  if (locale === "fr") {
+  if (isFr) {
     return {
-      title: "INTER-IT SERVICES INC | Implémentation Odoo & Solutions Technologiques",
+      title: "INTER-IT SERVICES INC | Implémentation Odoo & Solutions Logicielles",
       description:
-        "Accompagnement dans l'implémentation et le déploiement d'Odoo ERP, développement web moderne, automatisation de processus et formations professionnelles au Canada.",
+        "INTER-IT Services accompagne les entreprises dans l'implémentation d'Odoo pour centraliser leurs opérations et développe App Simulation Profil, sa plateforme propriétaire d'évaluation de profils par IA.",
       alternates,
+      openGraph: {
+        title: "INTER-IT SERVICES INC | Implémentation Odoo & Solutions Logicielles",
+        description:
+          "Accompagnement à l'implémentation Odoo pour les entreprises et développement de solutions logicielles propriétaires (App Simulation Profil).",
+        url: canonical,
+        siteName: "INTER-IT SERVICES INC",
+        locale: "fr_CA",
+        type: "website",
+      },
     };
   }
   return {
-    title: "INTER-IT SERVICES INC | Odoo Implementation & Technology Solutions",
+    title: "INTER-IT SERVICES INC | Odoo Implementation & Software Solutions",
     description:
-      "Expert guidance in Odoo ERP deployment, modern web engineering, workflow automation, and professional corporate training across Canada and internationally.",
+      "INTER-IT Services supports businesses in deploying Odoo to centralize operations and develops App Simulation Profil, its proprietary AI-powered profile evaluation platform.",
     alternates,
+    openGraph: {
+      title: "INTER-IT SERVICES INC | Odoo Implementation & Software Solutions",
+      description:
+        "Odoo implementation support for businesses and development of proprietary software solutions (App Simulation Profil).",
+      url: canonical,
+      siteName: "INTER-IT SERVICES INC",
+      locale: "en_CA",
+      type: "website",
+    },
   };
 }
 
@@ -53,24 +62,44 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const dict = await getDictionary(locale);
+  const isFr = locale === "fr";
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Organization",
     "name": "INTER-IT SERVICES INC",
     "image": "https://inter-itservices.ca/images/logo/Logo%202.svg",
     "@id": "https://inter-itservices.ca/#organization",
     "url": "https://inter-itservices.ca",
+    "description": isFr
+      ? "INTER-IT Services déploie la solution Odoo pour centraliser la gestion des entreprises et développe ses propres solutions logicielles propriétaires (App Simulation Profil)."
+      : "INTER-IT Services deploys Odoo to centralize business management and develops its own proprietary software solutions (App Simulation Profil).",
     "sameAs": [
       "https://www.facebook.com/interitservicesca",
       "https://www.instagram.com/inter.itservices",
       "https://www.linkedin.com/company/inter-it-services-inc"
     ],
-    "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "ON",
       "addressCountry": "CA"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": isFr ? "Solutions INTER-IT Services" : "INTER-IT Services Solutions",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Odoo Implementation",
+            "description": isFr
+              ? "Analyse des besoins, paramétrage des modules et accompagnement à la mise en service d'Odoo pour centraliser les opérations de l'entreprise."
+              : "Needs analysis, module configuration, and go-live support for Odoo to centralize business operations."
+          }
+        }
+      ]
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -89,7 +118,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiasedScroll`}
+      className="h-full antialiased"
     >
       <head>
         <script
@@ -98,9 +127,9 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-white text-slate-900 font-sans selection:bg-[#F39200] selection:text-white">
-        <Header locale={locale} />
+        <Header locale={locale} dict={dict} />
         <main className="flex-grow flex flex-col">{children}</main>
-        <Footer locale={locale} />
+        <Footer locale={locale} dict={dict} />
       </body>
     </html>
   );

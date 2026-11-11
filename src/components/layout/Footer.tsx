@@ -1,32 +1,29 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, MapPin, Linkedin, Facebook, Instagram, ArrowRight } from "lucide-react";
+import { Mail, MapPin, Linkedin, Facebook, Instagram, ArrowRight, Lock } from "lucide-react";
 import { getDictionary } from "@/lib/get-dictionary";
 import { BRAND } from "@/constants/brand";
+import { SOLUTIONS_CATALOG } from "@/data/solutions-catalog";
 
 interface FooterProps {
   locale: string;
+  dict?: any;
 }
 
-export default async function Footer({ locale }: FooterProps) {
-  const dict = await getDictionary(locale);
+export default async function Footer({ locale, dict: propDict }: FooterProps) {
+  const dict = propDict || (await getDictionary(locale));
   const currentYear = new Date().getFullYear();
+  const isFr = locale === "fr";
 
-  const solutionsLinks = [
-    { href: `/${locale}/solutions/odoo`, label: "Odoo Implementation" },
-    { href: `/${locale}/services/web-development`, label: locale === "fr" ? "Développement Web" : "Web Development" },
-    { href: `/${locale}/services/automation-ai`, label: locale === "fr" ? "Automatisation & IA" : "Automation & AI" },
-    { href: `/${locale}/services/business-applications`, label: locale === "fr" ? "Applications Métiers" : "Business Applications" },
-    { href: `/${locale}/services/digital-marketing`, label: locale === "fr" ? "Marketing Digital" : "Digital Marketing" },
-    { href: `/${locale}/training`, label: locale === "fr" ? "Ateliers de formation" : "Training Workshops" },
-  ];
+  const odooCatalog = SOLUTIONS_CATALOG.find((s) => s.id === "odoo")!;
+  const appCatalog = SOLUTIONS_CATALOG.find((s) => s.id === "app-simulation-profil")!;
 
   const companyLinks = [
-    { href: `/${locale}/about`, label: dict.nav.about },
-    { href: `/${locale}/training`, label: dict.nav.training },
-    { href: `/${locale}/blog`, label: dict.nav.blog },
-    { href: `/${locale}/contact`, label: dict.nav.contact },
+    { href: `/${locale}`, label: dict.nav?.home || (isFr ? "Accueil" : "Home") },
+    { href: `/${locale}/about`, label: dict.nav?.about || (isFr ? "À Propos" : "About Us") },
+    { href: `/${locale}/blog`, label: dict.nav?.blog || "Insights & Blog" },
+    { href: `/${locale}/contact`, label: dict.nav?.contact || "Contact" },
   ];
 
   return (
@@ -49,7 +46,7 @@ export default async function Footer({ locale }: FooterProps) {
             </p>
             <div className="pt-2">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-white/5 border border-white/10 text-[#F39200]">
-                <span>Solutions B2B & ERP</span>
+                <span>{dict.footer.b2bBadge}</span>
               </span>
             </div>
             {/* Social Icons */}
@@ -84,30 +81,57 @@ export default async function Footer({ locale }: FooterProps) {
             </div>
           </div>
 
-          {/* Solutions Col (3 cols) */}
+          {/* Solutions Col (3 cols) - Strictly Odoo Implementation (Available) & App Simulation Profil (In Development) */}
           <div className="lg:col-span-3">
             <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4 border-l-2 border-[#F39200] pl-2.5">
               {dict.footer.solutionsTitle || "Solutions"}
             </h3>
-            <ul className="space-y-2.5 text-xs sm:text-sm">
-              {solutionsLinks.map((link) => (
-                <li key={link.href}>
+            <ul className="space-y-3.5 text-xs sm:text-sm">
+              <li>
+                <Link
+                  href={odooCatalog.href(locale)}
+                  className="text-white/85 hover:text-[#F39200] transition-colors duration-200 flex items-center justify-between gap-2 group"
+                >
+                  <span className="flex items-center gap-1.5 font-semibold">
+                    <ArrowRight className="h-3.5 w-3.5 text-[#F39200]" />
+                    <span>{odooCatalog.name[isFr ? "fr" : "en"]}</span>
+                  </span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-[#F39200] text-white">
+                    {odooCatalog.statusBadge[isFr ? "fr" : "en"]}
+                  </span>
+                </Link>
+              </li>
+
+              <li>
+                {appCatalog.isAvailable ? (
                   <Link
-                    href={link.href}
-                    className="text-white/70 hover:text-[#F39200] transition-colors duration-200 flex items-center gap-1.5 group"
+                    href={appCatalog.href(locale)}
+                    className="text-white/80 hover:text-[#F39200] transition-colors duration-200 flex items-center justify-between gap-2"
                   >
-                    <ArrowRight className="h-3 w-3 text-[#F39200] opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <span>{link.label}</span>
+                    <span>{appCatalog.name[isFr ? "fr" : "en"]}</span>
                   </Link>
-                </li>
-              ))}
+                ) : (
+                  <div
+                    aria-disabled="true"
+                    className="text-white/55 flex items-center justify-between gap-2 select-none cursor-not-allowed"
+                  >
+                    <span className="flex items-center gap-1.5">
+                      <Lock className="h-3.5 w-3.5 text-white/40 shrink-0" />
+                      <span>{appCatalog.name[isFr ? "fr" : "en"]}</span>
+                    </span>
+                    <span className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded border border-[#F39200]/40 bg-[#F39200]/15 text-[#F39200] shrink-0">
+                      {appCatalog.statusBadge[isFr ? "fr" : "en"]}
+                    </span>
+                  </div>
+                )}
+              </li>
             </ul>
           </div>
 
           {/* Company Col (2 cols) */}
           <div className="lg:col-span-2">
             <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4 border-l-2 border-[#F39200] pl-2.5">
-              {dict.footer.companyTitle || "Entreprise"}
+              {dict.footer.companyTitle || (isFr ? "Entreprise" : "Company")}
             </h3>
             <ul className="space-y-2.5 text-xs sm:text-sm">
               {companyLinks.map((link) => (
@@ -144,7 +168,10 @@ export default async function Footer({ locale }: FooterProps) {
             <div className="pt-2">
               <Link href={`/${locale}/contact`} className="inline-block">
                 <span className="text-xs font-bold text-[#F39200] hover:underline flex items-center gap-1">
-                  <span>{locale === "fr" ? "Demander une consultation" : "Request a consultation"}</span>
+                  <span>
+                    {dict.footer.consultationCta ||
+                      (isFr ? "Demander une consultation" : "Request a Consultation")}
+                  </span>
                   <ArrowRight className="h-3 w-3" />
                 </span>
               </Link>
@@ -155,9 +182,7 @@ export default async function Footer({ locale }: FooterProps) {
         {/* Bottom Area */}
         <div className="flex flex-col sm:flex-row items-center justify-between pt-8 gap-4 text-xs text-white/50">
           <p>{dict.footer.copyright.replace("{year}", currentYear.toString())}</p>
-          <p className="text-white/50">
-            {dict.footer.legal}
-          </p>
+          <p className="text-white/50">{dict.footer.legal}</p>
         </div>
       </div>
     </footer>

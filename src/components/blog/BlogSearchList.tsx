@@ -6,7 +6,6 @@ import { ArrowRight, Calendar, User, Search, X, Tag } from "lucide-react";
 import { BlogPost } from "@/types";
 import Card from "../ui/Card";
 import Badge from "../ui/Badge";
-import { motion, AnimatePresence } from "framer-motion";
 
 interface BlogSearchListProps {
   posts: BlogPost[];
@@ -51,10 +50,10 @@ export default function BlogSearchList({ posts, locale, dict }: BlogSearchListPr
           <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
           <input
             type="text"
-            placeholder={locale === "fr" ? "Rechercher un article..." : "Search articles..."}
+            placeholder={dict?.blogPage?.searchPlaceholder || (locale === "fr" ? "Rechercher un article..." : "Search articles...")}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-white border border-slate-200 focus:border-orange-500 focus:outline-none rounded-lg pl-10 pr-10 py-2 text-xs text-slate-900 placeholder-slate-400 transition-colors"
+            className="w-full bg-white border border-slate-200 focus:border-[#F39200] focus:outline-none rounded-lg pl-10 pr-10 py-2 text-xs text-slate-900 placeholder-slate-400 transition-colors"
           />
           {searchQuery && (
             <button
@@ -68,19 +67,19 @@ export default function BlogSearchList({ posts, locale, dict }: BlogSearchListPr
 
         {/* Tags quick filters */}
         <div className="flex flex-wrap items-center gap-1.5 w-full md:w-auto justify-start md:justify-end">
-          <span className="text-[10px] text-slate-500 font-semibold uppercase tracking-wider mr-1.5 hidden sm:inline flex items-center gap-1">
+          <span className="text-[10px] text-slate-500 font-semibold uppercase tracking-wider mr-1.5 hidden sm:inline-flex items-center gap-1">
             <Tag className="h-3 w-3" />
-            <span>Tags:</span>
+            <span>{dict?.blogPage?.tagsLabel || (locale === "fr" ? "Tags :" : "Tags:")}</span>
           </span>
           <button
             onClick={() => setSelectedTag(null)}
             className={`px-3 py-1 rounded-full text-[10px] font-semibold transition-all cursor-pointer ${
               !selectedTag
-                ? "bg-orange-500 text-white font-bold"
-                : "bg-white text-slate-600 hover:text-slate-900 border border-slate-200 shadow-sm"
+                ? "bg-[#F39200] text-white font-bold"
+                : "bg-white text-slate-600 hover:text-[#1D2140] border border-slate-200 shadow-sm"
             }`}
           >
-            {locale === "fr" ? "Tous" : "All"}
+            {dict?.blogPage?.allTags || (locale === "fr" ? "Tous" : "All")}
           </button>
           {allTags.map((tag) => (
             <button
@@ -88,8 +87,8 @@ export default function BlogSearchList({ posts, locale, dict }: BlogSearchListPr
               onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
               className={`px-3 py-1 rounded-full text-[10px] font-semibold transition-all cursor-pointer ${
                 tag === selectedTag
-                  ? "bg-orange-500 text-white font-bold"
-                  : "bg-white text-slate-600 hover:text-slate-900 border border-slate-200 shadow-sm"
+                  ? "bg-[#F39200] text-white font-bold"
+                  : "bg-white text-slate-600 hover:text-[#1D2140] border border-slate-200 shadow-sm"
               }`}
             >
               #{tag}
@@ -99,80 +98,67 @@ export default function BlogSearchList({ posts, locale, dict }: BlogSearchListPr
       </div>
 
       {/* Grid of posts */}
-      <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <AnimatePresence mode="popLayout">
-          {filteredPosts.length > 0 ? (
-            filteredPosts.map((post) => (
-              <motion.div
-                key={post.id}
-                layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.3 }}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {filteredPosts.length > 0 ? (
+          filteredPosts.map((post) => (
+            <div key={post.id} className="h-full">
+              <Card
+                glowColor="primary"
+                className="h-full flex flex-col justify-between border-slate-200 bg-white p-6 shadow-sm"
               >
-                <Card
-                  glowColor="primary"
-                  className="h-full flex flex-col justify-between border-slate-200 bg-white p-6 shadow-sm"
-                >
-                  <div>
-                    {/* Meta details */}
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-1.5 text-[10px] text-slate-500">
-                        <Calendar className="h-3.5 w-3.5" />
-                        <span>{post.publishedAt}</span>
-                      </div>
-                      <Badge variant="secondary" className="text-[9px] px-1.5 py-0.5">
-                        {post.tags[0].toUpperCase()}
-                      </Badge>
+                <div>
+                  {/* Meta details */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-1.5 text-[10px] text-slate-500">
+                      <Calendar className="h-3.5 w-3.5" />
+                      <span>{post.publishedAt}</span>
                     </div>
-
-                    {/* Title */}
-                    <h3 className="text-base font-bold text-slate-900 mb-2 hover:text-orange-500 transition-colors">
-                      <Link href={`/${locale}/blog/${post.slug}`} className="cursor-pointer">
-                        {post.title[locale as "en" | "fr"]}
-                      </Link>
-                    </h3>
-
-                    {/* Excerpt */}
-                    <p className="text-slate-600 text-xs leading-relaxed mb-6 line-clamp-3">
-                      {post.excerpt[locale as "en" | "fr"]}
-                    </p>
+                    <Badge variant="secondary" className="text-[9px] px-1.5 py-0.5">
+                      {post.tags[0].toUpperCase()}
+                    </Badge>
                   </div>
 
-                  {/* Footer */}
-                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                    <div className="flex items-center gap-1.5 text-[10px] text-slate-600">
-                      <User className="h-3.5 w-3.5 text-orange-500" />
-                      <span>{post.author}</span>
-                    </div>
-                    <Link
-                      href={`/${locale}/blog/${post.slug}`}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-orange-500 hover:text-orange-600 transition-colors group cursor-pointer"
-                    >
-                      <span>{locale === "fr" ? "Lire l'article" : "Read Post"}</span>
-                      <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                  {/* Title */}
+                  <h3 className="text-base font-bold text-[#1D2140] mb-2 hover:text-[#F39200] transition-colors">
+                    <Link href={`/${locale}/blog/${post.slug}`} className="cursor-pointer">
+                      {post.title[locale as "en" | "fr"]}
                     </Link>
+                  </h3>
+
+                  {/* Excerpt */}
+                  <p className="text-slate-600 text-xs leading-relaxed mb-6 line-clamp-3">
+                    {post.excerpt[locale as "en" | "fr"]}
+                  </p>
+                </div>
+
+                {/* Footer */}
+                <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                  <div className="flex items-center gap-1.5 text-[10px] text-slate-600">
+                    <User className="h-3.5 w-3.5 text-[#F39200]" />
+                    <span>{post.author}</span>
                   </div>
-                </Card>
-              </motion.div>
-            ))
-          ) : (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="col-span-full py-12 text-center text-slate-500 space-y-2"
-            >
-              <p className="text-sm font-semibold">
-                {locale === "fr" ? "Aucun article de blog ne correspond à votre recherche." : "No blog posts matched your search."}
-              </p>
-              <p className="text-xs">
-                {locale === "fr" ? "Essayez d'autres termes ou sélectionnez une autre étiquette." : "Try using different keywords or selecting another tag."}
-              </p>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.div>
+                  <Link
+                    href={`/${locale}/blog/${post.slug}`}
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#F39200] hover:text-[#1D2140] transition-colors group cursor-pointer"
+                  >
+                    <span>{dict?.blogHome?.readMore || (locale === "fr" ? "Lire l'article" : "Read Post")}</span>
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                  </Link>
+                </div>
+              </Card>
+            </div>
+          ))
+        ) : (
+          <div className="col-span-full py-12 text-center text-slate-500 space-y-2">
+            <p className="text-sm font-semibold">
+              {dict?.blogPage?.emptyTitle || (locale === "fr" ? "Aucun article de blog ne correspond à votre recherche." : "No blog posts matched your search.")}
+            </p>
+            <p className="text-xs">
+              {dict?.blogPage?.emptySubtitle || (locale === "fr" ? "Essayez d'autres termes ou sélectionnez une autre étiquette." : "Try using different keywords or selecting another tag.")}
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

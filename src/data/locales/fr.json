@@ -4,185 +4,448 @@
     "location": "Ontario, Canada",
     "email": "contact@inter-itservices.ca",
     "cta": {
-      "contactUs": "Contactez-nous",
+      "contactUs": "Nous contacter",
       "getStarted": "Démarrer",
       "learnMore": "En savoir plus",
       "submit": "Envoyer ma demande",
       "viewAll": "Voir tout",
-      "register": "Demander un atelier",
-      "talkOdoo": "Parler de votre projet Odoo",
-      "discoverOdoo": "Découvrir Odoo"
+      "talkOdoo": "Demander une consultation",
+      "discoverOdoo": "Découvrir Odoo",
+      "requestConsultation": "Demander une consultation",
+      "discoverSolutions": "Découvrir nos solutions",
+      "comingSoon": "BIENTÔT DISPONIBLE"
     }
   },
   "nav": {
     "home": "Accueil",
     "about": "À Propos",
-    "services": "Solutions",
-    "training": "Ateliers de formation",
+    "solutions": "Solutions",
     "blog": "Insights & Blog",
     "contact": "Contact",
+    "discussProject": "Demander une consultation",
     "solutionsDropdown": {
       "title": "Solutions",
-      "odoo": "Odoo Implementation",
-      "webDev": "Développement Web",
-      "automationAi": "Automatisation & IA",
-      "businessApps": "Applications Métiers",
-      "digitalMarketing": "Marketing Digital",
-      "training": "Formations"
+      "odoo": {
+        "title": "Odoo Implementation",
+        "status": "DISPONIBLE",
+        "description": "Analyse des besoins, paramétrage modulaire et mise en place d'un environnement de gestion Odoo adapté à votre organisation.",
+        "ctaDiscover": "Découvrir Odoo",
+        "ctaConsult": "Demander une consultation"
+      },
+      "appSimulationProfil": {
+        "title": "App Simulation Profil",
+        "status": "EN DÉVELOPPEMENT",
+        "comingSoon": "BIENTÔT DISPONIBLE",
+        "category": "Produit logiciel propriétaire INTER-IT",
+        "tagline": "Évaluez votre profil en 5 minutes.",
+        "description": "Moteur d'analyse basé sur l'intelligence artificielle pour évaluer votre profil et obtenir un rapport d'éligibilité personnalisé (Canada, Europe, Afrique)."
+      }
     }
   },
   "hero": {
-    "badge": "ODOO IMPLEMENTATION",
-    "title": "Simplifiez la gestion de votre entreprise avec Odoo",
-    "subtitle": "INTER-IT Services vous accompagne dans l’implémentation d’Odoo pour centraliser vos opérations, automatiser vos processus et mieux gérer votre entreprise.",
-    "ctaPrimary": "Parler de votre projet Odoo",
-    "ctaSecondary": "Découvrir Odoo"
-  },
-  "intro": {
-    "badge": "Qui est INTER-IT Services ?",
-    "title": "Un partenaire technologique dédié à la performance des PME",
-    "description": "Nous accompagnons les dirigeants, PME et organisations dans la modernisation de leurs opérations. Spécialisés dans l'implémentation de solutions Odoo, le développement web sur mesure, l'automatisation de processus et la formation, nous créons des outils pratiques et durables au service de votre croissance."
-  },
-  "odooHome": {
-    "badge": "Centralisation & Efficacité",
-    "title": "Odoo pour centraliser et simplifier votre entreprise",
-    "subtitle": "Éliminez les silos de données et les outils hétérogènes. Odoo réunit l'ensemble de votre gestion opérationnelle au sein d'une solution modulaire et intuitive.",
-    "cta": "Découvrir notre accompagnement Odoo",
-    "benefits": {
-      "centralization": {
-        "title": "Gestion centralisée",
-        "description": "Unifiez CRM, ventes, facturation, comptabilité, stocks et projets au sein d'une unique plateforme partagée."
-      },
-      "automation": {
-        "title": "Automatisation des processus",
-        "description": "Supprimez les saisies manuelles redondantes et fluidifiez la transmission d'informations entre vos équipes."
-      },
-      "visibility": {
-        "title": "Visibilité sur les opérations",
-        "description": "Suivez vos indicateurs clés en temps réel via des tableaux de bord clairs pour piloter votre activité avec confiance."
-      },
-      "consolidation": {
-        "title": "Réduction des outils dispersés",
-        "description": "Remplacez de multiples abonnements isolés par une suite cohérente, réduisant vos coûts et la charge de maintenance."
-      },
-      "collaboration": {
-        "title": "Meilleure collaboration",
-        "description": "Permettez à vos collaborateurs de travailler de manière synchronisée avec les mêmes données clients et financières."
-      },
-      "support": {
-        "title": "Accompagnement par INTER-IT Services",
-        "description": "De l'analyse préalable des besoins au paramétrage, à la migration de données et à la formation de vos équipes."
-      }
-    }
+    "badge": "SOLUTIONS LOGICIEL & ERP",
+    "title": "Des solutions technologiques concrètes pour votre avenir.",
+    "subtitle": "INTER-IT Services développe et déploie des solutions logicielles destinées à répondre aux besoins réels des entreprises et des particuliers. Découvrez notre accompagnement Odoo et nos futurs produits propriétaires.",
+    "ctaPrimary": "Découvrir nos solutions",
+    "ctaSecondary": "Nous contacter",
+    "highlights": [
+      { "label": "Odoo Implementation — Disponible" },
+      { "label": "Gestion d'entreprise centralisée" },
+      { "label": "App Simulation Profil — En développement" },
+      { "label": "Solutions logicielles propriétaires" }
+    ]
   },
   "solutionsOverview": {
-    "badge": "Nos Domaines d'Expertise",
-    "title": "Des Solutions Technologiques Conçues pour Vos Enjeux Métiers",
-    "subtitle": "Un éventail de compétences complémentaires pour moderniser chaque dimension de votre organisation."
+    "badge": "Nos Solutions",
+    "title": "Des solutions pensées pour des besoins réels.",
+    "subtitle": "Nous privilégions des solutions concrètes, conçues pour simplifier les opérations, améliorer la gestion et apporter une réelle valeur à leurs utilisateurs.",
+    "odooCard": {
+      "title": "Odoo Implementation",
+      "subtitle": "Odoo – Une gestion d'entreprise centralisée.",
+      "status": "DISPONIBLE",
+      "category": "Offre Commerciale Principale",
+      "description": "Centralisez les opérations de votre entreprise avec Odoo. INTER-IT Services vous accompagne dans l'analyse de vos besoins, le paramétrage des modules et la mise en place d'un environnement de gestion adapté à votre organisation.",
+      "domainsTitle": "Domaines couverts :",
+      "domains": [
+        "CRM et gestion commerciale",
+        "Ventes et achats",
+        "Facturation et comptabilité",
+        "Gestion des stocks",
+        "Gestion de projets",
+        "Centralisation des opérations"
+      ],
+      "ctaDiscover": "Découvrir Odoo",
+      "ctaConsult": "Demander une consultation"
+    },
+    "appCard": {
+      "title": "App Simulation Profil",
+      "status": "EN DÉVELOPPEMENT",
+      "category": "Produit Logiciel Propriétaire INTER-IT",
+      "tagline": "Évaluez votre profil en 5 minutes.",
+      "description": "Notre moteur d'analyse IA vous permettra d'obtenir une première évaluation de votre profil et un rapport d'éligibilité personnalisé pour le Canada, l'Europe et l'Afrique.",
+      "regionsLabel": "Zones géographiques couvertes :",
+      "regions": ["Canada", "Europe", "Afrique"],
+      "devNotice": "Notre solution est actuellement en cours de développement. Son lancement sera annoncé prochainement.",
+      "disclaimer": "Le futur rapport constituera une évaluation indicative et non une décision officielle d'une autorité d'immigration ou d'un organisme compétent.",
+      "ctaDisabled": "BIENTÔT DISPONIBLE"
+    }
+  },
+  "odooHome": {
+    "badge": "Focus Solution Disponible",
+    "title": "Odoo – Une gestion d'entreprise centralisée.",
+    "subtitle": "Centralisez les opérations de votre entreprise avec Odoo. INTER-IT Services vous accompagne dans l'analyse de vos besoins, le paramétrage des modules et la mise en place d'un environnement de gestion adapté à votre organisation.",
+    "ctaDiscover": "Découvrir Odoo",
+    "ctaConsult": "Demander une consultation",
+    "provenBadge": "Solution disponible",
+    "challengesTitle": "Pourquoi centraliser votre gestion avec Odoo ?",
+    "challengesSubtitle": "Les PME font souvent face à la dispersion de leurs outils (tableurs multiples, logiciels isolés, doubles saisies). Odoo unifie l'ensemble de vos processus métiers :",
+    "domainsTitle": "Domaines couverts par notre accompagnement",
+    "domains": [
+      {
+        "title": "CRM et gestion commerciale",
+        "description": "Suivi structuré de vos opportunités commerciales, gestion de vos prospects et relances clients centralisées."
+      },
+      {
+        "title": "Ventes et achats",
+        "description": "Création rapide de devis, transformation en bons de commande et maîtrise de vos approvisionnements fournisseurs."
+      },
+      {
+        "title": "Facturation et comptabilité",
+        "description": "Facturation automatisée à partir des ventes ou projets, suivi des paiements et visibilité financière claire."
+      },
+      {
+        "title": "Gestion des stocks",
+        "description": "Traçabilité des mouvements d'inventaire, niveaux de stock en temps réel et optimisation de la logistique."
+      },
+      {
+        "title": "Gestion de projets",
+        "description": "Planification des tâches, suivi de l'avancement des livrables, feuilles de temps et rentabilité par projet."
+      },
+      {
+        "title": "Centralisation des opérations",
+        "description": "Une base de données unique pour toutes vos équipes, supprimant les saisies redondantes et incluant la prise en main par vos collaborateurs."
+      }
+    ],
+    "stepsTitle": "Notre méthode d'accompagnement en 7 étapes",
+    "stepsSubtitle": "Un déploiement méthodique et structuré, incluant l'accompagnement à la prise en main de l'outil dans le cadre de votre projet Odoo :",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Analyse des besoins de l'entreprise",
+        "desc": "Compréhension précise de votre organisation, de vos objectifs et de vos priorités opérationnelles."
+      },
+      {
+        "step": "02",
+        "title": "Étude des processus existants",
+        "desc": "Analyse de vos flux actuels afin d'aligner la solution sur le fonctionnement réel de votre activité."
+      },
+      {
+        "step": "03",
+        "title": "Sélection des modules pertinents",
+        "desc": "Choix ciblé des applications Odoo véritablement utiles à votre structure, sans superflu."
+      },
+      {
+        "step": "04",
+        "title": "Configuration et paramétrage",
+        "desc": "Mise en place et adaptation de votre environnement Odoo selon vos règles de gestion."
+      },
+      {
+        "step": "05",
+        "title": "Tests et validation",
+        "desc": "Vérification rigoureuse des flux configurés avec vos équipes avant le passage en production."
+      },
+      {
+        "step": "06",
+        "title": "Accompagnement à la mise en service",
+        "desc": "Déploiement opérationnel et prise en main par vos utilisateurs pour assurer une transition fluide."
+      },
+      {
+        "step": "07",
+        "title": "Suivi et amélioration",
+        "desc": "Accompagnement après le lancement pour ajuster et faire évoluer votre environnement Odoo."
+      }
+    ],
+    "callout": {
+      "title": "Prêt à structurer et centraliser la gestion de votre entreprise ?",
+      "subtitle": "Échangeons sur vos processus actuels et voyons comment Odoo peut s'adapter concrètement à votre organisation.",
+      "ctaDiscover": "Découvrir Odoo",
+      "ctaConsult": "Demander une consultation"
+    }
+  },
+  "proprietaryHome": {
+    "badge": "Produit Propriétaire en Développement",
+    "title": "Nous développons nos propres solutions.",
+    "subtitle": "Notre ambition est de concevoir des produits technologiques utiles, accessibles et adaptés aux besoins réels de leurs utilisateurs. App Simulation Profil est notre solution propriétaire actuellement en cours de développement.",
+    "productName": "App Simulation Profil",
+    "statusBadge": "EN DÉVELOPPEMENT",
+    "comingSoonBadge": "BIENTÔT DISPONIBLE",
+    "positioning": "Une plateforme intelligente d'évaluation de profils qui utilise un moteur d'analyse basé sur l'intelligence artificielle.",
+    "tagline": "Évaluez votre profil en 5 minutes.",
+    "description": "Grâce à notre moteur d'analyse basé sur l'intelligence artificielle, évaluez votre profil et obtenez un rapport d'éligibilité personnalisé pour le Canada, l'Europe et l'Afrique.",
+    "subDescription": "L'application permettra aux utilisateurs de réaliser une première évaluation de leur profil et de mieux comprendre leurs possibilités selon les critères applicables aux différentes destinations.",
+    "cardDescription": "Notre moteur d'analyse IA vous permettra d'obtenir une première évaluation de votre profil et un rapport d'éligibilité personnalisé pour le Canada, l'Europe et l'Afrique.",
+    "regionsTitle": "Trois zones géographiques analysées",
+    "regions": [
+      {
+        "name": "Canada",
+        "desc": "Analyse des possibilités selon les critères applicables au Canada."
+      },
+      {
+        "name": "Europe",
+        "desc": "Analyse des possibilités selon les critères applicables en Europe."
+      },
+      {
+        "name": "Afrique",
+        "desc": "Analyse des possibilités selon les critères applicables en Afrique."
+      }
+    ],
+    "featuresTitle": "Capacités prévues de la plateforme",
+    "features": [
+      "Analyse intelligente du profil de l'utilisateur",
+      "Évaluation selon des critères d'éligibilité pertinents",
+      "Analyse des possibilités pour le Canada",
+      "Analyse des possibilités pour l'Europe",
+      "Analyse des possibilités pour l'Afrique",
+      "Génération d'un rapport personnalisé d'évaluation",
+      "Présentation des points forts du profil",
+      "Identification des éléments pouvant être améliorés"
+    ],
+    "devIndication": "Notre solution est actuellement en cours de développement. Son lancement sera annoncé prochainement.",
+    "editorialDisclaimer": "Note importante : Le futur rapport généré par App Simulation Profil constituera une évaluation indicative destinée à éclairer l'utilisateur et non une décision officielle d'une autorité d'immigration ou d'un organisme compétent."
+  },
+  "intro": {
+    "badge": "À propos d'INTER-IT",
+    "title": "Une entreprise technologique centrée sur des solutions concrètes et maîtrisées",
+    "description": "INTER-IT Services Inc. concentre son activité sur le déploiement de la solution ERP Odoo pour les entreprises et sur le développement de ses propres produits logiciels propriétaires. Nous privilégions la création et la mise en œuvre d'outils concrets, fiables et directement utiles à leurs utilisateurs.",
+    "cta": "En savoir plus sur INTER-IT",
+    "pillars": [
+      {
+        "title": "Déploiement Odoo pour les entreprises",
+        "desc": "Un accompagnement structuré pour centraliser vos opérations commerciales, financières et logistiques avec Odoo."
+      },
+      {
+        "title": "Développement de nos propres solutions",
+        "desc": "La conception interne de produits logiciels propriétaires comme App Simulation Profil, pensés pour des besoins précis."
+      },
+      {
+        "title": "Maîtrise, qualité et relation durable",
+        "desc": "L'accent mis sur la qualité technique, l'utilité opérationnelle réelle et une relation de confiance à long terme avec nos clients."
+      }
+    ],
+    "techConsole": {
+      "header": "INTER-IT // ORIENTATION_PRODUITS",
+      "status": "ACTIF",
+      "rows": [
+        {
+          "tag": "01 // SOLUTION COMMERCIALISÉE",
+          "subtag": "DISPONIBLE",
+          "desc": "Odoo Implementation — Analyse des besoins, paramétrage des modules et centralisation de la gestion d'entreprise."
+        },
+        {
+          "tag": "02 // PRODUIT PROPRIÉTAIRE",
+          "subtag": "EN DÉVELOPPEMENT",
+          "desc": "App Simulation Profil — Plateforme intelligente d'évaluation de profils par IA pour le Canada, l'Europe et l'Afrique."
+        },
+        {
+          "tag": "03 // ENGAGEMENT CLIENT",
+          "subtag": "QUALITÉ & UTILITÉ",
+          "desc": "Accompagnement de proximité, maîtrise technique et solutions concrètes adaptées aux réalités opérationnelles."
+        }
+      ]
+    }
   },
   "odooPage": {
-    "badge": "Odoo Implementation Services",
-    "title": "Implémentation Odoo : Centralisez et Pilotez Votre Entreprise",
-    "subtitle": "INTER-IT Services vous accompagne dans le déploiement, la configuration et l'adoption d'Odoo pour unifier vos opérations quotidiennes et soutenir votre croissance.",
-    "cta": "Discuter de votre projet Odoo",
+    "badge": "SOLUTION DISPONIBLE — ODOO IMPLEMENTATION",
+    "title": "Odoo – Une gestion d'entreprise centralisée.",
+    "subtitle": "Centralisez les opérations de votre entreprise avec Odoo. INTER-IT Services vous accompagne dans l'analyse de vos besoins, le paramétrage des modules et la mise en place d'un environnement de gestion adapté à votre organisation.",
+    "ctaConsult": "Demander une consultation",
+    "ctaDiscover": "Découvrir Odoo",
     "whatIs": {
-      "title": "Odoo, c'est quoi ?",
-      "description": "Odoo est une suite intégrée d'applications professionnelles qui couvre l'ensemble des besoins de gestion d'une entreprise : de la gestion de la relation client (CRM) jusqu'à la comptabilité, en passant par les ventes, les stocks et la facturation. Modulaire et évolutive, elle permet à chaque organisation de démarrer avec les fonctionnalités prioritaires puis d'ajouter des modules au fil de son développement."
+      "title": "Pourquoi centraliser vos opérations avec Odoo ?",
+      "description": "Odoo est une suite intégrée d'applications de gestion qui permet de regrouper l'ensemble des fonctions clés de votre entreprise au sein d'un environnement unique. En éliminant la dispersion entre plusieurs outils isolés, vous gagnez en visibilité, réduisez les ressaisies et facilitez le travail quotidien de vos équipes.",
+      "availableModule": "Domaine couvert"
     },
     "modules": {
-      "title": "Une couverture modulaire pour chaque département",
-      "subtitle": "Activez uniquement les applications pertinentes pour votre modèle d'affaires :",
+      "title": "Domaines couverts",
+      "subtitle": "Nous configurons et adaptons les modules Odoo essentiels au pilotage de votre activité :",
       "items": [
-        { "name": "CRM & Ventes", "desc": "Gestion des prospects, opportunités commerciales, devis en ligne et signatures électroniques." },
-        { "name": "Facturation & Comptabilité", "desc": "Automatisation de la facturation, suivi des paiements, réconciliation bancaire et rapports financiers." },
-        { "name": "Inventaire & Achats", "desc": "Traçabilité des stocks en temps réel, commandes fournisseurs, réapprovisionnement automatique." },
-        { "name": "Gestion de Projets", "desc": "Planification des tâches, suivi des temps passés, feuilles d'heures et rentabilité des projets." },
-        { "name": "Ressources Humaines", "desc": "Gestion des employés, congés, notes de frais et recrutement centralisé." },
-        { "name": "Marketing & Communication", "desc": "Campagnes par courriel, formulaires web intégrés et marketing automation." }
+        {
+          "name": "CRM et gestion commerciale",
+          "desc": "Centralisation des prospects, suivi structuré des opportunités commerciales et historique complet des échanges clients.",
+          "icon": "Users2"
+        },
+        {
+          "name": "Ventes et achats",
+          "desc": "Édition rapide des devis, validation des commandes clients et gestion fluide des commandes auprès de vos fournisseurs.",
+          "icon": "Layers"
+        },
+        {
+          "name": "Facturation et comptabilité",
+          "desc": "Émission des factures, suivi rigoureux des règlements, rapprochement bancaire et tableaux de suivi financier.",
+          "icon": "BarChart3"
+        },
+        {
+          "name": "Gestion des stocks",
+          "desc": "Suivi précis des niveaux d'inventaire, traçabilité des réceptions et des livraisons, et gestion des réapprovisionnements.",
+          "icon": "Database"
+        },
+        {
+          "name": "Gestion de projets",
+          "desc": "Organisation des tâches, suivi de l'avancement opérationnel, planification des ressources et maîtrise des délais.",
+          "icon": "Settings2"
+        },
+        {
+          "name": "Centralisation des opérations",
+          "desc": "Unification de vos processus métiers dans un environnement unique, cohérent et partagé par vos collaborateurs.",
+          "icon": "Sparkles"
+        }
       ]
     },
     "process": {
-      "title": "Notre Processus d'Accompagnement en 8 Étapes",
-      "subtitle": "Une méthodologie rigoureuse pour garantir un déploiement fluide et une adhésion totale de vos utilisateurs :",
+      "title": "Accompagnement proposé",
+      "subtitle": "INTER-IT Services vous guide à chaque étape pour mettre en place une solution Odoo adaptée à votre organisation :",
+      "stepPrefix": "Étape",
       "steps": [
-        { "num": "01", "title": "Analyse des besoins", "desc": "Diagnostic approfondi de votre organisation, de vos défis actuels et de vos objectifs d'affaires." },
-        { "num": "02", "title": "Étude des processus", "desc": "Cartographie des flux de travail opérationnels pour aligner les modules Odoo sur votre réalité métier." },
-        { "num": "03", "title": "Configuration & Paramétrage", "desc": "Configuration des règles de gestion, taxes, devises, modèles de documents et droits d'accès." },
-        { "num": "04", "title": "Personnalisation lorsque nécessaire", "desc": "Ajustement des vues, des champs spécifiques et des flux personnalisés pour respecter vos spécificités." },
-        { "num": "05", "title": "Migration des données", "desc": "Nettoyage, mise en forme et importation sécurisée de vos données existantes (clients, articles, historique)." },
-        { "num": "06", "title": "Formation des équipes", "desc": "Sessions de formation pratiques adaptées à chaque profil utilisateur pour assurer une prise en main rapide." },
-        { "num": "07", "title": "Déploiement & Mise en production", "desc": "Basculement maîtrisé vers votre nouvel environnement avec une assistance renforcée le jour J." },
-        { "num": "08", "title": "Accompagnement post-déploiement", "desc": "Support continu, ajustements post-lancement et conseils d'évolution pour maximiser votre retour sur investissement." }
+        {
+          "step": "01",
+          "title": "Analyse des besoins de l'entreprise",
+          "desc": "Recueil et étude approfondie de vos objectifs, de votre fonctionnement et de vos enjeux de gestion.",
+          "icon": "FolderSync"
+        },
+        {
+          "step": "02",
+          "title": "Étude des processus existants",
+          "desc": "Analyse détaillée de vos flux opérationnels actuels pour structurer une mise en place cohérente.",
+          "icon": "Settings2"
+        },
+        {
+          "step": "03",
+          "title": "Sélection des modules pertinents",
+          "desc": "Identification des modules Odoo répondant directement aux besoins réels de votre organisation.",
+          "icon": "Layers"
+        },
+        {
+          "step": "04",
+          "title": "Configuration et paramétrage",
+          "desc": "Paramétrage de votre environnement, des règles de gestion, des accès utilisateurs et des documents.",
+          "icon": "Laptop"
+        },
+        {
+          "step": "05",
+          "title": "Tests et validation",
+          "desc": "Vérification complète du bon fonctionnement des flux configurés avant le lancement opérationnel.",
+          "icon": "ShieldCheck"
+        },
+        {
+          "step": "06",
+          "title": "Accompagnement à la mise en service",
+          "desc": "Mise en route de la solution et accompagnement à la prise en main par vos équipes au quotidien.",
+          "icon": "Users2"
+        },
+        {
+          "step": "07",
+          "title": "Suivi et amélioration",
+          "desc": "Suivi régulier après la mise en service afin d'ajuster et de faire évoluer votre outil selon vos besoins.",
+          "icon": "Headphones"
+        }
       ]
     },
     "targetAudience": {
-      "title": "Pour Quelles Entreprises ?",
-      "subtitle": "L'implémentation Odoo par INTER-IT Services s'adresse particulièrement aux :",
+      "title": "À qui s'adresse notre accompagnement Odoo ?",
+      "subtitle": "Notre démarche s'adresse aux entreprises et organisations qui souhaitent structurer durablement leur gestion :",
       "items": [
-        { "title": "PME en croissance", "desc": "Entreprises qui ont dépassé le stade des feuilles de calcul et ont besoin d'une structure robuste." },
-        { "title": "Organisations multi-outils", "desc": "Sociétés fatiguées de jongler entre logiciels incompatibles et souhaitant une plateforme unifiée." },
-        { "title": "Entreprises de services & négoce", "desc": "Structures ayant besoin d'un lien direct entre ventes, projets, stocks et facturation." },
-        { "title": "Organisations souhaitant centraliser leurs opérations", "desc": "Dirigeants cherchant une visibilité globale et un pilotage financier consolidé." }
+        {
+          "title": "PME souhaitant structurer leur gestion",
+          "desc": "Entreprises qui veulent remplacer les fichiers dispersés par un outil de gestion fiable et structuré."
+        },
+        {
+          "title": "Organisations utilisant des outils multiples",
+          "desc": "Structures cherchant à regrouper leurs ventes, leur facturation, leurs stocks et leurs projets dans un seul environnement."
+        },
+        {
+          "title": "Entreprises en quête de visibilité opérationnelle",
+          "desc": "Dirigeants et équipes ayant besoin d'informations centralisées et à jour pour piloter leur activité."
+        },
+        {
+          "title": "Équipes cherchant un accompagnement concret",
+          "desc": "Organisations qui privilégient une mise en place progressive, maîtrisée et accompagnée jusqu'à la prise en main."
+        }
       ]
+    },
+    "bottomCallout": {
+      "title": "Échangeons sur votre projet d'implémentation Odoo",
+      "subtitle": "Contactez INTER-IT Services pour analyser vos besoins de gestion et définir l'accompagnement Odoo adapté à votre entreprise.",
+      "cta": "Demander une consultation"
     }
   },
-  "whyUs": {
-    "title": "Pourquoi Choisir INTER-IT SERVICES ?",
-    "subtitle": "Une équipe de proximité, une solide culture d'ingénierie et une approche orientée résultats concrets.",
-    "reasons": {
-      "personalizedSupport": {
-        "title": "Accompagnement Personnalisé",
-        "description": "Nous prenons le temps de comprendre votre contexte métier spécifique pour concevoir des solutions véritablement adaptées."
+  "aboutPage": {
+    "badge": "À Propos d'INTER-IT Services Inc.",
+    "title": "Des solutions logicielles concrètes, maîtrisées et durables",
+    "subtitle": "INTER-IT Services Inc. est une entreprise technologique basée en Ontario (Canada). Nous avons fait le choix stratégique de concentrer notre activité sur l'implémentation de la solution Odoo pour les entreprises ainsi que sur la conception et le développement de nos propres produits logiciels propriétaires.",
+    "missionTitle": "Notre Positionnement",
+    "missionDesc": "Déployer aujourd'hui Odoo avec rigueur pour centraliser la gestion des entreprises, tout en développant nos propres solutions logicielles comme App Simulation Profil afin d'apporter des outils concrets et utiles à nos utilisateurs.",
+    "visionTitle": "Notre Ambition",
+    "visionDesc": "Bâtir des produits technologiques propriétaires fiables, accessibles et répondant à des besoins réels, tout en maintenant une relation durable et de proximité avec chacun de nos clients.",
+    "focusTitle": "Nos Deux Axes Stratégiques",
+    "focusItems": [
+      {
+        "badge": "DISPONIBLE",
+        "title": "Odoo Implementation",
+        "desc": "Notre seule solution actuellement commercialisée : nous accompagnons les entreprises dans l'analyse de leurs besoins, le paramétrage des modules et la mise en service d'un environnement Odoo centralisé."
       },
-      "modernExpertise": {
-        "title": "Expertise Technologique Moderne",
-        "description": "Implémentation Odoo, architecture web moderne, intégration d'API et automatisation : nous maîtrisons les technologies actuelles."
-      },
-      "resultsOriented": {
-        "title": "Approche Axée Résultats",
-        "description": "Nous nous concentrons sur la simplification opérationnelle, le gain de temps et la rentabilité concrète de vos investissements."
-      },
-      "knowledgeTransfer": {
-        "title": "Formation & Autonomie",
-        "description": "Nous assurons un transfert continu de compétences afin que vos équipes deviennent pleinement autonomes sur leurs nouveaux outils."
+      {
+        "badge": "EN DÉVELOPPEMENT",
+        "title": "App Simulation Profil",
+        "desc": "Notre produit logiciel propriétaire en cours de développement : une plateforme intelligente d'évaluation de profils basée sur l'IA permettant d'obtenir en 5 minutes un rapport d'éligibilité indicatif pour le Canada, l'Europe et l'Afrique."
       }
-    }
-  },
-  "processSection": {
-    "badge": "Notre Méthodologie",
-    "title": "Comment Nous Accompagnons Nos Clients",
-    "subtitle": "Une démarche structurée et collaborative, du premier échange jusqu'au support à long terme.",
-    "steps": [
-      { "step": "1", "title": "Écoute & Cadrage", "desc": "Échange initial pour cerner vos priorités, contraintes techniques et délais souhaités." },
-      { "step": "2", "title": "Conception & Stratégie", "desc": "Élaboration d'un plan d'action clair avec jalons mesurables et architecture adaptée." },
-      { "step": "3", "title": "Réalisation & Paramétrage", "desc": "Développement et configuration agile avec points d'étape réguliers pour valider les avancées." },
-      { "step": "4", "title": "Déploiement & Formation", "desc": "Mise en service opérationnelle, formation des utilisateurs et accompagnement réactif." }
+    ],
+    "valuesTitle": "Nos Engagements",
+    "values": [
+      {
+        "title": "Produits Concrets & Maîtrisés",
+        "desc": "Nous nous concentrons uniquement sur des solutions que nous maîtrisons pleinement, sans disperser notre activité dans de multiples prestations."
+      },
+      {
+        "title": "Utilité Opérationnelle",
+        "desc": "Chaque déploiement Odoo et chaque fonctionnalité que nous concevons vise la simplicité d'utilisation et une valeur réelle au quotidien."
+      },
+      {
+        "title": "Relation Durable & Transparence",
+        "desc": "Nous privilégions la clarté, l'honnêteté sur la disponibilité de nos produits et un accompagnement sérieux sur le long terme."
+      }
     ]
   },
   "blogHome": {
-    "badge": "Insights & Veille Technologique",
+    "badge": "Ressources & Articles Odoo",
     "title": "Insights & Blog",
-    "subtitle": "Découvrez nos derniers articles et conseils pour optimiser la gestion, l'automatisation et les outils numériques de votre entreprise.",
+    "subtitle": "Découvrez nos articles consacrés à la centralisation de la gestion d'entreprise et à la réussite de votre implémentation Odoo.",
     "cta": "Voir tous les articles",
     "readMore": "Lire l'article"
   },
-  "trainingHome": {
-    "badge": "Montée en Compétences",
-    "title": "Formations Professionnelles Pratiques",
-    "subtitle": "Renforcez les compétences numériques de vos collaborateurs grâce à des ateliers ciblés et concrets.",
-    "targetBadge": "Public cible",
-    "formatBadge": "Format",
-    "cta": "Voir le catalogue des formations",
-    "enrollCta": "Demander une formation"
+  "blogPage": {
+    "title": "Blog & Ressources",
+    "subtitle": "Découvrez nos guides pratiques et analyses sur l'implémentation Odoo, la gestion d'entreprise centralisée et nos réflexions technologiques.",
+    "searchPlaceholder": "Rechercher un article...",
+    "allTags": "Tous",
+    "tagsLabel": "Thématiques :",
+    "backLink": "Retour aux articles",
+    "authorLabel": "AUTEUR",
+    "emptyTitle": "Aucun article ne correspond à votre recherche.",
+    "emptySubtitle": "Essayez d'autres mots-clés ou sélectionnez une autre thématique."
   },
   "contact": {
-    "title": "Contactez-nous",
-    "subtitle": "Un projet d'implémentation Odoo, de développement web ou d'automatisation ? Échangeons sur vos besoins.",
+    "title": "Nous contacter",
+    "subtitle": "Vous souhaitez centraliser la gestion de votre entreprise avec Odoo ou obtenir des informations sur nos futurs produits ? Échangeons sur votre besoin.",
+    "badge": "Contact & Consultation",
     "info": {
       "address": "Localisation",
       "email": "Courriel",
       "hours": "Heures de service",
       "hoursVal": "Lun - Ven, 9:00 - 17:00 HNE"
+    },
+    "responsiveness": {
+      "title": "Engagement Réactivité",
+      "subtitle": "Nous répondons en moins de 24h ouvrées."
     },
     "form": {
       "firstName": "Prénom",
@@ -193,15 +456,10 @@
       "company": "Entreprise / Organisation",
       "service": "Service recherché",
       "servicesOptions": {
-        "odoo": "Odoo Implementation",
-        "web": "Web Development",
-        "ai": "Automation & AI",
-        "apps": "Business Applications",
-        "marketing": "Digital Marketing",
-        "training": "Training",
+        "odoo": "Implémentation Odoo",
         "other": "Autre demande"
       },
-      "message": "Décrivez votre projet ou votre besoin",
+      "message": "Décrivez votre besoin",
       "submit": "Envoyer ma demande",
       "success": "Merci ! Votre demande a été reçue avec succès. Notre équipe vous répondra dans les plus brefs délais.",
       "error": "Une erreur est survenue lors de l'envoi de votre demande. Veuillez réessayer ou nous contacter directement par courriel.",
@@ -209,12 +467,14 @@
     }
   },
   "footer": {
-    "tagline": "Solutions technologiques pour les PME et organisations : implémentation Odoo, développement web, automatisation de processus et formations professionnelles.",
+    "tagline": "INTER-IT Services développe et déploie des solutions logicielles concrètes : accompagnement à l'implémentation Odoo pour les entreprises et développement de nos propres produits logiciels.",
     "solutionsTitle": "Solutions",
     "companyTitle": "Entreprise",
     "contactTitle": "Contact & Informations",
     "address": "Ontario, Canada",
     "copyright": "© {year} INTER-IT SERVICES INC. Tous droits réservés.",
-    "legal": "Mentions Légales | Confidentialité"
+    "legal": "Mentions Légales | Confidentialité",
+    "b2bBadge": "Odoo Implementation & Produits Propriétaires",
+    "consultationCta": "Demander une consultation"
   }
 }

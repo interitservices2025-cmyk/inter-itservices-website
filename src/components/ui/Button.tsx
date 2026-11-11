@@ -2,13 +2,13 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline" | "ghost";
+  variant?: "primary" | "secondary" | "outline" | "outline-light" | "ghost";
   size?: "sm" | "md" | "lg";
   isLoading?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = "primary", size = "md", isLoading, children, ...props }, ref) => {
+  ({ className = "", variant = "primary", size = "md", isLoading, children, ...props }, ref) => {
     return (
       <button
         ref={ref}
@@ -23,9 +23,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             // Secondary: Brand Orange background with white text
             "bg-[#F39200] text-white font-semibold hover:bg-[#F39200]/90 hover:shadow-lg hover:shadow-[#F39200]/20":
               variant === "secondary",
-            // Outline: Transparent background with slate border and slate-700 text
-            "border border-slate-300 bg-transparent text-slate-700 hover:bg-slate-50 hover:text-[#1D2140] hover:border-slate-400":
+            // Outline (for light backgrounds): Transparent background with slate border and dark blue text
+            "border border-slate-300 bg-transparent text-[#1D2140] hover:bg-[#1D2140] hover:text-white hover:border-[#1D2140]":
               variant === "outline",
+            // Outline Light (for dark #1D2140 backgrounds): Crisp white border and white text
+            "border border-white/30 bg-white/5 text-white hover:bg-white/15 hover:text-white hover:border-white/60":
+              variant === "outline-light",
             // Ghost: Text only with light hover
             "bg-transparent text-slate-600 hover:bg-slate-100 hover:text-slate-900":
               variant === "ghost",

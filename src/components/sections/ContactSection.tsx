@@ -85,14 +85,10 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
     }
   };
 
+  const opt = dict.contact?.form?.servicesOptions || {};
   const servicesOptions = [
-    { value: "Odoo Implementation", label: "Odoo Implementation" },
-    { value: "Web Development", label: locale === "fr" ? "Développement Web" : "Web Development" },
-    { value: "Automation & AI", label: locale === "fr" ? "Automatisation & IA" : "Automation & AI" },
-    { value: "Business Applications", label: locale === "fr" ? "Applications Métiers" : "Business Applications" },
-    { value: "Digital Marketing", label: locale === "fr" ? "Marketing Digital" : "Digital Marketing" },
-    { value: "Training", label: locale === "fr" ? "Formations" : "Training" },
-    { value: "Other", label: locale === "fr" ? "Autre demande" : "Other" },
+    { value: "Odoo Implementation", label: opt.odoo || (locale === "fr" ? "Implémentation Odoo" : "Odoo Implementation") },
+    { value: "Other", label: opt.other || (locale === "fr" ? "Autre demande" : "Other Inquiry") },
   ];
 
   return (
@@ -101,7 +97,7 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
       <div className="text-center max-w-3xl mx-auto mb-16">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#1D2140]/15 bg-[#1D2140]/5 text-[#1D2140] text-xs font-bold uppercase tracking-wider mb-4">
           <Sparkles className="h-3.5 w-3.5 text-[#F39200]" />
-          <span>{locale === "fr" ? "Échangeons sur Votre Projet" : "Get in Touch"}</span>
+          <span>{dict.contact?.badge || (locale === "fr" ? "Échangeons sur Votre Projet" : "Get in Touch")}</span>
         </div>
 
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#1D2140] mb-4">
@@ -159,10 +155,10 @@ export default function ContactSection({ dict, locale }: ContactSectionProps) {
 
           <div className="bg-[#1D2140] text-white p-6 rounded-xl space-y-2 border border-white/10 shadow-sm">
             <h4 className="text-sm font-bold text-[#F39200] uppercase tracking-wider">
-              {locale === "fr" ? "Engagement Réactivité" : "Quick Response"}
+              {dict.contact?.responsiveness?.title || (locale === "fr" ? "Engagement Réactivité" : "Quick Response")}
             </h4>
             <p className="text-xs text-slate-300 leading-relaxed">
-              {dict.contact.form.responseTime}
+              {dict.contact?.responsiveness?.subtitle || dict.contact.form.responseTime}
             </p>
           </div>
         </div>

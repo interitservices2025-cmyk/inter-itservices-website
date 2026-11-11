@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, BookOpen } from "lucide-react";
-import { motion } from "framer-motion";
 import { blogPosts } from "@/data/blog";
 import SectionContainer from "../ui/SectionContainer";
 import Card from "../ui/Card";
@@ -20,7 +19,7 @@ export default function BlogSectionHome({ dict, locale }: BlogSectionHomeProps) 
   const featuredPosts = blogPosts.slice(0, 3);
 
   return (
-    <SectionContainer id="blog-insights" bgType="light" className="border-t border-slate-200">
+    <SectionContainer id="blog-insights" bgType="transparent" className="bg-white border-t border-slate-200">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -42,15 +41,8 @@ export default function BlogSectionHome({ dict, locale }: BlogSectionHomeProps) 
 
         {/* 3 Articles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {featuredPosts.map((post, index) => (
-            <motion.div
-              key={post.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="h-full"
-            >
+          {featuredPosts.map((post) => (
+            <div key={post.id} className="h-full">
               <Card
                 glowColor="secondary"
                 className="h-full flex flex-col justify-between border-slate-200 bg-white p-6 hover:border-[#1D2140]/20 hover:shadow-lg transition-all duration-300"
@@ -96,7 +88,7 @@ export default function BlogSectionHome({ dict, locale }: BlogSectionHomeProps) 
                   </Link>
                 </div>
               </Card>
-            </motion.div>
+            </div>
           ))}
         </div>
 

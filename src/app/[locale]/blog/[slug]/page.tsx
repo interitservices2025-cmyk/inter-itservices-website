@@ -8,6 +8,8 @@ import SectionContainer from "@/components/ui/SectionContainer";
 import Card from "@/components/ui/Card";
 import Badge from "@/components/ui/Badge";
 
+import { getDictionary } from "@/lib/get-dictionary";
+
 export async function generateMetadata({
   params,
 }: {
@@ -29,6 +31,7 @@ interface BlogDetailPageProps {
 
 export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const { locale, slug } = await params;
+  const dict = await getDictionary(locale);
 
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) {
@@ -41,10 +44,10 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
         {/* Back Link */}
         <Link
           href={`/${locale}/blog`}
-          className="inline-flex items-center gap-2 text-xs font-semibold text-slate-600 hover:text-orange-500 mb-8 transition-colors cursor-pointer"
+          className="inline-flex items-center gap-2 text-xs font-semibold text-slate-600 hover:text-[#F39200] mb-8 transition-colors cursor-pointer"
         >
           <ArrowLeft className="h-4 w-4" />
-          <span>{locale === "fr" ? "Retour au blog" : "Back to blog"}</span>
+          <span>{dict.blogPage.backLink}</span>
         </Link>
 
         <div className="max-w-3xl mx-auto space-y-8">
@@ -64,20 +67,20 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
               </div>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-[#1D2140] leading-tight mb-6">
               {post.title[locale as "en" | "fr"]}
             </h1>
-            <div className="h-1 w-20 bg-orange-500 rounded-full" />
+            <div className="h-1 w-20 bg-[#F39200] rounded-full" />
           </div>
 
           {/* Author info */}
           <div className="flex items-center gap-3 py-4 border-y border-slate-100">
-            <div className="h-10 w-10 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white font-bold text-sm">
+            <div className="h-10 w-10 rounded-full bg-[#1D2140] flex items-center justify-center text-[#F39200] font-bold text-sm">
               <User className="h-5 w-5" />
             </div>
             <div>
-              <span className="text-[10px] text-slate-500 block font-semibold">AUTHOR</span>
-              <span className="text-xs font-bold text-slate-800">{post.author}</span>
+              <span className="text-[10px] text-slate-500 block font-semibold">{dict.blogPage.authorLabel}</span>
+              <span className="text-xs font-bold text-[#1D2140]">{post.author}</span>
             </div>
           </div>
 

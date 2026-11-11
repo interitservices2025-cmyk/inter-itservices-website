@@ -61,8 +61,8 @@ export const blogPosts: BlogPost[] = [
       fr: "De la cartographie des processus à la formation des équipes et au support post-lancement, découvrez la méthode pour un déploiement Odoo réussi.",
     },
     content: {
-      en: "Implementing an ERP is not merely a software installation; it is an operational modernization project. Success relies on clear requirement scoping, phased configuration, thorough data cleansing, and hands-on user training. At INTER-IT Services, our structured 8-step methodology ensures that your Odoo deployment aligns precisely with your operational realities while guaranteeing high user adoption.",
-      fr: "L'implémentation d'un ERP n'est pas une simple installation logicielle : c'est un projet de modernisation des flux d'affaires. La clé du succès repose sur un cadrage précis des besoins, un paramétrage progressif, une migration rigoureuse des données et un accompagnement humain constant. Découvrez les 8 étapes incontournables appliquées par INTER-IT Services pour garantir la réussite de votre projet Odoo.",
+      en: "Implementing an ERP is not merely a software installation; it is an operational modernization project. Success relies on clear requirement scoping, phased configuration, thorough data validation, and hands-on user onboarding. At INTER-IT Services, our structured 7-step methodology ensures that your Odoo deployment aligns precisely with your operational realities while guaranteeing high user adoption.",
+      fr: "L'implémentation d'un ERP n'est pas une simple installation logicielle : c'est un projet de modernisation des flux d'affaires. La clé du succès repose sur une analyse précise des besoins, un paramétrage progressif, des tests rigoureux et un accompagnement humain constant lors de la mise en service. Découvrez les 7 étapes incontournables appliquées par INTER-IT Services pour garantir la réussite de votre projet Odoo.",
     },
     publishedAt: "2026-06-05",
     author: "Architecte Projets, INTER-IT",
@@ -85,16 +85,16 @@ export const blogPosts: BlogPost[] = [
       fr: "Une analyse approfondie des stratégies de rendu de Next.js, des indicateurs de performance et de sécurité pour les plateformes web.",
     },
     content: {
-      en: "Next.js offers a hybrid rendering model, combining Server-Side Rendering (SSR), Static Site Generation (SSG), and Client Components. For enterprises, this means lightning-fast page loading speeds, robust security (due to hidden backend APIs), and stellar out-of-the-box SEO. We review the latest App Router improvements and how we use them at INTER-IT to deliver premium user experiences.",
-      fr: "Next.js propose un modèle de rendu hybride, combinant le rendu côté serveur (SSR), la génération de sites statiques (SSG) et les composants client. Pour les entreprises, cela se traduit par des vitesses de chargement de page ultra-rapides, une sécurité robuste (grâce à des API backend protégées) et un référencement (SEO) exceptionnel dès le départ. Nous passons en revue ses atouts pour concevoir des applications web durables.",
+      en: "Next.js offers a hybrid rendering model, combining Server-Side Rendering (SSR), Static Site Generation (SSG), and Client Components. For software products and platforms, this means lightning-fast page loading speeds, robust security (due to hidden backend APIs), and stellar out-of-the-box SEO. We review the latest App Router improvements for building modern web applications.",
+      fr: "Next.js propose un modèle de rendu hybride, combinant le rendu côté serveur (SSR), la génération de sites statiques (SSG) et les composants client. Pour les applications logicielles, cela se traduit par des vitesses de chargement ultra-rapides, une sécurité robuste (grâce à des API backend protégées) et un référencement (SEO) exceptionnel dès le départ. Nous passons en revue ses atouts techniques pour concevoir des plateformes web durables.",
     },
     publishedAt: "2026-05-20",
-    author: "Lead Web Developer, INTER-IT",
+    author: "Architecture Logicielle, INTER-IT",
     imageUrl: "/images/blog/nextjs.png",
     readTime: {
       en: "4 min read",
       fr: "4 min de lecture",
     },
-    tags: ["Web Dev", "Next.js", "React"],
+    tags: ["Architecture", "Next.js", "React"],
   },
 ];

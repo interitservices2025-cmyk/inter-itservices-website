@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 
 interface PortfolioDetailPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -6,5 +6,5 @@ interface PortfolioDetailPageProps {
 
 export default async function PortfolioDetailPage({ params }: PortfolioDetailPageProps) {
   const { locale } = await params;
-  redirect(`/${locale}/solutions/odoo`);
+  permanentRedirect(`/${locale}/solutions/odoo`);
 }

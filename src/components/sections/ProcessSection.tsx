@@ -95,7 +95,7 @@ export default function ProcessSection({ dict, locale }: ProcessSectionProps) {
                   </div>
 
                   <div className="pt-4 mt-4 border-t border-slate-100 flex items-center gap-1 text-[11px] font-bold text-[#F39200] uppercase tracking-wider">
-                    <span>{locale === "fr" ? `Étape ${step.num}` : `Step ${step.num}`}</span>
+                    <span>{dict.processSection?.stepLabel ? `${dict.processSection.stepLabel} ${step.num}` : (locale === "fr" ? `Étape ${step.num}` : `Step ${step.num}`)}</span>
                   </div>
                 </Card>
               </motion.div>

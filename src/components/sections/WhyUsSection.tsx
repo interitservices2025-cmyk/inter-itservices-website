@@ -8,9 +8,10 @@ import Card from "../ui/Card";
 
 interface WhyUsSectionProps {
   dict: any;
+  locale?: string;
 }
 
-export default function WhyUsSection({ dict }: WhyUsSectionProps) {
+export default function WhyUsSection({ dict, locale }: WhyUsSectionProps) {
   const reasons = [
     {
       key: "personalizedSupport",
@@ -84,7 +85,7 @@ export default function WhyUsSection({ dict }: WhyUsSectionProps) {
 
                   <div className="pt-4 mt-4 border-t border-slate-100 flex items-center gap-1.5 text-xs text-slate-500 font-medium">
                     <CheckCircle className="h-3.5 w-3.5 text-[#F39200]" />
-                    <span>Engagement & Qualité</span>
+                    <span>{dict.whyUs?.commitmentBadge || (locale === "en" ? "Commitment & Quality" : "Engagement & Qualité")}</span>
                   </div>
                 </Card>
               </motion.div>
