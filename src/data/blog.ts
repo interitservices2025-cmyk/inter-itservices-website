@@ -18,7 +18,7 @@ export const blogPosts: BlogPost[] = [
     },
     publishedAt: "2026-06-15",
     author: "Consultant ERP, INTER-IT",
-    imageUrl: "/images/blog/logistics.png",
+    imageUrl: "/images/portfolio/fintrack.png",
     readTime: {
       en: "5 min read",
       fr: "5 min de lecture",
@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
     },
     publishedAt: "2026-06-10",
     author: "Consultant Solutions, INTER-IT",
-    imageUrl: "/images/blog/nextjs.png",
+    imageUrl: "/images/portfolio/smartrag.png",
     readTime: {
       en: "6 min read",
       fr: "6 min de lecture",
